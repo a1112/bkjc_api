@@ -1,6 +1,6 @@
 from PIL import Image
 
-from utils.cimg_read import CimgReadCore
+from bkjc_tools import CimgReadCore
 import config
 from bkjc_database.dbm import dbm
 from api.ImageCache import CimgCache, TimeoutDict

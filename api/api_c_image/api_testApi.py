@@ -7,7 +7,7 @@ from core import testApp as app
 import config
 import tool
 from fastapi.responses import StreamingResponse
-from utils.cimg_read import CimgReadCore
+from bkjc_tools import CimgReadCore
 from api.api_core import api_core
 
 @app.get("/file/{fileUrl:path}")

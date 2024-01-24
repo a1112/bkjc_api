@@ -3,7 +3,7 @@ from os.path import *
 from io import BytesIO
 from glob import glob
 from PIL import Image
-from utils.cimg_read import CimgReadCore
+from bkjc_tools import CimgReadCore
 import config
 from fastapi.responses import StreamingResponse
 import os
