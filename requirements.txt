@@ -1,0 +1,12 @@
+fastapi
+faker
+sqlalchemy
+uvicorn
+pymssql
+numpy
+webcolors
+pillow
+tqdm
+pymysql
+python-multipart
+pytest
