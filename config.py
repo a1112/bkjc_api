@@ -58,7 +58,7 @@ if useLoc:
         "useLoc": True
     }
 
-from bkjc_database.NerCarDataBase import core
+from bkjc_database import core
 
 
 core.setBaseUrl(ip=info["upServer"], port=1433, user=info["user"], password=info["password"], drive_=info["drive"],

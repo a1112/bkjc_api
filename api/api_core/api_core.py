@@ -4,7 +4,7 @@ from bkjc_tools import CimgReadCore
 import config
 from bkjc_database.dbm import dbm
 from api.ImageCache import CimgCache, TimeoutDict
-from bkjc_database.NerCarDataBase import SqlTool
+from bkjc_database import SqlTool
 
 
 def getTestImage():
