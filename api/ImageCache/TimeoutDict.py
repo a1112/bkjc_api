@@ -10,6 +10,7 @@ class TimeoutDict(threading.Thread):
         self.timeout_seconds = timeout_seconds
         self.data = OrderedDict()
         self.lock = threading.Lock()
+
         self.start()
 
     def __setitem__(self, key, value):
@@ -33,11 +34,12 @@ class TimeoutDict(threading.Thread):
 
     def run(self):
         while True:
-            for key in self.data:
-                entry = self.data[key]
-            # 如果条目已过期，则删除并返回None
-                if time.time() - entry['timestamp'] > self.timeout_seconds:
-                    del self.data[key]
+            with self.lock:
+                for key in self.data:
+                    entry = self.data[key]
+                # 如果条目已过期，则删除并返回None
+                    if time.time() - entry['timestamp'] > self.timeout_seconds:
+                        del self.data[key]
             time.sleep(60*5)
 
     def _remove_oldest(self):
