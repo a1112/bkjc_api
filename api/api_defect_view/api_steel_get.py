@@ -1,19 +1,17 @@
+import datetime
+import logging
 from io import BytesIO
 
-import datetime
+import webcolors
+from PIL import Image
+from bkjc_database import NerCarDataBase
+from bkjc_database.dbm import dbm
+from fastapi.responses import StreamingResponse
 
 import config
-import webcolors
-
 import tool
-from PIL import Image
-
 from api.api_core import api_core
 from core import steelGetApp as app
-from fastapi.responses import StreamingResponse
-from bkjc_database.dbm import dbm
-import logging
-from bkjc_database import NerCarDataBase
 
 sourceImageCache = {}  # 缓存大图
 defectItemCache = {}  # 缓存缺陷小图
@@ -24,7 +22,6 @@ if dbm.isSqlServer():
     pass
 else:
     import bkjc_database.NerCarDataBase.mysql, bkjc_database.NerCarDataBase.sqlserver
-    from bkjc_database.NerCarDataBase.mysql import Ncdhotstrip
 
 
 def getImageIO(image: Image.Image, format_="jpeg"):
@@ -98,6 +95,7 @@ def getRec(enumIndex, defect):
                 defect.rightInImg - defect.leftInImg,
                 ]
 
+
 def getDefectListByDefectInfo(seqNo, defectsInfo=None):
     if not defectsInfo:
         defectsInfo = dbm.getDefectBySeqNo(seqNo)
@@ -129,8 +127,8 @@ def getDefectListByDefectInfo(seqNo, defectsInfo=None):
                         "boxW": defect.RightInImg - defect.LeftInImg,
                         "boxH": defect.BottomInImg - defect.TopInImg,
                         "defectCoefficient": f"{defect.Grade} %",
-                        "grade":defect.Grade,
-                        "area":defect.Area
+                        "grade": defect.Grade,
+                        "area": defect.Area
 
                     }
                 else:
@@ -153,15 +151,16 @@ def getDefectListByDefectInfo(seqNo, defectsInfo=None):
                         "boxW": defect.rightInImg - defect.leftInImg,
                         "boxH": defect.bottomInImg - defect.topInImg,
                         "defectCoefficient": f"{defect.grade} %",
-                        "grade":defect.grade
+                        "grade": defect.grade
                     }
                 api_core.set_defectInfo(cameraId, defectInfo["defectNo"], defectInfo)
                 res[bmIndex].append(defectInfo)
     return res
 
+
 def tryGetWidthInfo(source):
     if config.useLoc:
-        source="test/width.txt"
+        source = "test/width.txt"
     try:
         with open(source) as f:
             lined = f.read().split("\n")
@@ -202,15 +201,14 @@ def getDefectView(seqNo: int):
     :return: 上下表面缺陷数据集合
     """
     defectInfo = dbm.getDefectBySeqNo(seqNo)
-
+    upWidthInfo, downWidthInfo = getWidthInfos(seqNo, [defectInfo["upCameraList"],
+                                                       defectInfo["downCameraList"]])
+    defectListUp, defectListDown = getDefectListByDefectInfo(seqNo, defectInfo)
+    defectListUp.sort(key=lambda item: item["imageIndex"])
+    defectListDown.sort(key=lambda item: (item["imageIndex"], item["cameraId"]))
+    upImageCount = upWidthInfo[0]["imageCount"] if upWidthInfo else 0
+    downImageCount = downWidthInfo[0]["imageCount"] if upWidthInfo else 0
     if dbm.isSqlServer():
-        upWidthInfo, downWidthInfo = getWidthInfos(seqNo, [defectInfo["upCameraList"],
-                                                           defectInfo["downCameraList"]])
-        defectListUp, defectListDown = getDefectListByDefectInfo(seqNo, defectInfo)
-        defectListUp.sort(key=lambda item: item["imageIndex"])
-        defectListDown.sort(key=lambda item: (item["imageIndex"], item["cameraId"]))
-        upImageCount = upWidthInfo[0]["imageCount"] if upWidthInfo else 0
-        downImageCount = downWidthInfo[0]["imageCount"] if upWidthInfo else 0
         reData = {
             "up": {
                 "steelInfo": {
@@ -236,14 +234,7 @@ def getDefectView(seqNo: int):
             },
         }
     else:
-        upWidthInfo, downWidthInfo = getWidthInfos(seqNo, [defectInfo["upCameraList"],
-                                                           defectInfo["downCameraList"]])
 
-        defectListUp, defectListDown = getDefectListByDefectInfo(seqNo, defectInfo)
-        defectListUp.sort(key=lambda item: item["imageIndex"])
-        defectListDown.sort(key=lambda item: (item["imageIndex"], item["cameraId"]))
-        upImageCount = upWidthInfo[0]["imageCount"] if upWidthInfo else 0
-        downImageCount = downWidthInfo[0]["imageCount"] if upWidthInfo else 0
         reData = {
             "up": {
                 "steelInfo": {
@@ -311,8 +302,8 @@ def getNumStr(num, size=4):
 def getMaxImage(cameraID: int, seqNo: int, imageIndex: int):
     """BUG 调用前请调用 getimage"""
 
-    return StreamingResponse(api_core.get_defect_max_cimage(cameraID, seqNo, imageIndex), media_type="image/jpeg")
-    # return StreamingResponse(getMaxImage_(cameraID, seqNo, imageIndex), media_type="image/jpeg")
+    return StreamingResponse(getImageIO(api_core.get_defect_max_cimage(cameraID, seqNo, imageIndex)),
+                             media_type="image/jpeg")
 
 
 @app.get("/image/{cameraId:int}/{defectId:int}")
@@ -334,7 +325,7 @@ def getDefectImage(cameraID, defectID):
     4.0 only
     """
     if dbm.isSqlServer():
-        pass
+        raise
     else:
         defect = dbm.getDefectItem(cameraID, defectID)
         if defect:
@@ -353,7 +344,8 @@ def getDefectImage2(cameraID, seqNo, defectID):
     4.0 only
     """
     if dbm.isSqlServer():
-        defect = dbm.getDefectItem(cameraID, defectID)
+        dbm.getDefectItem(cameraID, defectID)
+        raise
     else:
         source = config.getDefectImgFile_4d0(cameraID, seqNo, defectID)
         source = "\\" + source
@@ -373,73 +365,37 @@ def getAppFlush(currentSeqID, maxID):
 def getRealInfoById(steelId):
     res = dbm.getSteelById(steelId)
     if res:
-        if dbm.isSqlServer():
-            res = res[0]
-            seqNo = res[0].SequeceNo
-            defectInfo = dbm.getDefectBySeqNo(seqNo)
-            # upWidthInfo, downWidthInfo = getWidthInfos(seqNo, [defectInfo["upCameraList"],
-            #                                                    defectInfo["downCameraList"]])
-            defectListUp, defectListDown = getDefectListByDefectInfo(seqNo, defectInfo)
-            reData = {
-                "up": {
-                    "steelInfo": {
-                        #   钢板信息
-                        # "imageCount": upWidthInfo[0]["imageCount"],
-                        # "drawWidth": upWidthInfo[0]["imageCount"] * 1024,  # 渲染长度，
-                        "drawHeight": 4096 * 2  # 渲染高度，会拉伸/挤压到渲染区域的高度  （这里的高度指转换后的实际宽度）
-                    },
-                    "defectList": defectListUp,
-                    "outLineUp": [],
-                    "outLineDown": []
+        res = res[0]
+        seqNo = res[0].seqNo
+        defectInfo = dbm.getDefectBySeqNo(seqNo)
+        defectListUp, defectListDown = getDefectListByDefectInfo(seqNo, defectInfo)
+        reData = {
+            "up": {
+                "steelInfo": {
+                    #   钢板信息
+                    # "imageCount": upWidthInfo[0]["imageCount"],
+                    # "drawWidth": upWidthInfo[0]["imageCount"] * 1024,  # 渲染长度，
+                    "drawHeight": 4096 * 2  # 渲染高度，会拉伸/挤压到渲染区域的高度  （这里的高度指转换后的实际宽度）
                 },
-                "down": {
-                    "steelInfo": {
-                        #   钢板信息
-                        # "imageCount": downWidthInfo[0]["imageCount"],
-                        # "drawWidth": downWidthInfo[0]["imageCount"] * 1024,  # 渲染长度，
-                        "drawHeight": 4096 * 2  # 渲染高度，会拉伸/挤压到渲染区域的高度  （这里的高度指转换后的实际宽度）
-                    },
-                    "defectList": defectListDown,
-                    "outLineUp": [],
-                    "outLineDown": []
+                "defectList": defectListUp,
+                "outLineUp": [],
+                "outLineDown": []
+            },
+            "down": {
+                "steelInfo": {
+                    #   钢板信息
+                    # "imageCount": downWidthInfo[0]["imageCount"],
+                    # "drawWidth": downWidthInfo[0]["imageCount"] * 1024,  # 渲染长度，
+                    "drawHeight": 4096 * 2  # 渲染高度，会拉伸/挤压到渲染区域的高度  （这里的高度指转换后的实际宽度）
                 },
-            }
-            return {"lastObj": addSteelCache(res[0], res[1]),
-                    "data": reData
-                    }
-        else:
-            res: Ncdhotstrip.Steelrecord
-            res = res[0]
-            seqNo = res[0].seqNo
-            defectInfo = dbm.getDefectBySeqNo(seqNo)
-            defectListUp, defectListDown = getDefectListByDefectInfo(seqNo, defectInfo)
-            reData = {
-                "up": {
-                    "steelInfo": {
-                        #   钢板信息
-                        # "imageCount": upWidthInfo[0]["imageCount"],
-                        # "drawWidth": upWidthInfo[0]["imageCount"] * 1024,  # 渲染长度，
-                        "drawHeight": 4096 * 2  # 渲染高度，会拉伸/挤压到渲染区域的高度  （这里的高度指转换后的实际宽度）
-                    },
-                    "defectList": defectListUp,
-                    "outLineUp": [],
-                    "outLineDown": []
-                },
-                "down": {
-                    "steelInfo": {
-                        #   钢板信息
-                        # "imageCount": downWidthInfo[0]["imageCount"],
-                        # "drawWidth": downWidthInfo[0]["imageCount"] * 1024,  # 渲染长度，
-                        "drawHeight": 4096 * 2  # 渲染高度，会拉伸/挤压到渲染区域的高度  （这里的高度指转换后的实际宽度）
-                    },
-                    "defectList": defectListDown,
-                    "outLineUp": [],
-                    "outLineDown": []
-                },
-            }
-            return {"lastObj": addSteelCache(res[0], res[1]),
-                    "data": reData
-                    }
+                "defectList": defectListDown,
+                "outLineUp": [],
+                "outLineDown": []
+            },
+        }
+        return {"lastObj": addSteelCache(res[0], res[1]),
+                "data": reData
+                }
 
 
 @app.get("/searchByID/{id_:int}")

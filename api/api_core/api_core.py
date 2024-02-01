@@ -17,7 +17,7 @@ def getTestImage():
 cimageCache = CimgCache(1000)
 
 
-def get_cimage(cameraIndex, seqNo, imageIndex):
+def get_cimage(cameraIndex, seqNo, imageIndex) -> Image.Image:
     """
     Retrieves the large image.
 
@@ -59,7 +59,7 @@ def getNumStr(num, size=4):
     return (size - len(num)) * "0" + num
 
 
-def get_defect_max_cimage(cameraId, seqNo, imageIndex):
+def get_defect_max_cimage(cameraId, seqNo, imageIndex) -> Image.Image:
     """
     Retrieves the large image.
 
@@ -88,7 +88,7 @@ def get_steelInfo(steel, steelId):
     Returns:
         dict: The steel information.
     """
-    
+
     if steel.SequeceNo in steelInfoCache:
         return steelInfoCache[steel.SequeceNo]
     if dbm.isSqlServer():
