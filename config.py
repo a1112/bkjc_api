@@ -9,10 +9,11 @@ def get_path(path_name):
                         os.path.dirname(__file__), path_name)
 
 
-MAIN_INFO = json.load(Path(get_path("config/info.json")).open("r",encoding="utf-8"))
+MAIN_INFO = json.load(Path(get_path("config/info.json")).open("r", encoding="utf-8"))
 
 info = MAIN_INFO
 useLoc = info["useLoc"] if "useLoc" in info else False
+print(info["drive"])
 maxSteelInfoCache = 200
 if useLoc:
     info = {
@@ -21,7 +22,7 @@ if useLoc:
         "downCamera": [2],
         "upServer": "127.0.0.1",
         "system": "4.0",
-        "drive": "mysql",
+        "drive": "sqlserver",
         "user": "root",
         "database_type": "ncdplate",
         "password": "nercar",
@@ -59,13 +60,11 @@ if useLoc:
     }
 
 from bkjc_database import core
-
-
-core.setBaseUrl(ip=info["upServer"], port=1433, user=info["user"], password=info["password"], drive_=info["drive"],
-                chart='utf8')
-DEFECT_GET_HQ_TYPE=1
-DEFECT_GET_DEFECT_TYPE=2
-defectType=DEFECT_GET_DEFECT_TYPE
+print(info["upServer"])
+core.setBaseUrl(ip=info["upServer"])
+DEFECT_GET_HQ_TYPE = 1
+DEFECT_GET_DEFECT_TYPE = 2
+defectType = DEFECT_GET_DEFECT_TYPE
 
 database_type = info["database_type"] if "database_type" in info else ""
 
@@ -82,14 +81,13 @@ useYolo = False
 
 FILES_DIRECTORY = Path(get_path("./files"))
 
-UPLOAD_DIRECTORY = FILES_DIRECTORY/"uploaded_files"
+UPLOAD_DIRECTORY = FILES_DIRECTORY / "uploaded_files"
 UPLOAD_DIRECTORY.mkdir(exist_ok=True, parents=True)
-DOWNLOAD_DIRECTORY = FILES_DIRECTORY/"downloaded_files"
+DOWNLOAD_DIRECTORY = FILES_DIRECTORY / "downloaded_files"
 DOWNLOAD_DIRECTORY.mkdir(exist_ok=True, parents=True)
-CLIENT_DIRECTORY = FILES_DIRECTORY/"client_files"
-CLIENT_CONFIG_FILE = CLIENT_DIRECTORY/"info.json"
+CLIENT_DIRECTORY = FILES_DIRECTORY / "client_files"
+CLIENT_CONFIG_FILE = CLIENT_DIRECTORY / "info.json"
 CLIENT_DIRECTORY.mkdir(exist_ok=True, parents=True)
-
 
 base_encoding = "utf-8"
 
@@ -131,5 +129,5 @@ def getImgFile_4d0(cameraId, seqNo, imageIndex):
     return str(Path(getFolderBySeqNo_4d0(cameraId, seqNo)) / f"{str(imageIndex)}.jpg")
 
 
-if __name__=="__main__":
-    print(getFolderBySeqNo(2,315580))
+if __name__ == "__main__":
+    print(getFolderBySeqNo(2, 315580))

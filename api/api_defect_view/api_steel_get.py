@@ -5,6 +5,7 @@ from io import BytesIO
 import webcolors
 from PIL import Image
 from bkjc_database import NerCarDataBase
+from bkjc_database.NerCarDataBase.sqlserver.models.SteelRecord import Steel
 from bkjc_database.dbm import dbm
 from fastapi.responses import StreamingResponse
 
@@ -365,8 +366,11 @@ def getAppFlush(currentSeqID, maxID):
 def getRealInfoById(steelId):
     res = dbm.getSteelById(steelId)
     if res:
-        res = res[0]
-        seqNo = res[0].seqNo
+        res = res[0][0]
+        if not res:
+            return {"msg": "没有找到数据"}
+        res:Steel
+        seqNo = res.SequeceNo
         defectInfo = dbm.getDefectBySeqNo(seqNo)
         defectListUp, defectListDown = getDefectListByDefectInfo(seqNo, defectInfo)
         reData = {
@@ -393,7 +397,8 @@ def getRealInfoById(steelId):
                 "outLineDown": []
             },
         }
-        return {"lastObj": addSteelCache(res[0], res[1]),
+        print(res)
+        return {# "lastObj": addSteelCache(res[0], res[1]),
                 "data": reData
                 }
 
