@@ -11,5 +11,6 @@ pymysql
 python-multipart
 pytest
 pypattyrn
+flask
 https://github.com/a1112/bkjc_database
 https://github.com/a1112/bkjc_tool

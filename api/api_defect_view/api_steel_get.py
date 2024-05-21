@@ -501,8 +501,8 @@ def searchByDate(startTime, endTime):
     %Y-%m-%d %H:%M:%S
     """
     try:
-        startTime = datetime.datetime.strptime(startTime, "%Y-%m-%d %H:%M:%S")
-        endTime = datetime.datetime.strptime(endTime, "%Y-%m-%d %H:%M:%S")
+        startTime = datetime.datetime.strptime(startTime, config.TIMESTAMP_FORMAT)
+        endTime = datetime.datetime.strptime(endTime, config.TIMESTAMP_FORMAT)
         print(startTime)
         print(endTime)
         return [addSteelCache(steel, steelId) for steel, steelId in dbm.getSteelByDate(startTime, endTime)]

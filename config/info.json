@@ -24,5 +24,8 @@
     "WIDTH": 4096,
     "HEIGHT": 1024,
     "useLoc": false,
-    "locType": "4.0"
+    "locType": "4.0",
+
+    "forwarder": true,
+    "forward_url":"http://172.25.2.43:809/"
 }

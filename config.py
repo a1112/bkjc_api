@@ -2,7 +2,8 @@ import sys
 import os
 import json
 from pathlib import Path
-
+import init
+TIMESTAMP_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 def get_path(path_name):
     return os.path.join(os.path.dirname(sys.executable) if "python.exe" not in sys.executable else
@@ -62,10 +63,12 @@ if useLoc:
         }
 print(info["drive"])
 
-from bkjc_database import core
-core.CONFIG.database_type=info["database_type"]
-print(info["upServer"])
-core.setBaseUrl(ip=info["upServer"],user=info["user"],password=info["password"], drive_=info["drive"])
+forwarder = info["forwarder"] if "forwarder" in info else False
+forward_url = info["forward_url"] if "forward_url" in info else ""
+if not forwarder:
+    init.initDataBase(info)
+
+
 DEFECT_GET_HQ_TYPE = 1
 DEFECT_GET_DEFECT_TYPE = 2
 defectType = DEFECT_GET_DEFECT_TYPE
