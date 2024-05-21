@@ -1,0 +1,15 @@
+fastapi
+faker
+sqlalchemy
+uvicorn
+pymssql
+numpy
+webcolors
+pillow
+tqdm
+pymysql
+python-multipart
+pytest
+pypattyrn
+https://github.com/a1112/bkjc_database
+https://github.com/a1112/bkjc_tool
