@@ -1,0 +1,18 @@
+{
+    "cameraCount":8,
+    "upCamera":[1,2,3,4],
+    "downCamera":[5,6,7,8],
+    "upServer":"192.168.3.100",
+    "user":"ARNTUSER",
+    "password":"ARNTUSER",
+    "downServer":"192.168.3.100",
+    "source": "\\\\{}\\ImageSource{}\\{}",
+    "sourceLen": 6,
+    "TopFace": "TopFace",
+    "BottomFace":"BottomFace",
+    "ip": "0.0.0.0",
+    "port": 809,
+    "WIDTH": 4096,
+    "HEIGHT": 1024,
+    "useLoc": false
+}
