@@ -63,6 +63,8 @@ if useLoc:
         }
 print(info["drive"])
 
+defectClassFile = info["defectClassFile"] if "defectClassFile" in info else "config/DefectClass.json"
+
 forwarder = info["forwarder"] if "forwarder" in info else False
 forward_url = info["forward_url"] if "forward_url" in info else ""
 if not forwarder:
