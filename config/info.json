@@ -28,7 +28,6 @@
 
     "forwarder": false,
     "forward_url":"http://172.25.2.43:809/",
-
-    "defectClassFile": "config/ArNTClassTable_ASCII.xml"
+    "// defectClassFile": "config/ArNTClassTable_ASCII.xml"
 
 }

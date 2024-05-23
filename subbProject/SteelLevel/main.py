@@ -1,36 +1,43 @@
-from DataSet import LevelSet
+from threading import Thread
+from .DataSet import LevelSet
 from subbProject.SteelLevel.DataSet import api
-from Base.module import SteelProject, DefectProject
-from configs import levelConfig
-import toExcel
-
-maxSeq = LevelSet.getMaxSteelNo()   # 获取当前已经判断级别的 最大值
+from .Base.module import SteelProject, DefectProject
+from .configs import levelConfig
+from . import toExcel
 
 
-getCount = 100
-oldSeqNo = maxSeq
 
-while True:
-    for steelInfo in api.steelList(getCount, oldSeqNo):  # 查询钢板
-        steelInfo: SteelProject
-        if oldSeqNo == steelInfo.steelID:
-            continue
-        oldSeqNo = steelInfo.steelID
-        defects = api.getDefectList(steelInfo.steelID)
-        filterDefects = []
-        for defect in defects:  # 查询缺陷
-            defect: DefectProject
-            defectLevel = levelConfig.defectLevel(defect, steelInfo)
-            if defectLevel in ["L", "M", "S"]:
-                defect.level = defectLevel
-                # 严重缺陷
-                LevelSet.addDefect(
-                    defect
-                )
-                filterDefects.append(defect)
-        defList, levelMsg = levelConfig.steelLevel(steelInfo, filterDefects)
-        steelInfo.level = defList, levelMsg
+def main():
+    maxSeq = LevelSet.getMaxSteelNo()  # 获取当前已经判断级别的 最大值
+    getCount = 100
+    oldSeqNo = maxSeq
+    while True:
+        for steelInfo in api.steelList(getCount, oldSeqNo):  # 查询钢板
+            steelInfo: SteelProject
+            if oldSeqNo == steelInfo.steelID:
+                continue
+            oldSeqNo = steelInfo.steelID
+            defects = api.getDefectList(steelInfo.steelID)
+            filterDefects = []
+            for defect in defects:  # 查询缺陷
+                defect: DefectProject
+                defectLevel = levelConfig.defectLevel(defect, steelInfo)
+                if defectLevel in ["L", "M", "S"]:
+                    defect.level = defectLevel
+                    # 严重缺陷
+                    LevelSet.addDefect(
+                        defect
+                    )
+                    filterDefects.append(defect)
+            defList, levelMsg = levelConfig.steelLevel(steelInfo, filterDefects)
+            steelInfo.level = defList, levelMsg
 
-        toExcel.append(steelInfo)
-        LevelSet.addSteel(steelInfo)
-        # 获取 钢板等级
+            toExcel.append(steelInfo)
+            LevelSet.addSteel(steelInfo)
+            # 获取 钢板等级
+
+if __name__=="__main__":
+    main()
+
+else:
+    Thread(target=main).start()

@@ -1,7 +1,8 @@
 from datetime import datetime
 
-from Base.module._ModelBase_ import ModelBase
-from DataSet.models import SteelLevel
+from config import TIMESTAMP_FORMAT
+from ...Base.module._ModelBase_ import ModelBase
+from ...DataSet.models import SteelLevel
 
 
 class SteelProject(ModelBase):
@@ -64,7 +65,7 @@ class SteelProject(ModelBase):
     @property
     def detectTime(self):
         print(self.jsonData["detectTime"])
-        return datetime.strptime(self.jsonData["detectTime"], '%m-%d %H:%M:%S')
+        return datetime.strptime(self.jsonData["detectTime"], TIMESTAMP_FORMAT)
 
     @property
     def topLen(self):

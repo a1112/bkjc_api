@@ -3,9 +3,9 @@ from openpyxl import load_workbook
 
 from collections import defaultdict
 
-from Base.module import DefectProject, SteelProject
-from configs.DefectClass import defectClass2LevelDefectClass
-from core import xlsxFile
+from ..Base.module import DefectProject, SteelProject
+from ..configs.DefectClass import defectClass2LevelDefectClass
+from config import xlsxFile
 
 # 打开 Excel 文件
 

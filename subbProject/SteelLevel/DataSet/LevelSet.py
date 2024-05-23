@@ -2,7 +2,7 @@ import requests
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from Base.module import DefectProject, SteelProject
+from ..Base.module import DefectProject, SteelProject
 from .models import Base, SteelLevel, DefectLevel
 
 # 创建一个 SQLite 数据库引擎

@@ -1,12 +1,12 @@
 import openpyxl
-
+import config
 import openpyxl
 
-from Base.module import SteelProject
+from .Base.module import SteelProject
 
 
 def saveExcel(data, excel_path):
-    workbook = openpyxl.load_workbook("template/templateDataOut.xlsx")
+    workbook = openpyxl.load_workbook(config.steelLevelTemplateDataOut)
     ws1 = workbook.get_sheet_by_name("Sheet1")
     workbook.active = 0  # 设置active参数，即工作表索引值
     for colIndex, dataItem in enumerate(data):

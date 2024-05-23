@@ -1,7 +1,7 @@
-from Base.module._ModelBase_ import ModelBase
-from DataSet.models import DefectLevel
-from configs.ConfigRead import levelConfig
-from configs.DefectClass import defectClass2LevelDefectClass
+from ...Base.module._ModelBase_ import ModelBase
+from ...DataSet.models import DefectLevel
+from ...configs.ConfigRead import levelConfig
+from ...configs.DefectClass import defectClass2LevelDefectClass
 
 
 class DefectProject(ModelBase):

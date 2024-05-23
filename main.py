@@ -5,7 +5,7 @@ import pymssql
 
 if __name__ == '__main__':
 
-    import subbProject.SteelLevel
+    import subbProject.SteelLevel.main
 
     if not config.forwarder:
         import api
