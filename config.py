@@ -150,6 +150,7 @@ def getImgFile_4d0(cameraId, seqNo, imageIndex):
     return str(Path(getFolderBySeqNo_4d0(cameraId, seqNo)) / f"{str(imageIndex)}.jpg")
 
 
+steelLevelEnable = info["steelLevelEnable"] if "steelLevelEnable" in info else False
 xlsxFile = get_config_path('涟钢钢板质量判定标准表(横切、热处理线）2023.8.25.xlsx')
 steelLevelUrl = "http://127.0.0.1:809"
 steelLevelTemplateDataOut = get_path("template/templateDataOut.xlsx")
