@@ -4,6 +4,9 @@ import config
 import pymssql
 
 if __name__ == '__main__':
+
+    import subbProject.SteelLevel
+
     if not config.forwarder:
         import api
         uvicorn.run(app=app, host=config.info["ip"], port=config.info["port"])

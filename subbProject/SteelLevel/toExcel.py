@@ -20,8 +20,8 @@ def saveExcel(data, excel_path):
             dataItem.steelWidth,
             dataItem.steelThick,
             dataItem.detectTime,
-            len(dataItem.level)>0+1,
-            "否" if len(dataItem.level)>0 else "是" ,
+            len(dataItem.level) > 0+1,
+            "否" if len(dataItem.level) > 0 else "是",
             dataItem.levelInfo
         ]):
             print(value)
