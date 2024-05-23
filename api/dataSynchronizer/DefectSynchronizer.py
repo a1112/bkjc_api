@@ -7,7 +7,6 @@ from bkjc_database.NerCarDataBase.mysql import Ncdhotstrip
 class DefectSynchronizer(Thread):
     def __init__(self):
         super().__init__()
-        print("DefectSynchronizer")
         # self.start()
 
     def run(self):

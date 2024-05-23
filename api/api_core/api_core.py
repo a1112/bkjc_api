@@ -113,7 +113,7 @@ def get_steelInfo(steel, steelId):
                 "downDefectNum": steel.BottomDefectNum,  # Number of defects on the bottom surface
                 "errorLevel": steel.Grade,  # 0: normal, 1: warning, 2: alarm, 3: severe alarm
                 "grade": steel.Grade,
-                "detectTime": steel.TopDetectTime.strftime('%m-%d %H:%M:%S'),
+                "detectTime": steel.TopDetectTime.strftime(config.TIMESTAMP_FORMAT),
                 "topLen": steel.TopLen,
                 "bottomLen": steel.BottomLen,
                 # To be supplemented later
@@ -131,7 +131,7 @@ def get_steelInfo(steel, steelId):
                 "downDefectNum": steel.BottomDefectNum,  # Number of defects on the bottom surface
                 "errorLevel": steel.Grade,  # 0: normal, 1: warning, 2: alarm, 3: severe alarm
                 "grade": steel.Grade,
-                "detectTime": steel.TopDetectTime.strftime('%m-%d %H:%M:%S'),
+                "detectTime": steel.TopDetectTime.strftime(config.TIMESTAMP_FORMAT),
                 "topLen": steel.TopLen,
                 "bottomLen": steel.BottomLen,
                 # To be supplemented later
@@ -155,7 +155,7 @@ def get_steelInfo(steel, steelId):
                 "downDefectNum": steel.defectNum,  # Number of defects on the bottom surface
                 "errorLevel": steel.grade,  # 0: normal, 1: warning, 2: alarm, 3: severe alarm
                 "grade": 1,
-                "detectTime": steel.detectTime.strftime('%m-%d %H:%M:%S'),
+                "detectTime": steel.detectTime.strftime(config.TIMESTAMP_FORMAT),
                 "topLen": steel.steelLen,
                 "bottomLen": steel.steelLen,
                 # To be supplemented later
@@ -174,7 +174,7 @@ def get_steelInfo(steel, steelId):
                 "downDefectNum": steel.defectNum,  # Number of defects on the bottom surface
                 "errorLevel": steel.grade,  # 0: normal, 1: warning, 2: alarm, 3: severe alarm
                 "grade": 1,
-                "detectTime": steel.detectTime.strftime('%m-%d %H:%M:%S'),
+                "detectTime": steel.detectTime.strftime(config.TIMESTAMP_FORMAT),
                 "topLen": steel.steelLen,
                 "bottomLen": steel.steelLen,
                 # To be supplemented later

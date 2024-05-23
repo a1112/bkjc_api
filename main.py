@@ -1,8 +1,18 @@
 import uvicorn
 from core import mainApp as app
-from config import info
-import api
+import config
 import pymssql
 
 if __name__ == '__main__':
-    uvicorn.run(app=app, host=info["ip"], port=info["port"])
+    if config.steelLevelEnable:
+        import subbProject.SteelLevel.init
+
+        subbProject.SteelLevel.init.initServer(app)
+        import subbProject.SteelLevel.main
+
+    if not config.forwarder:
+        import api
+        uvicorn.run(app=app, host=config.info["ip"], port=config.info["port"])
+    else:
+        import forwarderServer
+        forwarderServer.app.run(host=config.info["ip"],port=config.info["port"])

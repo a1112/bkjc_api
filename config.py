@@ -2,67 +2,77 @@ import sys
 import os
 import json
 from pathlib import Path
-
+import init
+TIMESTAMP_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 def get_path(path_name):
     return os.path.join(os.path.dirname(sys.executable) if "python.exe" not in sys.executable else
                         os.path.dirname(__file__), path_name)
 
+def get_config_path(path_name):
+    return get_path("config/"+path_name)
 
 MAIN_INFO = json.load(Path(get_path("config/info.json")).open("r", encoding="utf-8"))
 
 info = MAIN_INFO
 useLoc = info["useLoc"] if "useLoc" in info else False
+locType = info["locType"] if "locType" in info else "3.0"
 maxSteelInfoCache = 200
 if useLoc:
-    # info = {
-    #     "cameraCount": 8,
-    #     "upCamera": [1],
-    #     "downCamera": [2],
-    #     "upServer": "127.0.0.1",
-    #     "system": "4.0",
-    #     "drive": "mysql",
-    #     "user": "root",
-    #     "database_type": "ncdplate",
-    #     "password": "nercar",
-    #     "downServer": "192.168.3.100",
-    #     "source": "\\\\{}\\ImageSource\\{}",
-    #     "sourceLen": 6,
-    #     "TopFace": "TopFace",
-    #     "BottomFace": "BottomFace",
-    #     "ip": "0.0.0.0",
-    #     "port": 809,
-    #     "WIDTH": 4096,
-    #     "HEIGHT": 1024,
-    #     "useLoc": True
-    # }
-    info = {
-        "cameraCount": 8,
-        "upCamera": [1],
-        "downCamera": [2],
-        "upServer": "127.0.0.1",
-        "system": "3.0",
-        "drive": "sqlserver",
-        "user": "sa",
-        "database_type": "ncdplate",
-        "password": "519223",
-        "downServer": "192.168.3.100",
-        "source": "\\\\{}\\ImageSource{}\\{}",
-        "sourceLen": 6,
-        "TopFace": "TopFace",
-        "BottomFace": "BottomFace",
-        "ip": "0.0.0.0",
-        "port": 809,
-        "WIDTH": 4096,
-        "HEIGHT": 1024,
-        "useLoc": True
-    }
+    if locType=="4.0":
+        info = {
+            "cameraCount": 8,
+            "upCamera": [1],
+            "downCamera": [2],
+            "upServer": "127.0.0.1",
+            "system": "4.0",
+            "drive": "mysql",
+            "user": "root",
+            "database_type": "ncdplate",
+            "password": "nercar",
+            "downServer": "192.168.3.100",
+            "source": "\\\\{}\\ImageSource\\{}",
+            "sourceLen": 6,
+            "TopFace": "TopFace",
+            "BottomFace": "BottomFace",
+            "ip": "0.0.0.0",
+            "port": 809,
+            "WIDTH": 4096,
+            "HEIGHT": 1024,
+            "useLoc": True
+        }
+    elif locType == "3.0":
+        info = {
+            "cameraCount": 8,
+            "upCamera": [1],
+            "downCamera": [2],
+            "upServer": "127.0.0.1",
+            "system": "3.0",
+            "drive": "sqlserver",
+            "user": "sa",
+            "database_type": "ncdplate",
+            "password": "519223",
+            "downServer": "192.168.3.100",
+            "source": "\\\\{}\\ImageSource{}\\{}",
+            "sourceLen": 6,
+            "TopFace": "TopFace",
+            "BottomFace": "BottomFace",
+            "ip": "0.0.0.0",
+            "port": 809,
+            "WIDTH": 4096,
+            "HEIGHT": 1024,
+            "useLoc": True
+        }
 print(info["drive"])
 
-from bkjc_database import core
-core.CONFIG.database_type=info["database_type"]
-print(info["upServer"])
-core.setBaseUrl(ip=info["upServer"],user=info["user"],password=info["password"], drive_=info["drive"])
+defectClassFile = info["defectClassFile"] if "defectClassFile" in info else get_config_path("DefectClass.json")
+
+forwarder = info["forwarder"] if "forwarder" in info else False
+forward_url = info["forward_url"] if "forward_url" in info else ""
+if not forwarder:
+    init.initDataBase(info)
+
+
 DEFECT_GET_HQ_TYPE = 1
 DEFECT_GET_DEFECT_TYPE = 2
 defectType = DEFECT_GET_DEFECT_TYPE
@@ -139,6 +149,11 @@ def getFolderBySeqNo_4d0(cameraId, seqNo):
 def getImgFile_4d0(cameraId, seqNo, imageIndex):
     return str(Path(getFolderBySeqNo_4d0(cameraId, seqNo)) / f"{str(imageIndex)}.jpg")
 
+
+steelLevelEnable = info["steelLevelEnable"] if "steelLevelEnable" in info else False
+xlsxFile = get_config_path('涟钢钢板质量判定标准表(横切、热处理线）2023.8.25.xlsx')
+steelLevelUrl = "http://127.0.0.1:809"
+steelLevelTemplateDataOut = get_path("template/templateDataOut.xlsx")
 
 if __name__ == "__main__":
     print(getFolderBySeqNo(2, 315580))
