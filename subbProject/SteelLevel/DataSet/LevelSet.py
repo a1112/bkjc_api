@@ -1,9 +1,11 @@
 import requests
+from bkjc_database import SqlTool
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from ..Base.module import DefectProject, SteelProject
 from .models import Base, SteelLevel, DefectLevel
+
 
 # 创建一个 SQLite 数据库引擎
 engine = create_engine('sqlite:///example.db', echo=False)
@@ -85,3 +87,14 @@ def getMaxSteelNo():
     except BaseException:
         return 0
 
+
+
+
+def getSteelLevelInfo():
+    session = Session()
+    try:
+        minItem = session.query(SteelLevel).order_by(SteelLevel.seqNo)[0]
+        maxItem = session.query(SteelLevel).order_by(SteelLevel.seqNo.desc())[0]
+        return SqlTool.to_dict(minItem), SqlTool.to_dict(maxItem)
+    except BaseException:
+        return {}, {}

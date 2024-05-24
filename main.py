@@ -9,6 +9,7 @@ if __name__ == '__main__':
 
         subbProject.SteelLevel.init.initServer(app)
         import subbProject.SteelLevel.main
+        import subbProject.SteelLevel.api
 
     if not config.forwarder:
         import api

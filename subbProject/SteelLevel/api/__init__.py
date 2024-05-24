@@ -1,0 +1,21 @@
+import datetime
+
+import config
+from ..init import app
+from ..DataSet import LevelSet
+from fastapi import File, UploadFile, Response
+
+
+@app.get("/steelLevel/info")
+def get_steel_level_info():
+    steelLevelInfo=LevelSet.getSteelLevelInfo()
+    return {"min": steelLevelInfo[0],"max":steelLevelInfo[1]}
+
+
+@app.get("/steelLevel/exportSteelLevelByTime/{startTime:str}/{endTime:str}/{fileName:path}")
+def exportSteelLevelByTime(startTime, endTime, fileName):
+    startTime = datetime.datetime.strptime(startTime, config.TIMESTAMP_FORMAT)
+    endTime = datetime.datetime.strptime(endTime, config.TIMESTAMP_FORMAT)
+    print(startTime)
+    print(endTime)
+    print(fileName)
