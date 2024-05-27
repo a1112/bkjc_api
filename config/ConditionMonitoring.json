@@ -1,0 +1,6 @@
+{
+    "ip": "0.0.0.0",
+    "port": 3341,
+    "database_type": "ncdhotstrip",
+    "serverDataBaseIp": "172.25.2.138"
+}

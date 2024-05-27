@@ -1,0 +1,113 @@
+{
+   "cpu" :{
+        "title_label": "CPU 报警设置",
+        "settings": [
+            {
+                "type": "value",
+                "title": "CPU使用率",
+                "key": "cpu_usage",
+                "value": "100"
+            }
+        ]
+
+    },
+       "momony" : {
+        "title_label": "内存 报警设置",
+        "settings": [
+            {
+                "type": "value",
+                "title": "CPU使用率",
+                "key": "cpu_usage",
+                "value": "100"
+            }
+        ]
+
+    },
+       "gpu" :  {
+        "title_label": "显卡 报警设置",
+        "settings": [
+            {
+                "type": "value",
+                "title": "CPU使用率",
+                "key": "cpu_usage",
+                "value": "100"
+            }
+        ]
+
+    },
+      "disk" :  {
+        "title_label": "磁盘 报警设置",
+        "settings": [
+            {
+                "type": "value",
+                "title": "CPU使用率",
+                "key": "cpu_usage",
+                "value": "100"
+            }
+        ],
+        "check": {
+    "D:\\":95,
+    "E:\\":95,
+    "F:\\":95,
+    "J:\\":95
+    }
+    },
+       "net" :  {
+        "title_label": "网络 报警设置",
+        "settings": [
+            {
+                "type": "value",
+                "title": "CPU使用率",
+                "key": "cpu_usage",
+                "value": "100"
+            }
+        ],
+           "check": {
+       "相机1":900,
+       "相机2":900,
+       "以太网 15":900,
+       "以太网 17":900
+   }
+
+    },
+       "camera": {
+        "title_label": "相机 报警设置",
+        "settings": [
+            {
+                "type": "value",
+                "title": "CPU使用率",
+                "key": "cpu_usage",
+                "value": "100"
+            }
+        ],
+        "check": {
+    "0":{"temp":65},
+    "1":{"temp":65},
+    "2":{"temp":65},
+    "3":{"temp":65}
+    }
+    },
+       "light":  {
+        "title_label": "光源 报警设置",
+        "settings": [
+            {
+                "type": "value",
+                "title": "CPU使用率",
+                "key": "cpu_usage",
+                "value": "100"
+            }
+        ],
+           "check": {
+                "1":{
+                "temp": 65,
+                "intense": 240
+                },
+                "2": {
+                "temp": 65,
+                "intense": 240
+                }
+
+    }
+
+    }
+}
