@@ -1,3 +1,4 @@
+import time
 from threading import Thread
 from .DataSet import LevelSet
 from subbProject.SteelLevel.DataSet import api
@@ -6,12 +7,12 @@ from .configs import levelConfig
 from . import toExcel
 
 
-
 def main():
     maxSeq = LevelSet.getMaxSteelNo()  # 获取当前已经判断级别的 最大值
     getCount = 100
     oldSeqNo = maxSeq
     while True:
+
         for steelInfo in api.steelList(getCount, oldSeqNo):  # 查询钢板
             steelInfo: SteelProject
             if oldSeqNo == steelInfo.steelID:
@@ -35,9 +36,9 @@ def main():
             toExcel.append(steelInfo)
             LevelSet.addSteel(steelInfo)
             # 获取 钢板等级
+        time.sleep(5)
 
-
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
 
 else:

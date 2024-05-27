@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+app = None
+
 
 def initServer(app_):
     global app
-    app=app_
+    app = app_
