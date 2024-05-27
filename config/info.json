@@ -31,5 +31,6 @@
     "forward_url":"http://172.25.2.43:809/",
     "// defectClassFile": "config/ArNTClassTable_ASCII.xml",
 
-    "steelLevelEnable": true
+    "steelLevelEnable": true,
+    "conditionMonitoringEnable": true
 }

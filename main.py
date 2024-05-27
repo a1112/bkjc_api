@@ -10,6 +10,10 @@ if __name__ == '__main__':
         subbProject.SteelLevel.init.initServer(app)
         import subbProject.SteelLevel.main
         import subbProject.SteelLevel.api
+    if config.conditionMonitoringEnable:
+        import subbProject.ConditionMonitoring.core
+        subbProject.ConditionMonitoring.core.initServer(app)
+        import subbProject.ConditionMonitoring.main
 
     if not config.forwarder:
         import api

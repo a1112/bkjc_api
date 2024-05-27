@@ -1,4 +1,4 @@
-from bkjc_database.NerCarDataBase.mysql.models import ncdplatedevice
+from bkjc_database.NerCarDataBase.mysql import Ncdplatedevice
 from threading import Thread
 import time
 
@@ -14,8 +14,8 @@ class getThread(Thread):
     def run(self):
         global CameraInfo, LightInfo
         while True:
-            CameraInfo = ncdplatedevice.getCameraInfo()
-            LightInfo = ncdplatedevice.getLightInfo()
+            CameraInfo = Ncdplatedevice.deviceDb.getCameraInfo()
+            LightInfo = Ncdplatedevice.deviceDb.getLightInfo()
             time.sleep(5)
 
 

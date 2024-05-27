@@ -1,9 +1,9 @@
 import json
 
 from enum import Enum
-from CameraStatus import getCameraInfo, getLightInfo
+from ..CameraStatus import getCameraInfo, getLightInfo
 
-from core import app
+from ..core import app
 
 from BKVisionListener.states.computer import ComputerStates
 

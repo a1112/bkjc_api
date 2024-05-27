@@ -155,5 +155,7 @@ xlsxFile = get_config_path('涟钢钢板质量判定标准表(横切、热处理
 steelLevelUrl = "http://127.0.0.1:809"
 steelLevelTemplateDataOut = get_path("template/templateDataOut.xlsx")
 
+conditionMonitoringEnable = info["conditionMonitoringEnable"] if "conditionMonitoringEnable" in info else False
+
 if __name__ == "__main__":
     print(getFolderBySeqNo(2, 315580))

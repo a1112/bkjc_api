@@ -1,7 +1,7 @@
 import uvicorn
-from core import mainApp as app
+from .core import mainApp as app
 from config import info
-from server import *  # server
+from .server import *  # server
 
 
 if __name__ == '__main__':
