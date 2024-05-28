@@ -1,0 +1,99 @@
+[
+  {
+            "hostname":"172.25.2.10",
+            "port":809,
+            "protocol":"http://",
+            "msg":"2号生产线"
+  },
+  {
+            "hostname":"172.25.2.11",
+            "port":809,
+            "protocol":"http://",
+            "msg":"4号矫直线"
+  },  {
+            "hostname":"172.25.2.12",
+            "port":809,
+            "protocol":"http://",
+            "msg":"4号生产线"
+  },  {
+            "hostname":"172.25.2.26",
+            "port":809,
+            "protocol":"http://",
+            "msg":"5号生产线"
+  },  {
+            "hostname":"172.25.2.27",
+            "port":809,
+            "protocol":"http://",
+            "msg":"6号生产线"
+  },  {
+            "hostname":"172.25.2.42",
+            "port":809,
+            "protocol":"http://",
+            "msg":"6号矫直线"
+  },  {
+            "hostname":"172.25.2.10",
+            "port":809,
+            "protocol":"http://",
+            "msg":"2号生产线"
+  },  {
+            "hostname":"172.25.2.43",
+            "port":809,
+            "protocol":"http://",
+            "msg":"7号矫直线"
+  },  {
+            "hostname":"172.25.2.58",
+            "port":809,
+            "protocol":"http://",
+            "msg":"8号生产线"
+  },  {
+            "hostname":"172.25.2.59",
+            "port":809,
+            "protocol":"http://",
+            "msg":"9号生产线"
+  },  {
+            "hostname":"172.25.2.10",
+            "port":809,
+            "protocol":"http://",
+            "msg":"10号生产线"
+  },  {
+            "hostname":"172.25.2.82",
+            "port":809,
+            "protocol":"http://",
+            "msg":"8号矫直线"
+  },  {
+            "hostname":"172.25.2.83",
+            "port":809,
+            "protocol":"http://",
+            "msg":"9号矫直线"
+  },  {
+            "hostname":"172.25.2.98",
+            "port":809,
+            "protocol":"http://",
+            "msg":"11号生产线"
+  },  {
+            "hostname":"172.25.2.99",
+            "port":809,
+            "protocol":"http://",
+            "msg":"12号生产线"
+  },  {
+            "hostname":"172.25.2.114",
+            "port":809,
+            "protocol":"http://",
+            "msg":"11号矫直线"
+  },  {
+            "hostname":"172.25.2.122",
+            "port":809,
+            "protocol":"http://",
+            "msg":"12号矫直线"
+  },  {
+            "hostname":"172.25.2.123",
+            "port":809,
+            "protocol":"http://",
+            "msg":"13号矫直线"
+  },  {
+            "hostname":"172.25.2.138",
+            "port":809,
+            "protocol":"http://",
+            "msg":"3号矫直线"
+  }
+]

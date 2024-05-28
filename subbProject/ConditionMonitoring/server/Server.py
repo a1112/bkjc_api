@@ -6,7 +6,7 @@ from ..CameraStatus import getCameraInfo, getLightInfo
 from ..core import app
 
 from BKVisionListener.states.computer import ComputerStates
-
+import config
 
 def formatObject(args):
     retDict_ = {}
@@ -55,7 +55,7 @@ def getAlarmSettings():
     """
     获取到全部的设置参数 json
     """
-    alarmFile = "alarm.json"
+    alarmFile = config.get_config_path("alarm.json")
     alarmData = json.load(open(alarmFile, "r",encoding='utf-8'))
     return alarmData
 
