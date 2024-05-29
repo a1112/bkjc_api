@@ -19,3 +19,8 @@ def exportSteelLevelByTime(startTime, endTime, fileName):
     print(startTime)
     print(endTime)
     print(fileName)
+
+
+@app.get("/steelLevel/defectLevel/{bmIndex:int}/{defectId:int}")
+def getDefectLevel(defectId):
+    pass

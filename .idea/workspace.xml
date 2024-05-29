@@ -4,55 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/bkjc_api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DefectClass.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/.idea/api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/api_level/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/CONFIG.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/cimg_read/CimgReadCore.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/cimg_read/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/CimgRead.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/ImageDetect.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/MSVCP140.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDCommonFunc.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDConfigFile.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDConsole.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDDataSource.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDGUITerminal.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDImage.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDImageProcess.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDKeyHook.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDLineaCaptrue.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDLogFile.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDMFCCommonUI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDNetTrans.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDSimulCapture.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDSimulDataSource.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/NCDThreadOper.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead4.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead5.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead6.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead7.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead8.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgRead9.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/OldCimgReadTest.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/ServiceCommand.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/dll/x64/mspdb80.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bkjc_tools/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/info.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/info_3_0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/serverApi.yaml" afterDir="false" />
+    <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="add server Config">
+      <change afterPath="$PROJECT_DIR$/subbProject/SteelLevel/core/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/api/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -80,21 +36,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.CimgReadCore.executor&quot;: &quot;Run&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Project/py312/python.exe&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.CimgReadCore.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/project/bkjc_api/subbProject/ConditionMonitoring",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\bkjc_api\subbProject\ConditionMonitoring" />
+      <recent name="C:\project\bkjc_api\subbProject" />
       <recent name="D:\Project\BKVison\bkjc_api\config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project\bkjc_api\config" />
+      <recent name="C:\project\bkjc_api" />
+      <recent name="C:\project\bkjc_api\subbProject\SteelLevel" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -112,6 +77,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bkjc_tools/cimg_read/CimgReadCore.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bkjc_api" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/forwarderServer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/forwarderServer/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,6 +154,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.__init__" />
         <item itemvalue="Python.config" />
         <item itemvalue="Python.CimgReadCore" />
       </list>
@@ -188,6 +176,151 @@
       <option name="presentableId" value="Default" />
       <updated>1712886621500</updated>
     </task>
+    <task id="LOCAL-00001" summary="add">
+      <option name="closed" value="true" />
+      <created>1716257693776</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716257693776</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add">
+      <option name="closed" value="true" />
+      <created>1716257751679</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716257751679</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add">
+      <option name="closed" value="true" />
+      <created>1716257786853</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716257786853</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add">
+      <option name="closed" value="true" />
+      <created>1716258065607</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716258065608</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add forwarder">
+      <option name="closed" value="true" />
+      <created>1716284839776</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716284839776</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add forwarder">
+      <option name="closed" value="true" />
+      <created>1716363292245</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716363292245</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add sub">
+      <option name="closed" value="true" />
+      <created>1716363613136</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716363613136</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add sub 1">
+      <option name="closed" value="true" />
+      <created>1716449492805</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716449492805</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ch level">
+      <option name="closed" value="true" />
+      <created>1716455776198</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716455776198</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ch level">
+      <option name="closed" value="true" />
+      <created>1716457156437</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716457156437</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ch level">
+      <option name="closed" value="true" />
+      <created>1716541858209</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716541858209</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ch level">
+      <option name="closed" value="true" />
+      <created>1716776256655</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716776256655</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ch level">
+      <option name="closed" value="true" />
+      <created>1716778543578</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716778543578</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ch level">
+      <option name="closed" value="true" />
+      <created>1716778597416</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1716778597416</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add server Config">
+      <option name="closed" value="true" />
+      <created>1716889962919</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1716889962919</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add server Config">
+      <option name="closed" value="true" />
+      <created>1716949356595</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1716949356595</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add server Config">
+      <option name="closed" value="true" />
+      <created>1716972284294</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1716972284294</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add server Config">
+      <option name="closed" value="true" />
+      <created>1716972753638</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1716972753638</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,5 +333,14 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add" />
+    <MESSAGE value="add forwarder" />
+    <MESSAGE value="add sub" />
+    <MESSAGE value="add sub 1" />
+    <MESSAGE value="ch level" />
+    <MESSAGE value="add server Config" />
+    <option name="LAST_COMMIT_MESSAGE" value="add server Config" />
   </component>
 </project>
