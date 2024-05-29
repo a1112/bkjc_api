@@ -70,7 +70,7 @@ def addSteelCache(steel, steelId):
 
 @app.get("/steelList/{num:int}/{start_seqNo:int}")
 def getSteelList(start_seqNo, num):
-    steels = dbm.getSteelByNum(num, False, start_seqNo,desc=False)
+    steels = dbm.getSteelByNum(num, False, start_seqNo, desc=False)
     infos = []
     for (steel, steelId) in steels:
         if dbm.isSqlServer():  # 3.0
