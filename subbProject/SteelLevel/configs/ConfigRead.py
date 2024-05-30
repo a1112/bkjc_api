@@ -18,8 +18,6 @@ def getLevel(items):
 
 def decodeDefectSheet(name, data):
     defectLevelDict = {}
-    print(name)
-    print(data)
     defectLevelDict[0] = {
         "id": 0,
         "name": "背景",
@@ -85,6 +83,7 @@ class DefectLevelConfig:
     def __init__(self, name, data):
         self.name = name
         self.data = data
+        # self.defectDict={}
 
         self.defectLevelDict = decodeDefectSheet(name, data)
         self.defectLevelConfig = None
@@ -157,7 +156,7 @@ class SteelLevelConfig:
                     continue
                 for levelIndex, level in enumerate(["L", "M", "S"]):
                     if defectLevel == level:
-                        code = self.steelLevelDict[defectClass][levelIndex+1]
+                        code = self.steelLevelDict[defectClass][levelIndex + 1]
                         code1 = code[0]
                         if "不允许" in code1:
                             defList.append({
@@ -172,7 +171,6 @@ class SteelLevelConfig:
         return defList, self.toMsgString(defList)
 
     def toMsgString(self, defList):
-        print(len(defList))
         _defList = defaultdict(list)
         for defect in defList:
             _defList[defect["name"]].append(defect)
@@ -191,6 +189,13 @@ class SteelLevelConfig:
             return msg
         else:
             return "无影响判级缺陷"
+
+    def getInfo(self):
+        return {
+            "name": self.name,
+            "steelLevel": self.steelLevelDict,
+            "defectLevel": self.defectLevelConfig.defectLevelDict
+        }
 
     def defectLevel(self, defect, steelInfo):
         defect: DefectProject
@@ -271,8 +276,15 @@ class LevelConfig:
                 return steelLevel.steelLevel(steelInfo, filterDefects)
         pass
 
+    def getAllLevelTabel(self):
+        return [tabel.getInfo() for tabel in self.SteelLevelConfigList]
+
 
 if __name__ == "__main__":
     levelConfig = LevelConfig(str((Path(__file__).parent.parent / xlsxFile)))
 else:
     levelConfig = LevelConfig()
+
+
+def getLevelTabel():
+    return levelConfig.getAllLevelTabel()

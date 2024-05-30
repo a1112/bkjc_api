@@ -5,6 +5,7 @@ from ..init import app
 from ..DataSet import LevelSet
 from fastapi import File, UploadFile, Response
 
+from ..configs import ConfigRead
 
 @app.get("/steelLevel/info")
 def get_steel_level_info():
@@ -24,3 +25,8 @@ def exportSteelLevelByTime(startTime, endTime, fileName):
 @app.get("/steelLevel/defectLevel/{bmIndex:int}/{defectId:int}")
 def getDefectLevel(defectId):
     pass
+
+
+@app.get("/steelLevel/getLevelTabel")
+def getLevelTabel():
+    return ConfigRead.getLevelTabel()
