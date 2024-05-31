@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="add server Config">
+      <change afterPath="$PROJECT_DIR$/in/5月1日1#横切判定情况.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/Base/module/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/Base/module/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +50,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/project/bkjc_api/subbProject/ConditionMonitoring",
+    "last_opened_file_path": "C:/project/bkjc_api/in",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\bkjc_api\in" />
       <recent name="C:\project\bkjc_api\subbProject\ConditionMonitoring" />
       <recent name="C:\project\bkjc_api\subbProject" />
       <recent name="D:\Project\BKVison\bkjc_api\config" />
@@ -328,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716974803452</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add server Config">
+      <option name="closed" value="true" />
+      <created>1717062987507</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717062987507</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

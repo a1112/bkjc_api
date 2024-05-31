@@ -7,10 +7,11 @@ from fastapi import File, UploadFile, Response
 
 from ..configs import ConfigRead
 
+
 @app.get("/steelLevel/info")
 def get_steel_level_info():
-    steelLevelInfo=LevelSet.getSteelLevelInfo()
-    return {"min": steelLevelInfo[0],"max":steelLevelInfo[1]}
+    steelLevelInfo = LevelSet.getSteelLevelInfo()
+    return {"min": steelLevelInfo[0], "max": steelLevelInfo[1]}
 
 
 @app.get("/steelLevel/exportSteelLevelByTime/{startTime:str}/{endTime:str}/{fileName:path}")

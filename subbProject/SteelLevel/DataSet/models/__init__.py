@@ -53,3 +53,5 @@ class DefectLevel(Base):
     level = Column(Integer)
     levelMsg = Column(String)
     msg = Column(String)
+
+class UserData(Base):
