@@ -23,7 +23,7 @@
     "port": 809,
     "WIDTH": 4096,
     "HEIGHT": 1024,
-    "useLoc": true,
+    "useLoc": false,
     "locType": "4.0",
 
 

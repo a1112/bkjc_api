@@ -4,8 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from ..Base.module import DefectProject, SteelProject
-from .models import Base, SteelLevel, DefectLevel
-
+from .models import Base, SteelLevel, DefectLevel, UserData
 
 # 创建一个 SQLite 数据库引擎
 engine = create_engine('sqlite:///example.db', echo=False)
@@ -96,5 +95,16 @@ def getSteelLevelInfo():
         minItem = session.query(SteelLevel).order_by(SteelLevel.seqNo)[0]
         maxItem = session.query(SteelLevel).order_by(SteelLevel.seqNo.desc())[0]
         return SqlTool.to_dict(minItem), SqlTool.to_dict(maxItem)
+    except BaseException:
+        return {}, {}
+
+
+def hasUserFileData(fileName):
+    session = Session()
+    try:
+        minItem = session.query(UserData).where(fileName==UserData.fileName).all()
+        if minItem:
+            return True
+        return False
     except BaseException:
         return {}, {}
