@@ -39,7 +39,9 @@ if useLoc:
             "port": 809,
             "WIDTH": 4096,
             "HEIGHT": 1024,
-            "useLoc": True
+            "useLoc": True,
+            "steelLevelEnable": True,
+            "conditionMonitoringEnable": True
         }
     elif locType == "3.0":
         info = {
@@ -61,7 +63,9 @@ if useLoc:
             "port": 809,
             "WIDTH": 4096,
             "HEIGHT": 1024,
-            "useLoc": True
+            "useLoc": True,
+            "steelLevelEnable": True,
+            "conditionMonitoringEnable": True
         }
 print(info["drive"])
 
@@ -114,6 +118,7 @@ def getInfo():
 #     folderNo = int(int(seqNo) / maxSave)
 #     url = Path(imgUrl) / str(int(int(seqNo) / maxSave) % maxEpoch)
 #     return url
+
 
 def getFolderBySeqNo(cameraId, seqNo):
     ip = info["TopFace"] if int(cameraId) in info["upCamera"] else info["BottomFace"]

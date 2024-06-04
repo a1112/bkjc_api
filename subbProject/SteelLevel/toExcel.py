@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import openpyxl
 import config
 import openpyxl
@@ -27,6 +29,9 @@ def saveExcel(data, excel_path):
             print(value)
             ws1.cell(colIndex + 2, rowIndex + 1).value = value
             #  流水号	板号	捆包号	钢种	长度	宽度	厚度	检测时间	判级	是否合格	判级原因	人工
+    saveDir = Path(excel_path).parent
+    if not saveDir.exists():
+        saveDir.mkdir(parents=True)
     workbook.save(excel_path)
 
 
