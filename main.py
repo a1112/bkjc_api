@@ -19,4 +19,4 @@ if __name__ == '__main__':
         uvicorn.run(app=app, host=config.info["ip"], port=config.info["port"])
     else:
         import forwarderServer
-        forwarderServer.app.run(host=config.info["ip"],port=config.info["port"])
+        forwarderServer.app.run(host=config.info["ip"], port=config.info["port"])

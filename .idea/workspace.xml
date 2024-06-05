@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="add server Config">
-      <change afterPath="$PROJECT_DIR$/subbProject/SteelLevel/AddUseDataThread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subbProject/SteelLevel/Base/module/UserDataProject.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/info.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/AddUseDataThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/AddUseDataThread.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/LevelSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/LevelSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717226935109</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add server Config">
+      <option name="closed" value="true" />
+      <created>1717492116063</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1717492116063</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

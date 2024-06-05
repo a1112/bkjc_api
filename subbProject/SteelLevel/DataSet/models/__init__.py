@@ -82,4 +82,4 @@ class UserData(Base):
     defectCode = Column(String)
     scrapReasonCode = Column(String)
     downgradeNote = Column(String)
-    BusNumber = Column(String)
+    busNumber = Column(String)

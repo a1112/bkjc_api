@@ -5,7 +5,7 @@ from subbProject.SteelLevel.DataSet import api
 from .Base.module import SteelProject, DefectProject
 from .configs import levelConfig
 from . import toExcel
-
+from . import AddUseDataThread
 
 def main():
     maxSeq = LevelSet.getMaxSteelNo()  # 获取当前已经判断级别的 最大值

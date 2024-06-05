@@ -3,7 +3,7 @@ from bkjc_database import SqlTool
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from ..Base.module import DefectProject, SteelProject
+from ..Base.module import DefectProject, SteelProject, UserDataProject
 from .models import Base, SteelLevel, DefectLevel, UserData
 
 # 创建一个 SQLite 数据库引擎
@@ -107,4 +107,12 @@ def hasUserFileData(fileName):
             return True
         return False
     except BaseException:
-        return {}, {}
+        return False
+
+
+def addUserData(userItem):
+    print("addUserData")
+    userItem: UserDataProject
+    session = Session()
+    session.add(userItem.getUserData())
+    session.commit()
