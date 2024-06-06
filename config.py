@@ -69,7 +69,7 @@ if useLoc:
         }
 print(info["drive"])
 
-defectClassFile = info["defectClassFile"] if "defectClassFile" in info else get_config_path("DefectClass.json")
+defectClassFile = info["defectClassFile"] if "defectClassFile" in info else get_config_path("config/DefectClass.json")
 
 forwarder = info["forwarder"] if "forwarder" in info else False
 forward_url = info["forward_url"] if "forward_url" in info else ""
@@ -159,6 +159,9 @@ steelLevelEnable = info["steelLevelEnable"] if "steelLevelEnable" in info else F
 xlsxFile = get_config_path('涟钢钢板质量判定标准表(横切、热处理线）2023.8.25.xlsx')
 steelLevelUrl = "http://127.0.0.1:809"
 steelLevelTemplateDataOut = get_path("template/templateDataOut.xlsx")
+
+steelLevelTabelServerUrl = info["steelLevelTabelServerUrl"] if "steelLevelEnable" in info else False
+
 
 ipListJson = get_config_path("ipList.json")
 

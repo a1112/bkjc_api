@@ -3,6 +3,7 @@ from openpyxl import load_workbook
 
 from collections import defaultdict
 
+from subbProject.SteelLevel.configs.DataRead import LevelDataGet
 from ..Base.module import DefectProject, SteelProject
 from ..configs.DefectClass import defectClass2LevelDefectClass
 from config import xlsxFile
@@ -17,15 +18,14 @@ def getLevel(items):
 
 
 def decodeDefectSheet(name, data):
-    defectLevelDict = {}
-    defectLevelDict[0] = {
+    defectLevelDict = {0: {
         "id": 0,
         "name": "背景",
         "msg": "",
         "L": "",
         "M": "",
         "S": ""
-    }
+    }}
     for line in data[4:]:
         try:
             if name == "默认规则":
@@ -204,30 +204,23 @@ class SteelLevelConfig:
 
 
 class LevelConfig:
-    def __init__(self, xlsx=xlsxFile):
-        self.workbook = load_workbook(xlsx)
+    def __init__(self):
+        levelDatas = LevelDataGet()
+
         self.SteelLevelConfigList: list[SteelLevelConfig] = []
         data = []
-        for name in self.workbook.get_sheet_names():
+        for name in levelDatas:
             if name == '缺陷规则表':
-                data = self.getSheetData("缺陷规则表")
+                data = levelDatas[name]
                 self.defectLevelDict = decodeDefectSheet(name, data)
             else:
-                self.decodeSteelSheet(name)
+                self.decodeSteelSheet(name,levelDatas[name])
         for steelLevel in self.SteelLevelConfigList:
-            data = self.getSheetData("缺陷规则表")
+            data = levelDatas["缺陷规则表"]
             steelLevel.setDefectLevelConfig(SteelLevelConfig("默认规则", data))
 
-    def getSheetData(self, name):
-        steelSheet = self.workbook.get_sheet_by_name(name)
-        data = []
-        for row in steelSheet.iter_rows(values_only=True):
-            data.append(row)
-        return data
-
-    def decodeSteelSheet(self, name):
+    def decodeSteelSheet(self, name,data):
         # 解析 steel
-        data = self.getSheetData(name)
         slc = SteelLevelConfig(name, data)
         self.SteelLevelConfigList.append(slc)
 

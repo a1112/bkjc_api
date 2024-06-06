@@ -7,12 +7,13 @@ from .configs import levelConfig
 from . import toExcel
 from . import AddUseDataThread
 
+
 def main():
+    # 循环访问
     maxSeq = LevelSet.getMaxSteelNo()  # 获取当前已经判断级别的 最大值
     getCount = 100
     oldSeqNo = maxSeq
     while True:
-
         for steelInfo in api.steelList(getCount, oldSeqNo):  # 查询钢板
             steelInfo: SteelProject
             if oldSeqNo == steelInfo.steelID:
@@ -41,6 +42,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 else:
     Thread(target=main).start()

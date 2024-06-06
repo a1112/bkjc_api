@@ -1,0 +1,78 @@
+{
+      "1":{
+            "levelDefectClass": 9,
+            "name": "划伤",
+            "levelName": "划伤"
+      },
+      "2": {
+            "levelDefectClass": 16,
+            "name": "凹坑",
+            "levelName":"凹坑"
+      },
+      "3": {
+            "levelDefectClass": 2,
+            "name": "结疤",
+            "levelName":"结疤"
+      },
+      "4": {
+            "levelDefectClass": 5,
+            "name": "氧化铁皮",
+            "levelName":"氧化铁皮"
+
+
+      },
+      "5": {
+            "levelDefectClass": 3,
+            "name": "边裂",
+            "levelName":"边裂"
+      },
+      "6": {
+            "levelDefectClass": 7,
+            "name": "辊印",
+            "levelName":"辊印"
+
+      },
+      "7": {
+            "levelDefectClass": 11,
+            "name": "油污",
+            "levelName":"油污"
+
+      },
+      "8": {
+            "levelDefectClass": 9,
+            "name": "擦伤",
+            "levelName":"擦伤"
+
+      },
+      "9": {
+            "levelDefectClass": 14,
+            "name": "舌尾印",
+            "levelName":"舌尾印"
+
+      },
+      "10": {
+            "levelDefectClass": 0,
+            "name": "压痕",
+            "levelName":"背景"
+      },
+      "11": {
+            "levelDefectClass": 13,
+            "name": "挫伤",
+            "levelName":"挫伤"
+      },
+      "12": {
+            "levelDefectClass": 16,
+            "name": "丸料凹坑",
+            "levelName":"凹坑"
+      },
+      "13": {
+            "levelDefectClass": 16,
+            "name": "氧化物凹坑",
+            "levelName":"氧化物凹坑"
+      },
+      "14": {
+            "levelDefectClass": 1,
+            "name": "夹杂",
+            "levelName":"夹杂"
+      }
+}

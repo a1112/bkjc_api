@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="add server Config">
-      <change afterPath="$PROJECT_DIR$/subbProject/SteelLevel/Base/module/UserDataProject.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/LevelTabel.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subbProject/LevelServer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subbProject/LevelServer/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subbProject/LevelServer/core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subbProject/LevelServer/init.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subbProject/SteelLevel/configs/DataRead.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/AddUseDataThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/AddUseDataThread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/LevelSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/LevelSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefectClass.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api_c_image/api_testApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/api_c_image/api_testApi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/DefectClass.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/DefectClass.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/info.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/configs/DefectClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/configs/DefectClass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +72,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\project\bkjc_api\config" />
+      <recent name="C:\project\bkjc_api\subbProject\LevelServer" />
       <recent name="C:\project\bkjc_api" />
       <recent name="C:\project\bkjc_api\subbProject\SteelLevel" />
     </key>
@@ -365,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717492116063</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add server Config">
+      <option name="closed" value="true" />
+      <created>1717580560925</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1717580560925</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

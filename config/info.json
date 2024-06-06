@@ -32,5 +32,6 @@
     "// defectClassFile": "config/ArNTClassTable_ASCII.xml",
 
     "steelLevelEnable": true,
-    "conditionMonitoringEnable": true
+    "conditionMonitoringEnable": true,
+    "steelLevelTabelServerUrl": false
 }

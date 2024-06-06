@@ -1,7 +1,9 @@
 # from collections import defaultdict
 # from ConfigRead import levelConfig
 # from DataSet.api import getDefectDict
-
+import json
+from pathlib import Path
+import config
 # defectDict = getDefectDict()
 # print(defectDict)
 # print(levelConfig.defectLevelDict)
@@ -97,6 +99,15 @@ var = [
         "grade": 0
     }
 ]
+
+class DefectCheckList:
+    pass
+
+
+def defectClass2LevelDefectClassInfo():
+    jsFile = config.get_config_path("LevelTabel.json")
+    jsData = json.load(Path(jsFile).open("r"))
+    return jsData
 
 
 def defectClass2LevelDefectClass(defectClass):

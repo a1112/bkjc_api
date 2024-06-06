@@ -10,6 +10,7 @@ from fastapi.responses import StreamingResponse
 from bkjc_tools import CimgReadCore
 from api.api_core import api_core
 
+
 @app.get("/file/{fileUrl:path}")
 async def getFile(fileUrl: str = ""):
     """
