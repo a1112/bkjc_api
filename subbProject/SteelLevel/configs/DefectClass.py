@@ -106,7 +106,8 @@ class DefectCheckList:
 
 def defectClass2LevelDefectClassInfo():
     jsFile = config.get_config_path("LevelTabel.json")
-    jsData = json.load(Path(jsFile).open("r"))
+    print(jsFile)
+    jsData = json.load(Path(jsFile).open("r", encoding="utf-8"))
     return jsData
 
 

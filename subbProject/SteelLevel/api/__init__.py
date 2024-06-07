@@ -4,6 +4,7 @@ from pathlib import Path
 
 import config
 from ..configs.DataRead import LevelDataGet, xlsxDataGet
+from ..configs.DefectClass import defectClass2LevelDefectClassInfo
 from ..init import app
 from ..DataSet import LevelSet
 from fastapi import File, UploadFile, Response
@@ -48,4 +49,4 @@ def getLevelData():
 
 @app.get("/steelLevel/getDefectInfo")
 def getDefectInfo():
-    return json.load(Path(config.get_config_path("LevelTabel.json")).open("r"))
+    return defectClass2LevelDefectClassInfo()
