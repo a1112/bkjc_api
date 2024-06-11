@@ -100,33 +100,28 @@ var = [
     }
 ]
 
+
 class DefectCheckList:
-    pass
+    def __init__(self):
+        self.jsData = None
+        self.jsFile = None
+        self.defectClass2LevelDefectClassInfo()
+
+    def defectClass2LevelDefectClassInfo(self):
+        self.jsFile = config.get_config_path("LevelTabel.json")
+        self.jsData = json.load(Path(self.jsFile).open("r", encoding="utf-8"))
+        return self.jsData
+
+
+dcl = DefectCheckList()
 
 
 def defectClass2LevelDefectClassInfo():
-    jsFile = config.get_config_path("LevelTabel.json")
-    print(jsFile)
-    jsData = json.load(Path(jsFile).open("r", encoding="utf-8"))
-    return jsData
+    return dcl.jsData
 
 
 def defectClass2LevelDefectClass(defectClass):
     try:
-        return {
-            1: 9,
-            2: 16,
-            3: 2,
-            4: 5,
-            5: 3,
-            6: 7,
-            7: 11,
-            8: 9,
-            10: 14,
-            11: 13,
-            12: 16,
-            13: 16
-            # 14
-        }[defectClass]
+        return dcl.jsData[str(defectClass)]["levelDefectClass"]
     except:
         return 0

@@ -139,6 +139,7 @@ def getDefectFolder_4d0(cameraId, seqNo):
     imgUrl = info["defectSource"].format(ip, str(int(seqNo)))
     return imgUrl
 
+
 def getDefectImgFile_4d0(cameraId, seqNo, defectId):
     if cropDefect:
         return None

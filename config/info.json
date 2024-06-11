@@ -17,7 +17,7 @@
     "BottomFace":"172.25.2.43\\imgsrc2",
     "TopDefect": "172.25.2.43\\defectImg1",
     "BottomDefect": "172.25.2.43\\defectImg2",
-    "defectSource": "{}\\{}",
+    "defectSource": "\\\\{}\\{}",
 
     "ip": "0.0.0.0",
     "port": 809,

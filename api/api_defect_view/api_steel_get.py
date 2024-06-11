@@ -126,7 +126,7 @@ def getBox(defect, scale=1):
         defect: bkjc_database.NerCarDataBase.mysql.Ncdhotstripdefect.Camdefect1
         box = [defect.leftInSrcImg, defect.topInSrcImg, defect.rightInSrcImg - defect.leftInSrcImg,
                defect.bottomInImg - defect.topInSrcImg]
-        out = [-100, -100, 100, 100]
+        out = [-10, -10, 20, 20]
         return [int(i * scale) + j for i, j in zip(box, out)]
 
 
@@ -189,7 +189,7 @@ def getDefectListByDefectInfo(seqNo, defectsInfo=None):
                         "bmIndex": 1 - bmIndex,  # 上表面1 下表面0
                         "seqNo": seqNo,
                         "cameraId": cameraId,
-                        "imageIndex": defect.imgIndex,
+                        "imageIndex": defect.imgIndex-1,
                         "defectX": rec[0],
                         "defectY": rec[1],
                         "defectWidth": rec[2],
@@ -404,7 +404,6 @@ def getDefectImage(cameraID, defectID):
     defectInfo = api_core.get_defectInfo(cameraID, defectID)
     image = api_core.get_defect_max_cimage(cameraID, defectInfo["seqNo"], defectInfo["imageIndex"])
     box = defectInfo['box']
-    print(image)
     return StreamingResponse(getImageIO(image.crop(
         (box[0], box[1], box[0] + box[2], box[1] + box[3])
     )), media_type="image/jpeg")
