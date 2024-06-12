@@ -107,17 +107,17 @@ def getUserDataProject(item) -> UserDataProject:
         {
             "fileName": item['fileName'],
             "steelName": item['材料号'],
-            "plant_classification":  item['厂别区分'],
-            "productionLine_classification": item['厂别区分'],
-            "productionTime": item['生产时刻'],
-            "steelType": item['产品等级码'],
-            "steelLevel": item['产品等级码'],
-            "steelLevelCode":  item['产品等级码'],
-            "residualReasonCode": item['余材原因代码'],
-            "defectCode": item['缺陷代码'],
-            "scrapReasonCode": item['报废原因代码'],
-            "downgradeNote": item['降级注释'],
-            "busNumber": item['热轧母卷号']
+            "plant_classification":  item['厂区分别'],
+            "productionLine_classification": item['产线区分'],
+            "productionTime": item['生产时间'],
+            "steelType": item['钢种'],
+            "steelLevel": item['产品等级'],
+            "steelLevelCode":  item['产品等级'],
+            "residualReasonCode": item['判级原因'],
+            "defectCode": item['缺陷等级 '],
+            "scrapReasonCode": item['判级原因'],
+            "downgradeNote": item['缺陷等级'],
+            "busNumber": item['捆包号']
         }
     )
 

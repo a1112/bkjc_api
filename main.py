@@ -7,8 +7,10 @@ if __name__ == '__main__':
     if config.steelLevelEnable:
         import subbProject.SteelLevel.init
         subbProject.SteelLevel.init.initServer(app)
-        import subbProject.SteelLevel.main
+        # import subbProject.SteelLevel.main
+        import subbProject.SteelLevel.script
         import subbProject.SteelLevel.api
+        from subbProject.SteelLevel.configs import levelConfig
     if config.conditionMonitoringEnable:
         import subbProject.ConditionMonitoring.core
         subbProject.ConditionMonitoring.core.initServer(app)

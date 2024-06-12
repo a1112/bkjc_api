@@ -3,6 +3,7 @@ from datetime import datetime
 from config import TIMESTAMP_FORMAT
 from ...Base.module._ModelBase_ import ModelBase
 from ...DataSet.models import SteelLevel
+from ...tool import getPackageNo
 
 
 class SteelProject(ModelBase):
@@ -20,7 +21,7 @@ class SteelProject(ModelBase):
 
     @property
     def packageName(self):
-        return ""
+        return getPackageNo(self.steelNo)
 
     @property
     def seqNo(self):
