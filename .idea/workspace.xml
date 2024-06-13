@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="cccc">
-      <change afterPath="$PROJECT_DIR$/script.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/oracleServer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subbProject/SteelLevel/script.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subbProject/SteelLevel/tool.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiServer.spec" beforeDir="false" afterPath="$PROJECT_DIR$/ApiServer.spec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ApiServer/xref-ApiServer.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/ApiServer/xref-ApiServer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/Base/module/SteelProject.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/Base/module/SteelProject.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/Base/module/UserDataProject.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/Base/module/UserDataProject.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/LevelSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/LevelSet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/toExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/toExcel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/tool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/templateDataOut.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/template/templateDataOut.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -429,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718098024429</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="cccc">
+      <option name="closed" value="true" />
+      <created>1718185083098</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1718185083098</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

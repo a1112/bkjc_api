@@ -160,7 +160,8 @@ steelLevelEnable = info["steelLevelEnable"] if "steelLevelEnable" in info else F
 xlsxFile = get_config_path('涟钢钢板质量判定标准表(横切、热处理线）2023.8.25.xlsx')
 steelLevelUrl = "http://172.25.2.43:900"
 steelLevelTemplateDataOut = get_path("template/templateDataOut.xlsx")
-
+plant_classification = "热处理一厂"
+productionLine_classification = "横切一号线"
 steelLevelTabelServerUrl = info["steelLevelTabelServerUrl"] if "steelLevelEnable" in info else False
 
 

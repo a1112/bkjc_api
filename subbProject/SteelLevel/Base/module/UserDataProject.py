@@ -114,7 +114,7 @@ def getUserDataProject(item) -> UserDataProject:
             "steelLevel": item['产品等级'],
             "steelLevelCode":  item['产品等级'],
             "residualReasonCode": item['判级原因'],
-            "defectCode": item['缺陷等级 '],
+            "defectCode": item['缺陷等级'],
             "scrapReasonCode": item['判级原因'],
             "downgradeNote": item['缺陷等级'],
             "busNumber": item['捆包号']

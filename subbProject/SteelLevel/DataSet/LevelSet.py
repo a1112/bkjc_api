@@ -90,29 +90,38 @@ def getMaxSteelNo():
 
 
 def getSteelLevelInfo():
-    session = Session()
-    try:
-        minItem = session.query(SteelLevel).order_by(SteelLevel.seqNo)[0]
-        maxItem = session.query(SteelLevel).order_by(SteelLevel.seqNo.desc())[0]
-        return SqlTool.to_dict(minItem), SqlTool.to_dict(maxItem)
-    except BaseException:
-        return {}, {}
+    with Session() as session:
+        try:
+            minItem = session.query(SteelLevel).order_by(SteelLevel.seqNo)[0]
+            maxItem = session.query(SteelLevel).order_by(SteelLevel.seqNo.desc())[0]
+            return SqlTool.to_dict(minItem), SqlTool.to_dict(maxItem)
+        except BaseException:
+            return {}, {}
 
 
 def hasUserFileData(fileName):
-    session = Session()
-    try:
-        minItem = session.query(UserData).where(fileName==UserData.fileName).all()
-        if minItem:
-            return True
-        return False
-    except BaseException:
-        return False
+    with Session() as session:
+        try:
+            minItem = session.query(UserData).where(fileName==UserData.fileName).all()
+            if minItem:
+                return True
+            return False
+        except BaseException:
+            return False
 
 
 def addUserData(userItem):
     print("addUserData")
     userItem: UserDataProject
-    session = Session()
-    session.add(userItem.getUserData())
-    session.commit()
+    with Session() as session:
+        session.add(userItem.getUserData())
+        session.commit()
+
+
+def getUserDatByPackageNo(packageNo):
+    print("packageNo ", packageNo)
+    print("getUserDatByPackageNo")
+    with Session() as session:
+        items = session.query(UserData).where(packageNo==UserData.busNumber).all()
+        print(items)
+        return items

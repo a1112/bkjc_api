@@ -10,6 +10,7 @@ class SteelProject(ModelBase):
     def __init__(self, jsonData):
         self.jsonData = jsonData
         self._level = 1
+        self._packageNo_ = ""
 
     @property
     def id(self):
@@ -21,8 +22,11 @@ class SteelProject(ModelBase):
 
     @property
     def packageName(self):
-        return getPackageNo(self.steelNo)
-
+        if not self._packageNo_:
+            gpn=getPackageNo(self.steelNo)
+            self._packageNo_= gpn
+            return gpn
+        return self._packageNo_
     @property
     def seqNo(self):
         return self.jsonData["steelID"]
@@ -83,6 +87,11 @@ class SteelProject(ModelBase):
     @property
     def levelInfo(self):
         return self._level[1]
+    @property
+    def levelCode(self):
+        if len(self._level[1][0])<10:
+            return "一等品"
+        return "二等品"
 
     @level.setter
     def level(self, value):

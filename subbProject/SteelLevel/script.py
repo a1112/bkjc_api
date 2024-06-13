@@ -13,13 +13,17 @@ class Script1(Thread):
 
     def run(self):
         time.sleep(5)
-        dataList = api.searchByData("2024-05-1 0:0:0", "2024-05-2 0:0:0")
-        for steelInfo in dataList:  # 查询钢板
-            print("steelInfo_______", steelInfo)
-            steelInfo: SteelProject
-            levelBySteelProject(steelInfo)
-            toExcel.append(steelInfo)
-            LevelSet.addSteel(steelInfo)
+        print("run")
+        for item in range(100):
+            dataList = api.steelList(1000, 207934+item*1000)
+            # dataList = api.searchByData("2024-05-1 0:0:0", "2024-05-10 0:0:0")
+            for steelInfo in dataList:  # 查询钢板
+                print("steelInfo_______", steelInfo)
+                steelInfo: SteelProject
+                levelBySteelProject(steelInfo)
+                toExcel.append(steelInfo)
+                LevelSet.addSteel(steelInfo)
+            toExcel.saveExcel_()
 
 
 sc1 = Script1()

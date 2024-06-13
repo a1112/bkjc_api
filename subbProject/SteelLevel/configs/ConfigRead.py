@@ -158,6 +158,8 @@ class SteelLevelConfig:
                     if defectLevel == level:
                         code = self.steelLevelDict[defectClass][levelIndex + 1]
                         code1 = code[0]
+                        if code1 is None:
+                            continue
                         if "不允许" in code1:
                             defList.append({
                                 "level": level,

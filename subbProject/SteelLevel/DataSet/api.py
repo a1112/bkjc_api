@@ -7,8 +7,8 @@ from ..Base.module import SteelProject, DefectProject
 
 def steelList(num, start_id) -> list[SteelProject]:
     url_ = f"{steelLevelUrl}/steelList/{num}/{start_id}"
-    jsonData = requests.get(url_).json()
     print(url_)
+    jsonData = requests.get(url_).json()
     return [SteelProject(data) for data in jsonData]
 
 
@@ -18,6 +18,7 @@ def searchByData(startData, endData):
     if isinstance(endData, datetime):
         endData = endData.strftime("%Y-%m-%d %H:%M:%S")
     url_ = f"{steelLevelUrl}/searchByDate/{startData}/{endData}"
+    print(url_)
     jsonData = requests.get(url_).json()
     return [SteelProject(data) for data in jsonData]
 
