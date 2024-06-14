@@ -73,5 +73,15 @@
             "levelDefectClass": 1,
             "name": "夹杂",
             "levelName":"夹杂"
+      },
+            "15": {
+            "levelDefectClass": 13,
+            "name": "挫划伤",
+            "levelName":"挫划伤"
+      },
+            "16": {
+            "levelDefectClass": 10,
+            "name": "异物压入",
+            "levelName":"异物压入"
       }
 }

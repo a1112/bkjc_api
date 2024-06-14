@@ -15,6 +15,7 @@ def levelBySteelProject(steelInfo):
     for defect in defects:  # 查询缺陷
         defect: DefectProject
         defectLevel = levelConfig.defectLevel(defect, steelInfo)
+        print(defectLevel)
         if defectLevel in ["L", "M", "S"]:
             defect.level = defectLevel
             # 严重缺陷

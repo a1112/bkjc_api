@@ -93,8 +93,9 @@ class DefectLevelConfig:
 
     def defectLevel(self, defect, steelInfo):
         defectClass = defectClass2LevelDefectClass(defect.defectID)
+        print(defect.defectID)
+        print(self.defectLevelDict[defectClass])
         for levelLevel in ["S", "M", "L"]:
-
             if defectClass not in self.defectLevelDict:
                 continue
             levelConfig = self.defectLevelDict[defectClass][levelLevel]
@@ -157,19 +158,32 @@ class SteelLevelConfig:
                 for levelIndex, level in enumerate(["L", "M", "S"]):
                     if defectLevel == level:
                         code = self.steelLevelDict[defectClass][levelIndex + 1]
+                        print( self.steelLevelDict[defectClass])
                         code1 = code[0]
-                        if code1 is None:
-                            continue
-                        if "不允许" in code1:
-                            defList.append({
-                                "level": level,
-                                "name": self.steelLevelDict[defectClass]["name"],
-                                "id": self.steelLevelDict[defectClass]["id"],
-                                "defect": defect,
-                                "width": defect.width,
-                                "height": defect.height,
-                                "msg": "",
-                            })
+                        print(code1)
+                        # if code1 is None:
+                        #     continue
+                        # if "不允许" in code1:
+                        #     defList.append({
+                        #         "level": level,
+                        #         "name": self.steelLevelDict[defectClass]["name"],
+                        #         "id": self.steelLevelDict[defectClass]["id"],
+                        #         "defect": defect,
+                        #         "width": defect.width,
+                        #         "height": defect.height,
+                        #         "msg": "",
+                        #     })
+
+                        defList.append({
+                            "level": level,
+                            "name": self.steelLevelDict[defectClass]["name"],
+                            "id": self.steelLevelDict[defectClass]["id"],
+                            "defect": defect,
+                            "width": defect.width,
+                            "height": defect.height,
+                            "msg": "",
+                        })
+        # input()
         return defList, self.toMsgString(defList)
 
     def toMsgString(self, defList):
@@ -264,12 +278,13 @@ class LevelConfig:
             return [], "无法判断"
         # 进行判级#
         filterDefects: list[DefectProject]
+        print(filterDefects)
         for steelLevel in self.SteelLevelConfigList:
             if steelLevel.isCurrentType(steelInfo.steelType):
-                print("steelLevel.steelLevel ", steelInfo)
-                print(filterDefects)
-                return steelLevel.steelLevel(steelInfo, filterDefects)
-        pass
+                steelLevel = steelLevel.steelLevel(steelInfo, filterDefects)
+                print(steelLevel)
+                return steelLevel
+        raise
 
     def getAllLevelTabel(self):
         return [tabel.getInfo() for tabel in self.SteelLevelConfigList]

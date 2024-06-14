@@ -89,7 +89,7 @@ class SteelProject(ModelBase):
         return self._level[1]
     @property
     def levelCode(self):
-        if len(self._level[1][0])<10:
+        if len(self._level[0]) < 15:
             return "一等品"
         return "二等品"
 

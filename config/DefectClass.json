@@ -13,4 +13,6 @@
   {"class":11, "name":"cuoshang", "tag":"c0","color":{"red":33, "green":158, "blue":149}, "desc":"挫伤","parent":[]},
   {"class":12, "name":"wanliaoaokeng", "tag":"B2","color":{"red":0, "green":128, "blue":192}, "desc":"丸料凹坑","parent":[]},
   {"class":13, "name":"yanghuawuaokeng", "tag":"B3","color":{"red":0, "green":255, "blue":0}, "desc":"氧化物凹坑","parent":[]},
-  {"class":14, "name":"jiaza", "tag":"B4","color":{"red":255, "green":0, "blue":128}, "desc":"夹杂","parent":[]}]}
+  {"class":14, "name":"jiaza", "tag":"B4","color":{"red":255, "green":0, "blue":128}, "desc":"夹杂","parent":[]},
+  {"class":15, "name":"cuohuashang", "tag":"H2","color":{"red":255, "green":96, "blue":96}, "desc":"挫划伤","parent":[]},
+  {"class":16, "name":"yiwuyaru", "tag":"Y0","color":{"red":205, "green":198, "blue":146}, "desc":"异物压入","parent":[]}]}

@@ -15,10 +15,10 @@ class Script1(Thread):
         time.sleep(5)
         print("run")
         for item in range(100):
-            dataList = api.steelList(1000, 207934+item*1000)
+            dataList = api.steelList(500, 207934+item * 500)
             # dataList = api.searchByData("2024-05-1 0:0:0", "2024-05-10 0:0:0")
             for steelInfo in dataList:  # 查询钢板
-                print("steelInfo_______", steelInfo)
+                print("steelInfo_____", steelInfo)
                 steelInfo: SteelProject
                 levelBySteelProject(steelInfo)
                 toExcel.append(steelInfo)
