@@ -11,7 +11,7 @@ from config import xlsxFile
 # 打开 Excel 文件
 
 baseTabelName = "缺陷规则表"
-
+glob_defectLevelConfig=None
 
 def getLevel(items):
     return items
@@ -84,36 +84,70 @@ class DefectLevelConfig:
         self.name = name
         self.data = data
         # self.defectDict={}
-
         self.defectLevelDict = decodeDefectSheet(name, data)
         self.defectLevelConfig = None
 
     def setDefectLevelConfig(self, defectLevelConfig):
         self.defectLevelConfig = defectLevelConfig
 
+    def getDefectLevel(self, defectClass, levelLevel):
+        print("getDefectLevel")
+        print(self.name)
+        print(defectClass, levelLevel)
+        print(self.defectLevelConfig)
+        print( self.defectLevelConfig.defectLevelDict[defectClass][levelLevel])
+        return self.defectLevelConfig.defectLevelDict[defectClass][levelLevel]
+
     def defectLevel(self, defect, steelInfo):
+        global glob_defectLevelConfig
         defectClass = defectClass2LevelDefectClass(defect.defectID)
+        print(self.name)
         print(defect.defectID)
         print(self.defectLevelDict[defectClass])
         for levelLevel in ["S", "M", "L"]:
             if defectClass not in self.defectLevelDict:
-                continue
+                raise
             levelConfig = self.defectLevelDict[defectClass][levelLevel]
+            print(levelConfig)
             if defectClass == 0:
                 return "L"
-            if not levelConfig[-1] and self.name != "默认规则":
-                levelConfig = self.defectLevelConfig.defectLevelConfig.defectLevelDict[defectClass][levelLevel]
             code = levelConfig[-1]
+            if code is None:
+                print(fr"{self.name} {levelLevel} 未设置规则，使用默认规则。 ")
+                print(glob_defectLevelConfig.defectLevelConfig.defectLevelDict)
+                levelConfig = glob_defectLevelConfig.defectLevelConfig.defectLevelDict[defectClass][levelLevel]
+
+            code = levelConfig[-1]
+            print(code)
+            msg=fr"{self.name} {levelLevel} {self.defectLevelDict[defectClass]["name"]}"
+            self.levelDefectByCode(defect, code, msg)
+
+            input()
+
             if code:
                 return "L"
+
         return "L"
 
+    def levelDefectByCode(self,defect, code, msg):
+        defect: DefectProject
+        print("缺陷判级"+msg)
+        print(code)
+        print(defect)
+        height_mm = defect.rightInSteel-defect.leftInSteel
+        width_mm = defect.bottomInSteel-defect.topInSteel
+        area_mm = height_mm*width_mm
+        height_cm = height_mm/10
+        width_cm = width_mm/10
+        area_cm = height_cm*width_cm
+        print(fr"width {width_mm} mm")
+        print(fr"height {height_mm} mm")
 
 class SteelLevelConfig:
     def __init__(self, name, data):
         self.name = name
         self.data = data
-        if name == "默认规则":
+        if name == "缺陷规则表":
             self.steelTypes = ""
         else:
             self.steelTypes = self.decodeTypes(self.data[1][15])
@@ -141,6 +175,9 @@ class SteelLevelConfig:
                 return True
         return False
 
+    def getDefectLevel(self, defectClass, levelLevel):
+        return self.defectLevelConfig.getDefectLevel(defectClass, levelLevel)
+
     def steelLevel(self, steelInfo, filterDefects):
         print(f"filterDefects {len(filterDefects)}")
         defect: DefectProject
@@ -158,7 +195,7 @@ class SteelLevelConfig:
                 for levelIndex, level in enumerate(["L", "M", "S"]):
                     if defectLevel == level:
                         code = self.steelLevelDict[defectClass][levelIndex + 1]
-                        print( self.steelLevelDict[defectClass])
+                        print(self.steelLevelDict[defectClass])
                         code1 = code[0]
                         print(code1)
                         # if code1 is None:
@@ -222,20 +259,22 @@ class SteelLevelConfig:
 class LevelConfig:
     def __init__(self):
         levelDatas = LevelDataGet()
-
+        global glob_defectLevelConfig
         self.SteelLevelConfigList: list[SteelLevelConfig] = []
         data = []
         for name in levelDatas:
             if name == '缺陷规则表':
                 data = levelDatas[name]
                 self.defectLevelDict = decodeDefectSheet(name, data)
+                print(name)
+                glob_defectLevelConfig = SteelLevelConfig(name, data)
             else:
-                self.decodeSteelSheet(name,levelDatas[name])
-        for steelLevel in self.SteelLevelConfigList:
-            data = levelDatas["缺陷规则表"]
-            steelLevel.setDefectLevelConfig(SteelLevelConfig("默认规则", data))
+                self.decodeSteelSheet(name, levelDatas[name])
+        # for steelLevel in self.SteelLevelConfigList:
+        #     data = levelDatas["缺陷规则表"]
+        #     steelLevel.setDefectLevelConfig(SteelLevelConfig("缺陷规则表", data))
 
-    def decodeSteelSheet(self, name,data):
+    def decodeSteelSheet(self, name, data):
         # 解析 steel
         slc = SteelLevelConfig(name, data)
         self.SteelLevelConfigList.append(slc)

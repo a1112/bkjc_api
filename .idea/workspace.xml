@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="cccc" />
+    <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="cccc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/涟钢钢板质量判定标准表(横切、热处理线）2023.8.25.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/config/涟钢钢板质量判定标准表(横切、热处理线）2023.8.25.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/script.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,23 +37,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.CimgReadCore.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.api.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.joinExcel.executor": "Run",
-    "Python.main (1).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.tool.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/project/bkjc_api/in",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.CimgReadCore.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.joinExcel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tool.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/project/bkjc_api/in&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\project\bkjc_api\in" />
@@ -63,7 +68,7 @@
       <recent name="C:\project\bkjc_api\subbProject\SteelLevel" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.joinExcel">
+  <component name="RunManager" selected="Python.main">
     <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bkjc_api" />
       <option name="ENV_FILES" value="" />
@@ -176,8 +181,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.joinExcel" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.joinExcel" />
         <item itemvalue="Python.api" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.tool" />
@@ -440,7 +445,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718357031514</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="cccc">
+      <option name="closed" value="true" />
+      <created>1718357100783</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1718357100783</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
