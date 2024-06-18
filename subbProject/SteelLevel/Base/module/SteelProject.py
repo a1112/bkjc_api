@@ -85,13 +85,28 @@ class SteelProject(ModelBase):
         return self._level[0]
 
     @property
+    def levelInfoUp(self):
+        if self._level[1]:
+            return str(self._level[1][0])
+        return ""
+
+    @property
+    def levelInfoUnder(self):
+        if self._level[1]:
+            return str(str(self._level[1][1]))
+        return ""
+    @property
     def levelInfo(self):
         return self._level[1]
     @property
+    def levelStr(self):
+        return self._level [2]
+
+    @property
     def levelCode(self):
-        if len(self._level[0]) < 15:
-            return "一等品"
-        return "二等品"
+        if self._level[2]:
+            return "二等品"
+        return "一等品"
 
     @level.setter
     def level(self, value):

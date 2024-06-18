@@ -36,9 +36,9 @@ def saveExcel(data, excel_path):
             dataItem.steelWidth,
             dataItem.steelThick,
             dataItem.detectTime,
-            "",
-            "",
-            dataItem.levelInfo,
+            dataItem.levelInfoUp,
+            dataItem.levelInfoUnder,
+            dataItem.levelStr,
             dataItem.levelCode,
             useCode,
             useNode

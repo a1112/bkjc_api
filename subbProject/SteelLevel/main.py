@@ -23,8 +23,8 @@ def levelBySteelProject(steelInfo):
                 defect
             )
             filterDefects.append(defect)
-    defList, levelMsg = levelConfig.steelLevel(steelInfo, filterDefects)
-    steelInfo.level = defList, levelMsg
+    defList, levelMsg,levelStr = levelConfig.steelLevel(steelInfo, filterDefects)
+    steelInfo.level = defList, levelMsg, levelStr
     # 获取 钢板等级
 
 

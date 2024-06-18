@@ -22,7 +22,7 @@ class Script1(Thread):
                 steelInfo: SteelProject
                 levelBySteelProject(steelInfo)
                 toExcel.append(steelInfo)
-                LevelSet.addSteel(steelInfo)
+                # LevelSet.addSteel(steelInfo)
             toExcel.saveExcel_()
 
 
