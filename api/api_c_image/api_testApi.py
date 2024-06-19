@@ -3,9 +3,8 @@ import time
 
 from PIL import Image
 
-from core import testApp as app
+from core import testApp as app, tool
 import config
-import tool
 from fastapi.responses import StreamingResponse
 from bkjc_tools import CimgReadCore
 from api.api_core import api_core

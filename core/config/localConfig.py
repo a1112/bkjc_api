@@ -48,3 +48,5 @@ elif locType == "3.0":
         "steelLevelEnable": True,
         "conditionMonitoringEnable": True
     }
+
+steelLevelEnable = False

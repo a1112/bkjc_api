@@ -11,9 +11,8 @@ from bkjc_database.dbm import dbm
 from fastapi.responses import StreamingResponse
 
 import config
-import tool
 from api.api_core import api_core
-from core import steelGetApp as app
+from core import steelGetApp as app, tool
 
 sourceImageCache = {}  # 缓存大图
 defectItemCache = {}  # 缓存缺陷小图

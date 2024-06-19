@@ -1,6 +1,5 @@
-from core import mainApp as app
+from core import mainApp as app, tool
 from bkjc_database.dbm import dbm
-import tool
 
 import config
 
