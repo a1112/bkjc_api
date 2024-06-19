@@ -110,9 +110,7 @@ def get_all_join_file(fileUrl, resize, start, end):
 def killApp():
     """
     Kills the ApiServer.exe process and its child processes.
-
     Returns:
         None
     """
     return os.killpg(os.getpgid(0), signal.SIGTERM)
-
