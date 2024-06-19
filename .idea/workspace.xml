@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="pc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/涟钢钢板质量判定标准表(横切、热处理线）2023.8.25.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/config/涟钢钢板质量判定标准表(横切、热处理线）2023.8.25.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/Base/module/SteelProject.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/Base/module/SteelProject.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ApiServer/xref-ApiServer.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/ApiServer/xref-ApiServer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/toExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/toExcel.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
       <recent name="C:\project\bkjc_api\subbProject\SteelLevel" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.joinExcel">
     <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bkjc_api" />
       <option name="ENV_FILES" value="" />
@@ -185,8 +183,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.joinExcel" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.api" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.tool" />
@@ -465,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718617358629</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="pc">
+      <option name="closed" value="true" />
+      <created>1718703518223</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1718703518223</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

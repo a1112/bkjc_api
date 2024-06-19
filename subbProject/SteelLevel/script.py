@@ -14,8 +14,9 @@ class Script1(Thread):
     def run(self):
         time.sleep(5)
         print("run")
-        for item in range(100):
-            dataList = api.steelList(10, 207934+item * 10)
+        for item in range(200):
+            itemSize = 1000
+            dataList = api.steelList(itemSize, 200000+item * itemSize)
             # dataList = api.searchByData("2024-05-1 0:0:0", "2024-05-10 0:0:0")
             for steelInfo in dataList:  # 查询钢板
                 print("steelInfo_____", steelInfo)

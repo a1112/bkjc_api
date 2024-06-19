@@ -200,7 +200,7 @@ class SteelLevelConfig:
         defect: DefectProject
         steelInfo: SteelProject
         if not filterDefects:
-            return [], ["无缺陷","无缺陷"],""
+            return [], ["无缺陷", "无缺陷"], ""
         else:
             defList = []
             for defect in filterDefects:
@@ -252,9 +252,13 @@ class SteelLevelConfig:
                 defects = defect_dict[defect_id][item_2]
                 print(steelLevelCode)
                 print(defects)
-                if "不允许" in steelLevelCode[0]:
+                if steelLevelCode[0] is None:
+                    print("未设立规则 {}".format(steelLevelCode))
+                    continue
+                elif "不允许" in steelLevelCode[0]:
                     if defects:
-                        steelLevelStr += defects[0]["name"] + " " + item_2 + "级缺陷不允许 " + "数量" + str(len(defects))
+                        steelLevelStr += defects[0]["name"] + " " + item_2 + "级缺陷不允许 " + "数量" + str(
+                            len(defects))
         return steelLevelStr
 
     def toMsgString(self, defList):
@@ -262,7 +266,7 @@ class SteelLevelConfig:
         for defect in defList:
             _defList[defect["name"]].append(defect)
         if defList:
-            msg = ["",""]
+            msg = ["", ""]
             for key, item in _defList.items():
                 levelCounts = defaultdict(int)
                 for defItem in item:
@@ -272,8 +276,8 @@ class SteelLevelConfig:
                     if lev in levelCounts:
                         levelMsg += f"{lev}: {levelCounts[lev]}"
 
-                updefects=[]
-                doundefects=[]
+                updefects = []
+                doundefects = []
                 if item[0]["defect"].bmIndex < 1:
                     msg[0] += f"[{item[0]['name']}：{len(item)} {levelMsg}] "
                 else:
@@ -353,7 +357,7 @@ class LevelConfig:
     def steelLevel(self, steelInfo, filterDefects):
         steelInfo: SteelProject
         if not steelInfo.steelType:
-            return [], ["",""],""
+            return [], ["", ""], ""
         # 进行判级#
         filterDefects: list[DefectProject]
         print(filterDefects)

@@ -182,8 +182,9 @@ imports:
  &#8226;   <a href="#subbProject.ConditionMonitoring.core">subbProject.ConditionMonitoring.core</a>
  &#8226;   <a href="#subbProject.ConditionMonitoring.main">subbProject.ConditionMonitoring.main</a>
  &#8226;   <a href="#subbProject.SteelLevel.api">subbProject.SteelLevel.api</a>
+ &#8226;   <a href="#subbProject.SteelLevel.configs">subbProject.SteelLevel.configs</a>
  &#8226;   <a href="#subbProject.SteelLevel.init">subbProject.SteelLevel.init</a>
- &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
  &#8226;   <a href="#traceback">traceback</a>
  &#8226;   <a href="#types">types</a>
  &#8226;   <a href="#uvicorn">uvicorn</a>
@@ -10208,11 +10209,15 @@ imported by:
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#socks">socks</a>
  &#8226;   <a href="#sqlalchemy.connectors.asyncio">sqlalchemy.connectors.asyncio</a>
+ &#8226;   <a href="#sqlalchemy.dialects.mysql.aiomysql">sqlalchemy.dialects.mysql.aiomysql</a>
+ &#8226;   <a href="#sqlalchemy.dialects.mysql.asyncmy">sqlalchemy.dialects.mysql.asyncmy</a>
  &#8226;   <a href="#sqlalchemy.dialects.mysql.base">sqlalchemy.dialects.mysql.base</a>
  &#8226;   <a href="#sqlalchemy.dialects.oracle.base">sqlalchemy.dialects.oracle.base</a>
  &#8226;   <a href="#sqlalchemy.dialects.oracle.oracledb">sqlalchemy.dialects.oracle.oracledb</a>
  &#8226;   <a href="#sqlalchemy.dialects.postgresql.asyncpg">sqlalchemy.dialects.postgresql.asyncpg</a>
  &#8226;   <a href="#sqlalchemy.dialects.postgresql.base">sqlalchemy.dialects.postgresql.base</a>
+ &#8226;   <a href="#sqlalchemy.dialects.postgresql.psycopg">sqlalchemy.dialects.postgresql.psycopg</a>
+ &#8226;   <a href="#sqlalchemy.dialects.sqlite.aiosqlite">sqlalchemy.dialects.sqlite.aiosqlite</a>
  &#8226;   <a href="#sqlalchemy.engine.cursor">sqlalchemy.engine.cursor</a>
  &#8226;   <a href="#sqlalchemy.event.attr">sqlalchemy.event.attr</a>
  &#8226;   <a href="#sqlalchemy.event.registry">sqlalchemy.event.registry</a>
@@ -12864,6 +12869,7 @@ imported by:
  &#8226;   <a href="#starlette.responses">starlette.responses</a>
  &#8226;   <a href="#subbProject.SteelLevel.Base.module.SteelProject">subbProject.SteelLevel.Base.module.SteelProject</a>
  &#8226;   <a href="#subbProject.SteelLevel.Base.module.UserDataProject">subbProject.SteelLevel.Base.module.UserDataProject</a>
+ &#8226;   <a href="#subbProject.SteelLevel.DataSet.api">subbProject.SteelLevel.DataSet.api</a>
  &#8226;   <a href="#subbProject.SteelLevel.api">subbProject.SteelLevel.api</a>
  &#8226;   <a href="#tomllib._re">tomllib._re</a>
  &#8226;   <a href="#urllib3.connection">urllib3.connection</a>
@@ -19792,7 +19798,6 @@ imports:
  &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib._bootstrap">importlib._bootstrap</a>
  &#8226;   <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
- &#8226;   <a href="#importlib.machinery">importlib.machinery</a>
  &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#warnings">warnings</a>
 
@@ -19952,7 +19957,6 @@ imported by:
     <a href="#cffi._imp_emulation">cffi._imp_emulation</a>
  &#8226;   <a href="#cffi.verifier">cffi.verifier</a>
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
- &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib.abc">importlib.abc</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#numpy.compat.py3k">numpy.compat.py3k</a>
@@ -20794,7 +20798,6 @@ imported by:
  &#8226;   <a href="#setuptools.dist">setuptools.dist</a>
  &#8226;   <a href="#setuptools.msvc">setuptools.msvc</a>
  &#8226;   <a href="#setuptools.wheel">setuptools.wheel</a>
- &#8226;   <a href="#sqlalchemy.connectors.asyncio">sqlalchemy.connectors.asyncio</a>
  &#8226;   <a href="#sqlalchemy.dialects.mysql.base">sqlalchemy.dialects.mysql.base</a>
  &#8226;   <a href="#sqlalchemy.engine.result">sqlalchemy.engine.result</a>
  &#8226;   <a href="#sqlalchemy.event.attr">sqlalchemy.event.attr</a>
@@ -40019,6 +40022,7 @@ imported by:
  &#8226;   <a href="#subbProject.SteelLevel.DataSet.LevelSet">subbProject.SteelLevel.DataSet.LevelSet</a>
  &#8226;   <a href="#subbProject.SteelLevel.DataSet.api">subbProject.SteelLevel.DataSet.api</a>
  &#8226;   <a href="#subbProject.SteelLevel.configs.DataRead">subbProject.SteelLevel.configs.DataRead</a>
+ &#8226;   <a href="#subbProject.SteelLevel.tool">subbProject.SteelLevel.tool</a>
 
   </div>
 
@@ -45347,7 +45351,6 @@ imported by:
 imports:
     <a href="#__future__">__future__</a>
  &#8226;   <a href="#collections">collections</a>
- &#8226;   <a href="#itertools">itertools</a>
  &#8226;   <a href="#sqlalchemy.connectors">sqlalchemy.connectors</a>
  &#8226;   <a href="#sqlalchemy.engine">sqlalchemy.engine</a>
  &#8226;   <a href="#sqlalchemy.util.concurrency">sqlalchemy.util.concurrency</a>
@@ -45809,7 +45812,8 @@ imported by:
   <a target="code" href="///C:/Python/Python312/Lib/site-packages/sqlalchemy/dialects/mysql/aiomysql.py" type="text/plain"><tt>sqlalchemy.dialects.mysql.aiomysql</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#pymysql.constants">pymysql.constants</a>
+    <a href="#collections">collections</a>
+ &#8226;   <a href="#pymysql.constants">pymysql.constants</a>
  &#8226;   <a href="#pymysql.constants.CLIENT">pymysql.constants.CLIENT</a>
  &#8226;   <a href="#sqlalchemy">sqlalchemy</a>
  &#8226;   <a href="#sqlalchemy.dialects.mysql">sqlalchemy.dialects.mysql</a>
@@ -45834,6 +45838,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#asyncmy">asyncmy</a>
+ &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#sqlalchemy">sqlalchemy</a>
  &#8226;   <a href="#sqlalchemy.dialects.mysql">sqlalchemy.dialects.mysql</a>
@@ -46808,6 +46813,7 @@ imports:
  &#8226;   <a href="#'psycopg.pq'">'psycopg.pq'</a>
  &#8226;   <a href="#'psycopg.types'">'psycopg.types'</a>
  &#8226;   <a href="#__future__">__future__</a>
+ &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#logging">logging</a>
  &#8226;   <a href="#psycopg">psycopg</a>
  &#8226;   <a href="#re">re</a>
@@ -46986,6 +46992,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#sqlalchemy">sqlalchemy</a>
  &#8226;   <a href="#sqlalchemy.dialects.sqlite">sqlalchemy.dialects.sqlite</a>
@@ -47333,6 +47340,7 @@ imported by:
     <a href="#bkjc_database.BaseImport">bkjc_database.BaseImport</a>
  &#8226;   <a href="#bkjc_database.SqlBase">bkjc_database.SqlBase</a>
  &#8226;   <a href="#sqlalchemy.engine">sqlalchemy.engine</a>
+ &#8226;   <a href="#sqlalchemy.engine.characteristics">sqlalchemy.engine.characteristics</a>
  &#8226;   <a href="#sqlalchemy.engine.create">sqlalchemy.engine.create</a>
  &#8226;   <a href="#sqlalchemy.engine.cursor">sqlalchemy.engine.cursor</a>
  &#8226;   <a href="#sqlalchemy.engine.default">sqlalchemy.engine.default</a>
@@ -47360,6 +47368,7 @@ imports:
     <a href="#__future__">__future__</a>
  &#8226;   <a href="#abc">abc</a>
  &#8226;   <a href="#sqlalchemy.engine">sqlalchemy.engine</a>
+ &#8226;   <a href="#sqlalchemy.engine.base">sqlalchemy.engine.base</a>
  &#8226;   <a href="#sqlalchemy.engine.interfaces">sqlalchemy.engine.interfaces</a>
  &#8226;   <a href="#typing">typing</a>
 
@@ -54315,7 +54324,9 @@ imported by:
  &#8226;   <a href="#subbProject.SteelLevel.configs">subbProject.SteelLevel.configs</a>
  &#8226;   <a href="#subbProject.SteelLevel.init">subbProject.SteelLevel.init</a>
  &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
  &#8226;   <a href="#subbProject.SteelLevel.toExcel">subbProject.SteelLevel.toExcel</a>
+ &#8226;   <a href="#subbProject.SteelLevel.tool">subbProject.SteelLevel.tool</a>
 
   </div>
 
@@ -54387,6 +54398,7 @@ imported by:
  &#8226;   <a href="#subbProject.SteelLevel.DataSet.api">subbProject.SteelLevel.DataSet.api</a>
  &#8226;   <a href="#subbProject.SteelLevel.configs.ConfigRead">subbProject.SteelLevel.configs.ConfigRead</a>
  &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
  &#8226;   <a href="#subbProject.SteelLevel.toExcel">subbProject.SteelLevel.toExcel</a>
 
   </div>
@@ -54427,6 +54439,7 @@ imports:
  &#8226;   <a href="#subbProject.SteelLevel.Base.module">subbProject.SteelLevel.Base.module</a>
  &#8226;   <a href="#subbProject.SteelLevel.Base.module._ModelBase_">subbProject.SteelLevel.Base.module._ModelBase_</a>
  &#8226;   <a href="#subbProject.SteelLevel.DataSet.models">subbProject.SteelLevel.DataSet.models</a>
+ &#8226;   <a href="#subbProject.SteelLevel.tool">subbProject.SteelLevel.tool</a>
 
   </div>
   <div class="import">
@@ -54436,6 +54449,7 @@ imported by:
  &#8226;   <a href="#subbProject.SteelLevel.DataSet.api">subbProject.SteelLevel.DataSet.api</a>
  &#8226;   <a href="#subbProject.SteelLevel.configs.ConfigRead">subbProject.SteelLevel.configs.ConfigRead</a>
  &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
  &#8226;   <a href="#subbProject.SteelLevel.toExcel">subbProject.SteelLevel.toExcel</a>
 
   </div>
@@ -54501,6 +54515,7 @@ imported by:
  &#8226;   <a href="#subbProject.SteelLevel.DataSet.models">subbProject.SteelLevel.DataSet.models</a>
  &#8226;   <a href="#subbProject.SteelLevel.api">subbProject.SteelLevel.api</a>
  &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
 
   </div>
 
@@ -54530,6 +54545,8 @@ imported by:
  &#8226;   <a href="#subbProject.SteelLevel.DataSet">subbProject.SteelLevel.DataSet</a>
  &#8226;   <a href="#subbProject.SteelLevel.api">subbProject.SteelLevel.api</a>
  &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
+ &#8226;   <a href="#subbProject.SteelLevel.toExcel">subbProject.SteelLevel.toExcel</a>
 
   </div>
 
@@ -54541,6 +54558,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
     <a href="#config">config</a>
+ &#8226;   <a href="#datetime">datetime</a>
  &#8226;   <a href="#requests">requests</a>
  &#8226;   <a href="#subbProject.SteelLevel.Base.module">subbProject.SteelLevel.Base.module</a>
  &#8226;   <a href="#subbProject.SteelLevel.Base.module.DefectProject">subbProject.SteelLevel.Base.module.DefectProject</a>
@@ -54553,6 +54571,7 @@ imports:
 imported by:
     <a href="#subbProject.SteelLevel.DataSet">subbProject.SteelLevel.DataSet</a>
  &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
 
   </div>
 
@@ -54574,6 +54593,7 @@ imported by:
  &#8226;   <a href="#subbProject.SteelLevel.Base.module.SteelProject">subbProject.SteelLevel.Base.module.SteelProject</a>
  &#8226;   <a href="#subbProject.SteelLevel.Base.module.UserDataProject">subbProject.SteelLevel.Base.module.UserDataProject</a>
  &#8226;   <a href="#subbProject.SteelLevel.DataSet.LevelSet">subbProject.SteelLevel.DataSet.LevelSet</a>
+ &#8226;   <a href="#subbProject.SteelLevel.toExcel">subbProject.SteelLevel.toExcel</a>
 
   </div>
 
@@ -54618,7 +54638,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#subbProject.SteelLevel.api">subbProject.SteelLevel.api</a>
+    <a href="#main.py">main.py</a>
+ &#8226;   <a href="#subbProject.SteelLevel.api">subbProject.SteelLevel.api</a>
  &#8226;   <a href="#subbProject.SteelLevel.configs.ConfigRead">subbProject.SteelLevel.configs.ConfigRead</a>
  &#8226;   <a href="#subbProject.SteelLevel.configs.DataRead">subbProject.SteelLevel.configs.DataRead</a>
  &#8226;   <a href="#subbProject.SteelLevel.configs.DefectClass">subbProject.SteelLevel.configs.DefectClass</a>
@@ -54736,6 +54757,31 @@ imports:
   </div>
   <div class="import">
 imported by:
+    <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="subbProject.SteelLevel.script"></a>
+  <a target="code" href="///C:/project/bkjc_api/subbProject/SteelLevel/script.py" type="text/plain"><tt>subbProject.SteelLevel.script</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#subbProject.SteelLevel">subbProject.SteelLevel</a>
+ &#8226;   <a href="#subbProject.SteelLevel.Base.module">subbProject.SteelLevel.Base.module</a>
+ &#8226;   <a href="#subbProject.SteelLevel.Base.module.SteelProject">subbProject.SteelLevel.Base.module.SteelProject</a>
+ &#8226;   <a href="#subbProject.SteelLevel.DataSet">subbProject.SteelLevel.DataSet</a>
+ &#8226;   <a href="#subbProject.SteelLevel.DataSet.LevelSet">subbProject.SteelLevel.DataSet.LevelSet</a>
+ &#8226;   <a href="#subbProject.SteelLevel.DataSet.api">subbProject.SteelLevel.DataSet.api</a>
+ &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.toExcel">subbProject.SteelLevel.toExcel</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#time">time</a>
+
+  </div>
+  <div class="import">
+imported by:
     <a href="#main.py">main.py</a>
 
   </div>
@@ -54753,12 +54799,32 @@ imports:
  &#8226;   <a href="#subbProject.SteelLevel">subbProject.SteelLevel</a>
  &#8226;   <a href="#subbProject.SteelLevel.Base.module">subbProject.SteelLevel.Base.module</a>
  &#8226;   <a href="#subbProject.SteelLevel.Base.module.SteelProject">subbProject.SteelLevel.Base.module.SteelProject</a>
+ &#8226;   <a href="#subbProject.SteelLevel.DataSet.LevelSet">subbProject.SteelLevel.DataSet.LevelSet</a>
+ &#8226;   <a href="#subbProject.SteelLevel.DataSet.models">subbProject.SteelLevel.DataSet.models</a>
 
   </div>
   <div class="import">
 imported by:
     <a href="#subbProject.SteelLevel">subbProject.SteelLevel</a>
  &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="subbProject.SteelLevel.tool"></a>
+  <a target="code" href="///C:/project/bkjc_api/subbProject/SteelLevel/tool.py" type="text/plain"><tt>subbProject.SteelLevel.tool</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#requests">requests</a>
+ &#8226;   <a href="#subbProject.SteelLevel">subbProject.SteelLevel</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#subbProject.SteelLevel.Base.module.SteelProject">subbProject.SteelLevel.Base.module.SteelProject</a>
 
   </div>
 
@@ -55520,6 +55586,7 @@ imported by:
  &#8226;   <a href="#subbProject.ConditionMonitoring.CameraStatus">subbProject.ConditionMonitoring.CameraStatus</a>
  &#8226;   <a href="#subbProject.SteelLevel.AddUseDataThread">subbProject.SteelLevel.AddUseDataThread</a>
  &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#sysconfig">sysconfig</a>
  &#8226;   <a href="#unittest.mock">unittest.mock</a>
@@ -55618,6 +55685,7 @@ imported by:
  &#8226;   <a href="#subbProject.SteelLevel.AddUseDataThread">subbProject.SteelLevel.AddUseDataThread</a>
  &#8226;   <a href="#subbProject.SteelLevel.DataSet.api">subbProject.SteelLevel.DataSet.api</a>
  &#8226;   <a href="#subbProject.SteelLevel.main">subbProject.SteelLevel.main</a>
+ &#8226;   <a href="#subbProject.SteelLevel.script">subbProject.SteelLevel.script</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#threading">threading</a>
