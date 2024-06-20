@@ -19,5 +19,4 @@ def forward_request(subpath):
             io.BytesIO(response.content),
             mimetype='image/jpg'
         )
-
     return response.content, response.status_code, response.headers.items()

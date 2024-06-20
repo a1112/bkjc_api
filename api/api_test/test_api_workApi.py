@@ -4,13 +4,17 @@ from fastapi.testclient import TestClient
 from PIL import Image
 
 from core import testApp as app
+
 client = TestClient(app)
+
 
 def test_home():
     # Test the home endpoint
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"msg": "本服务主要用于请求图像，api接口可以访问 openapi.json， 文档请访问 /docs  或 /redoc"}
+    assert response.json() == {
+        "msg": "本服务主要用于请求图像，api接口可以访问 openapi.json， 文档请访问 /docs  或 /redoc"}
+
 
 def test_getSteelInfo():
     # Test the getSteelInfo endpoint
@@ -18,11 +22,13 @@ def test_getSteelInfo():
     assert response.status_code == 200
     # Add assertions for the expected response
 
+
 def test_getCameraInfo():
     # Test the getCameraInfo endpoint
     response = client.get("/info")
     assert response.status_code == 200
     # Add assertions for the expected response
+
 
 def test_get_image_Count():
     # Test the get_image_Count endpoint without specifying cameraId
@@ -34,6 +40,7 @@ def test_get_image_Count():
     response = client.get("/count?steelNo=123456&cameraId=1")
     assert response.status_code == 200
     # Add assertions for the expected response
+
 
 def test_get_img_by_steelNo():
     # Test the get_img_by_steelNo endpoint

@@ -18,12 +18,21 @@ def isLoc():
         return True
     return locConfig
 
+
 # 4.0 系统的缺陷读取
 defectClassFile = info["defectClassFile"] if "defectClassFile" in info else get_config_path("config/DefectClass.json")
 
-# 转接模式
+# 转接模式,转发表面检测数据
 forwarder = info["forwarder"] if "forwarder" in info else False
 forward_url = info["forward_url"] if "forward_url" in info else ""
+
+# 是否是PLC数据转发
+plcForwarder = info["plcForwarder"] if "plcForwarder" in info else False
+plcForwarderUrl = info["plcForwarderUrl"] if "plcForwarderUrl" in info else ""
+plcForwarderRack = info["plcForwarderRack"] if "plcForwarderRack" in info else 0
+plcForwarderSlot = info["plcForwarderSlot"] if "plcForwarderSlot" in info else 4
+
+
 DEFECT_GET_HQ_TYPE = 1
 DEFECT_GET_DEFECT_TYPE = 2
 defectType = DEFECT_GET_DEFECT_TYPE

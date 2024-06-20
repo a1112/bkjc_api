@@ -27,6 +27,8 @@ def test_read_item(client):
     assert response.json() == {"item_id": "foo", "q": None}
 
 """
+
+
 @pytest.fixture
 def test_image(tmp_path):
     # Create a test image file
@@ -35,6 +37,7 @@ def test_image(tmp_path):
     image.save(image_path)
     return image_path
 
+
 def test_get_file_exists(test_image):
     # Test the getFile endpoint when the file exists
     response = client.get(f"/file/{test_image}")
@@ -42,11 +45,13 @@ def test_get_file_exists(test_image):
     assert response.headers["content-type"] == "application/octet-stream"
     assert response.content == open(test_image, "rb").read()
 
+
 def test_get_file_not_exists():
     # Test the getFile endpoint when the file does not exist
     response = client.get("/file/nonexistent.jpg")
     assert response.status_code == 200
     assert response.json() == {"文件不存在 !"}
+
 
 def test_get_file_count(test_image):
     # Test the get_file_count endpoint
@@ -54,11 +59,13 @@ def test_get_file_count(test_image):
     assert response.status_code == 200
     assert response.json() == 1
 
+
 def test_get_all_join_file(test_image):
     # Test the get_all_join_file endpoint
     response = client.get(f"/img/join/{test_image}")
     assert response.status_code == 200
     # Add assertions for the expected response
+
 
 def test_get_cimg_exists(test_image):
     # Test the getCimg endpoint when the file exists
@@ -67,11 +74,13 @@ def test_get_cimg_exists(test_image):
     assert response.headers["content-type"] == "image/jpeg"
     # Add assertions for the expected response
 
+
 def test_get_cimg_not_exists():
     # Test the getCimg endpoint when the file does not exist
     response = client.get("/img/nonexistent.jpg")
     assert response.status_code == 200
     assert response.json() == {"msg": "文件不存在 !", "code": 404}
+
 
 def test_cimg():
     # Test the cimg endpoint
@@ -80,18 +89,21 @@ def test_cimg():
     assert response.headers["content-type"] == "image/jpeg"
     # Add assertions for the expected response
 
+
 def test_upload_file():
     # Test the upload_file endpoint
     response = client.post("/upload/")
     assert response.status_code == 200
-    assert response.json() == {"info": "file 'None' saved at './uploaded_files/None'"}  
+    assert response.json() == {"info": "file 'None' saved at './uploaded_files/None'"}
+
 
 def test_download_file():
     # Test the download_file endpoint when the file exists
     response = client.get("/download/test_image.jpg")
     assert response.status_code == 200
     assert response.headers["content-type"] == "application/octet-stream"
-    assert response.content == open("test_image.jpg", "rb").read()  
+    assert response.content == open("test_image.jpg", "rb").read()
+
 
 def test_download_file_not_exists():
     # Test the download_file endpoint when the file does not exist
@@ -99,17 +111,20 @@ def test_download_file_not_exists():
     assert response.status_code == 200
     assert response.json() == {"error": "File not found"}
 
+
 def test_get_steel_info():
     # Test the get_steel_info endpoint
     response = client.get("/steel_info/123456")
     assert response.status_code == 200
     # Add assertions for the expected response 
 
+
 def test_get_camera_info():
     # Test the get_camera_info endpoint
     response = client.get("/info")
     assert response.status_code == 200
     # Add assertions for the expected response
+
 
 def test_get_image_count():
     # Test the get_image_count endpoint
@@ -128,4 +143,3 @@ def test_get_image_count():
 # pytest -v -s --html=report.html --self-contained-html test_api.py::TestApi::test_get_file_exists
 # 生成指定测试类的指定测试方法：
 # pytest -v -s --html=report.html --self-contained-html test_api.py::TestApi::test_get_file_exists
-    
