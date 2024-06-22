@@ -12,6 +12,7 @@ def getSiemens(PLC_IP, PLC_RACK, PLC_SLOT):
     siemens.SetSlotAndRack(PLC_RACK, PLC_SLOT)
     return siemens
 
+
 siemens = None
 
 
@@ -62,5 +63,4 @@ def forward_request(addr: str, typeStr: str, length: int):
     value = siemens.Read(addr, length).Content
     return getValue(value, typeStr)
 
-# uvicorn.run(app=app, host="0.0.0.0", port=1211)
-# print(forward_request("DB2.150","st   ring",20))
+

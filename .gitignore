@@ -1,3 +1,5 @@
 /build/
 /dist/
 /out/
+/utils/plcServer/dist/
+/utils/plcServer/build/
