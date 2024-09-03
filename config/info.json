@@ -2,7 +2,7 @@
     "cameraCount":2,
     "upCamera": [1],
     "downCamera": [2],
-    "upServer":"172.25.2.43",
+    "upServer":"172.25.2.42",
     "system":"4.0",
     "drive":"mysql",
         "drive2":"mysql",

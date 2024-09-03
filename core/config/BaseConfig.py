@@ -13,6 +13,7 @@ locType = info["locType"] if "locType" in info else "3.0"
 
 
 def isLoc():
+    # 是否未本机
     locConfig = info["useLoc"] if "useLoc" in info else False
     if socket.gethostname() in ["lcx_ace"]:
         return True

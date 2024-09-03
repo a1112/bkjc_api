@@ -1,12 +1,13 @@
 import json
 
 from enum import Enum
-from ..CameraStatus import getCameraInfo, getLightInfo
+from ..CameraStatus import getCameraInfo, getLightInfo,getRkmonitorInfo
 
 from ..core import app
 
 from BKVisionListener.states.computer import ComputerStates
 import config
+
 
 def formatObject(args):
     retDict_ = {}
@@ -42,6 +43,7 @@ def getComputerStatus():
     computerDict = ComputerStates().__dict__()
     computerDict.update(formatObject({"camera": getCameraInfo(),
                                       "light": getLightInfo(),
+                                      "RkmonitorInfo":getRkmonitorInfo(),
                                       "pc": [{
                                           "ip": "127.0.3.100",
                                           "msg": "横切1号线"

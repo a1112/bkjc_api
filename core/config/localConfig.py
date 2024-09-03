@@ -5,7 +5,7 @@ if locType == "4.0":
         "cameraCount": 8,
         "upCamera": [1],
         "downCamera": [2],
-        "upServer": "127.0.0.1",
+        "upServer": "172.25.2.42",
         "system": "4.0",
         "drive": "mysql",
         "user": "root",
