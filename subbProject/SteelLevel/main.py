@@ -8,8 +8,7 @@ from . import toExcel
 from . import AddUseDataThread
 
 
-def levelBySteelProject(steelInfo):
-    steelInfo: SteelProject
+def levelBySteelProject(steelInfo: SteelProject):
     defects = api.getDefectList(steelInfo.steelID)
     filterDefects = []
     for defect in defects:  # 查询缺陷
@@ -37,10 +36,10 @@ def main():
             steelInfo: SteelProject
             if oldSeqNo == steelInfo.steelID:
                 continue
-            oldSeqNo = steelInfo.steelID
             levelBySteelProject(steelInfo)
             toExcel.append(steelInfo)
             LevelSet.addSteel(steelInfo)
+            oldSeqNo = steelInfo.steelID
             # defects = api.getDefectList(steelInfo.steelID)
             # filterDefects = []
             # for defect in defects:  # 查询缺陷

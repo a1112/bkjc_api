@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 from collections import defaultdict
 
+tabelList = {
+
+
+}
+
 
 class ForwarderServer:
     def __init__(self, ip, port):

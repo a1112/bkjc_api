@@ -18,11 +18,9 @@ async def forward_request(forward_ip: str, port: str, subpath: str, request: Req
         port: 目标服务器的端口
         subpath: 目标服务器的路径
         request: 客户端的请求
-
     Returns:
         目标服务器的响应
     """
-
     url = "http://" + forward_ip + f":{port}/" + subpath  # 目标服务器的 URL
     print(url)
     headers = {key: value for key, value in request.headers.items()}  # 使用客户端的请求头
@@ -37,6 +35,7 @@ async def forward_request(forward_ip: str, port: str, subpath: str, request: Req
         headers=headers,
         data=data
     )
+
     print(response.content)
     if "image" in response.headers.get('content-type', ''):
         return StreamingResponse(
