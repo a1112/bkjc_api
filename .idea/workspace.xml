@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="pc">
-      <change afterPath="$PROJECT_DIR$/subbProject/ApiForwarder/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subbProject/ApiForwarder/workThread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subbProject/ApiForwarder/work_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subbProject/ForwarderAll/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subbProject/ForwarderAll/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/ApiManage/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/runSteelLevel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/ApiManage/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/ApiForwarder/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/ApiManage/forwarder_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/ApiForwarder/forwarder_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/ApiManage/forwarder_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/ApiForwarder/forwarder_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/ApiManage/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/ApiForwarder/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/DataSet/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/configs/ConfigRead.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/SteelLevel/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/info.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/config/BaseConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/config/BaseConfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/ApiForwarder/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/ApiForwarder/core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/ApiForwarder/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/ApiForwarder/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,7 @@
     "Python.__init__.executor": "Run",
     "Python.api.executor": "Run",
     "Python.config.executor": "Run",
+    "Python.core.executor": "Run",
     "Python.joinExcel.executor": "Run",
     "Python.main (1).executor": "Run",
     "Python.main (2).executor": "Run",
@@ -65,7 +65,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/project/bkjc_api/tool",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -77,14 +77,36 @@
       <recent name="D:\Project\BKVison\bkjc_api\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project\bkjc_api\subbProject" />
       <recent name="C:\project\bkjc_api\utils\plcServer" />
       <recent name="C:\project\bkjc_api\utils" />
       <recent name="C:\project\bkjc_api\config" />
       <recent name="C:\project\bkjc_api\subbProject\LevelServer" />
-      <recent name="C:\project\bkjc_api" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.runSteelLevel">
+  <component name="RunManager" selected="Python.main (1)">
+    <configuration name="core" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bkjc_api" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/subbProject/ApiForwarder" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/subbProject/ApiForwarder/core.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bkjc_api" />
       <option name="ENV_FILES" value="" />
@@ -94,11 +116,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/subbProject/ApiManage" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/subbProject/ApiManage/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,33 +138,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils/plcServer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/subbProject/ApiForwarder" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/plcServer/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bkjc_api" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/subbProject/SteelLevel/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/subbProject/ApiForwarder/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,11 +160,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/subbProject/ForwarderAll" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/subbProject/ForwarderAll/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.runSteelLevel" />
-        <item itemvalue="Python.main (3)" />
+        <item itemvalue="Python.main (2)" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.core" />
+        <item itemvalue="Python.runSteelLevel" />
       </list>
     </recent_temporary>
   </component>
