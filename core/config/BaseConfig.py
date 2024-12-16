@@ -62,8 +62,10 @@ CLIENT_DIRECTORY.mkdir(exist_ok=True, parents=True)
 
 base_encoding = "utf-8"
 
+
 def getInfo():
     return MAIN_INFO
+
 
 def getFolderBySeqNo(cameraId, seqNo):
     ip = info["TopFace"] if int(cameraId) in info["upCamera"] else info["BottomFace"]
@@ -73,9 +75,10 @@ def getFolderBySeqNo(cameraId, seqNo):
         return Path(imgUrl) / str(loopIndex % maxEpoch)
     return Path(imgUrl)
 
+
 def getCimgFile(cameraId, seqNo, imageIndex):
-    if useLoc:
-        return f"test/cimg/imageSource{cameraId}/041447/{str(imageIndex).rjust(4, '0')}.cimg"
+    # if useLoc:
+    #     return f"test/cimg/imageSource{cameraId}/041447/{str(imageIndex).rjust(4, '0')}.cimg"
     return str(Path(getFolderBySeqNo(cameraId, seqNo)) / f"{str(imageIndex).rjust(4, '0')}.cimg")
 
 
