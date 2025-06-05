@@ -1,7 +1,6 @@
 import uvicorn
 from core import mainApp as app
 import config
-from bkjc_database.NerCarDataBase.mysql.models.ncdplatedevice import
 
 if __name__ == '__main__':
     if config.steelLevelEnable:

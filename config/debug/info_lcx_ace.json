@@ -1,0 +1,39 @@
+{
+    "cameraCount":2,
+    "upCamera": [1],
+    "downCamera": [2],
+    "upServer":"127.0.0.1",
+    "system":"3.0",
+    "drive":"mssql",
+    "drive2":"mysql",
+    "database_type": "ncdplate",
+    "database_type_msg":"ncdhotstrip",
+    "user":"root",
+    "password":"nercar",
+    "downServer":"127.0.0.1",
+    "source": "\\\\{}\\{}\\small",
+    "sourceLen": 6,
+    "TopFace": "127.0.0.1\\imgsrc1",
+    "BottomFace":"127.0.0.1\\imgsrc2",
+    "TopDefect": "127.0.0.1\\defectImg1",
+    "BottomDefect": "127.0.0.1\\defectImg2",
+    "defectSource": "\\\\{}\\{}",
+
+    "ip": "0.0.0.0",
+    "port": 809,
+    "WIDTH": 4096,
+    "HEIGHT": 1024,
+    "useLoc": false,
+    "locType": "3.0",
+
+
+    "forwarder": false,
+    "forward_url":"http://127.0.0.1:809/",
+    "// defectClassFile": "config/ArNTClassTable_ASCII.xml",
+
+    "steelLevelEnable": false,
+    "conditionMonitoringEnable": true,
+    "steelLevelTabelServerUrl": false,
+
+    "plcForwarder": false
+}
