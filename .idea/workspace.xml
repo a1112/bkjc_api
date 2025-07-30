@@ -5,34 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="906585bd-d0d4-43d6-9e3d-1e290c04509c" name="Changes" comment="pc">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/api_Control/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/api_Control/api_control.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subbProject/ServerSettingUi/ServerSettingUi/ServerSettingUi.pyproject" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subbProject/ServerSettingUi/ServerSettingUi/ServerSettingUi.pyproject.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subbProject/ServerSettingUi/ServerSettingUi/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subbProject/ServerSettingUi/ServerSettingUi/main.qml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subbProject/ServerSettingUi/ServerSettingUi/qml.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subbProject/ServerSettingUi/ServerSettingUi/qml/MainLayout.qml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subbProject/ServerSettingUi/ServerSettingUi/rc_qml.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subbProject/ServerSettingUi/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/plcServer/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/api_test/test_api_testApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/api_test/test_api_testApi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/api_test/test_api_workApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/api_test/test_api_workApi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/info.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/涟钢钢板质量判定标准表(横切、热处理线）2023.8.25.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/config/涟钢钢板质量判定标准表(横切、热处理线）2023.8.25.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/config/BaseConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/config/BaseConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/config/NetConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/config/NetConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forwarderServer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/forwarderServer/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/bkva/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/subbProject/ServerSettingUi/ServerSettingUi/ServerSettingUi.pyproject.user" beforeDir="false" afterPath="$PROJECT_DIR$/subbProject/ServerSettingUi/ServerSettingUi/ServerSettingUi.pyproject.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/forwarderServer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/forwarderServer/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +28,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;a1112&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/a1112/bkjc_api&quot;,
+    &quot;accountId&quot;: &quot;1444c3fa-12fe-465d-8885-5ef23e7c8133&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -217,7 +207,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>

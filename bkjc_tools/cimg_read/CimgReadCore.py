@@ -9,7 +9,7 @@ from PIL import Image
 import sys
 import numpy as np
 
-from bkjc_tools.CONFIG import DLL_PATH, WIDTH, HEIGHT, POOL_SIZE
+from CONFIG import DLL_PATH, WIDTH, HEIGHT, POOL_SIZE
 
 dllPath = os.path.join(DLL_PATH, "CimgRead.dll")
 base_encoding = "gbk"
@@ -23,6 +23,7 @@ def loadDll(dll_url):
     Returns:
         ctypes.CDLL: The loaded DLL file.
     """
+    print(fr"loadDll {sys.version_info}")
     if sys.version_info.major >= 3 and sys.version_info.minor >= 8:
         os.add_dll_directory(DLL_PATH)
         return ctypes.CDLL(dll_url, winmode=0)
