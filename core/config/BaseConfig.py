@@ -6,13 +6,22 @@ from core import get_path, get_config_path
 
 maxSteelInfoCache = 200
 TIMESTAMP_FORMAT = "%Y-%m-%d %H:%M:%S"
-MAIN_INFO = json.load(Path(get_path("config/info.json")).open("r", encoding="utf-8"))
+
+computer_name = socket.gethostname()
+
+print(fr"PC name : {computer_name}")
+if computer_name in ["lcx_ace"]:
+    MAIN_INFO = json.load(open(get_config_path("debug/info_lcx_ace.json"), "r", encoding="utf-8"))
+else:
+    MAIN_INFO = json.load(Path(get_path("info.json")).open("r", encoding="utf-8"))
+
 info = MAIN_INFO
 
 locType = info["locType"] if "locType" in info else "3.0"
 
 
 def isLoc():
+    # 是否未本机
     locConfig = info["useLoc"] if "useLoc" in info else False
     if socket.gethostname() in ["lcx_ace"]:
         return True
@@ -110,7 +119,7 @@ steelLevelUrl = "http://172.25.2.43:900"
 steelLevelTemplateDataOut = get_path("template/templateDataOut.xlsx")
 plant_classification = "热处理一厂"
 productionLine_classification = "横切一号线"
-steelLevelTabelServerUrl = info["steelLevelTabelServerUrl"] if "steelLevelEnable" in info else False
+steelLevelTabelServerUrl = info["steelLevelTabelServerUrl"] if "steelLevelTabelServerUrl" in info else False
 
 
 ipListJson = get_config_path("ipList.json")

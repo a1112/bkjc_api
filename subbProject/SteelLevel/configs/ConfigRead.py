@@ -128,9 +128,7 @@ class DefectLevelConfig:
                 print(fr"{self.name} {levelLevel} 未设置规则，使用默认规则。 ")
                 print(glob_defectLevelConfig.defectLevelConfig.defectLevelDict)
                 levelConfig = glob_defectLevelConfig.defectLevelConfig.defectLevelDict[defectClass][levelLevel]
-            print(fr" 强制 使用默认规则。 ")
-            print(glob_defectLevelConfig.defectLevelConfig.defectLevelDict)
-            levelConfig = glob_defectLevelConfig.defectLevelConfig.defectLevelDict[defectClass][levelLevel]
+            # levelConfig = glob_defectLevelConfig.defectLevelConfig.defectLevelDict[defectClass][levelLevel]
             code = levelConfig
             msg = fr"{self.name} {levelLevel} {self.defectLevelDict[defectClass]["name"]}"
             levelCode = self.levelDefectByCode(defect, code, msg)
@@ -154,6 +152,8 @@ class DefectLevelConfig:
         area_cm = height_cm * width_cm
         print(fr"width {width_mm} mm")
         print(fr"height {height_mm} mm")
+
+
         if eval(levelCode):
             return True
         return False
@@ -296,7 +296,6 @@ class SteelLevelConfig:
     def defectLevel(self, defect, steelInfo):
         defect: DefectProject
         steelInfo: SteelProject
-        print(self.defectLevelConfig.defectLevel(defect, steelInfo))
         return self.defectLevelConfig.defectLevel(defect, steelInfo)
 
 

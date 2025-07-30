@@ -6,9 +6,6 @@ from ..Base.module import SteelProject, DefectProject
 
 
 def steelList(num, start_id) -> list[SteelProject]:
-
-
-
     url_ = f"{steelLevelUrl}/steelList/{num}/{start_id}"
     print(url_)
     jsonData = requests.get(url_).json()
