@@ -1,9 +1,9 @@
 from datetime import datetime
 
 from config import TIMESTAMP_FORMAT
-from ...Base.module._ModelBase_ import ModelBase
-from ...DataSet.models import SteelLevel
-from ...tool import getPackageNo
+from Base.module._ModelBase_ import ModelBase
+from DataSet.models import SteelLevel
+from tool import getPackageNo
 
 
 class SteelProject(ModelBase):
@@ -125,7 +125,7 @@ class SteelProject(ModelBase):
             detectTime=self.detectTime,
             grade=self.grade,
             level=(len(self._level[0]) > 0) + 1,
-            msg=self._level[1],
+            msg=str(self._level[1]),
         )
 
     def __str__(self):

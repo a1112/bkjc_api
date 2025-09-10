@@ -12,5 +12,7 @@ python-multipart
 pytest
 pypattyrn
 flask
+openpyxl
+requests
 https://github.com/a1112/bkjc_database
 https://github.com/a1112/bkjc_tool

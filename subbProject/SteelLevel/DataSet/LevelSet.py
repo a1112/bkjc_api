@@ -3,7 +3,7 @@ from bkjc_database import SqlTool
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from ..Base.module import DefectProject, SteelProject, UserDataProject
+from Base.module import DefectProject, SteelProject, UserDataProject
 from .models import Base, SteelLevel, DefectLevel, UserData
 
 # 创建一个 SQLite 数据库引擎

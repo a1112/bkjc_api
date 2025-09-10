@@ -2,11 +2,11 @@ from pathlib import Path
 
 import openpyxl
 import config
-import openpyxl
 
-from .Base.module import SteelProject
-from .DataSet.LevelSet import getUserDatByPackageNo
-from .DataSet.models import UserData
+
+from Base.module import SteelProject
+from DataSet.LevelSet import getUserDatByPackageNo
+from DataSet.models import UserData
 
 
 def saveExcel(data, excel_path):

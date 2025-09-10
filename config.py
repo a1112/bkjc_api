@@ -2,7 +2,7 @@ import sys
 import os
 import json
 from pathlib import Path
-from core import init, get_path,get_config_path
+from core import init, get_path, get_config_path
 from core.config import MAIN_INFO, isLoc
 
 info = MAIN_INFO

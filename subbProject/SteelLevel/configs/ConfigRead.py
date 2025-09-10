@@ -3,8 +3,7 @@ from openpyxl import load_workbook
 
 from collections import defaultdict
 from subbProject.SteelLevel.configs.DataRead import LevelDataGet
-from ..Base.module import DefectProject, SteelProject
-from ..configs.DefectClass import defectClass2LevelDefectClass
+from configs.DefectClass import defectClass2LevelDefectClass
 from config import xlsxFile
 
 # 打开 Excel 文件
@@ -139,7 +138,7 @@ class DefectLevelConfig:
         return "L"
 
     def levelDefectByCode(self, defect, code, msg):
-        defect: DefectProject
+        defect: "DefectProject"
         print("缺陷判级　" + msg)
         print(code)
         levelCode = code[-1]
@@ -197,14 +196,14 @@ class SteelLevelConfig:
 
     def steelLevel(self, steelInfo, filterDefects):
         print(f"filterDefects {len(filterDefects)}")
-        defect: DefectProject
-        steelInfo: SteelProject
+        defect: "DefectProject"
+        steelInfo: "SteelProject"
         if not filterDefects:
             return [], ["无缺陷", "无缺陷"], ""
         else:
             defList = []
             for defect in filterDefects:
-                defect: DefectProject
+                defect: "DefectProject"
                 defectLevel = self.defectLevelConfig.defectLevel(defect, steelInfo)
                 defectClass = defectClass2LevelDefectClass(defect.defectID)
                 if defectClass == 0:
@@ -231,7 +230,7 @@ class SteelLevelConfig:
         return defList, self.toMsgString(defList), levelStr
 
     def leveSteelByCode(self, defect_list, code_list, msg):
-        defect: DefectProject
+        defect: "DefectProject"
         print(code_list)
         defect_dict = defaultdict(dict)
 
@@ -294,8 +293,8 @@ class SteelLevelConfig:
         }
 
     def defectLevel(self, defect, steelInfo):
-        defect: DefectProject
-        steelInfo: SteelProject
+        defect: "DefectProject"
+        steelInfo: "SteelProject"
         return self.defectLevelConfig.defectLevel(defect, steelInfo)
 
 
@@ -344,8 +343,8 @@ class LevelConfig:
     # print(steelLevelDict)
 
     def defectLevel(self, defect, steelInfo):
-        defect: DefectProject
-        steelInfo: SteelProject
+        defect: "DefectProject"
+        steelInfo: "SteelProject"
         # 进行判级
         for steelLevel in self.SteelLevelConfigList:
             if steelLevel.isCurrentType(steelInfo.steelType):
@@ -354,11 +353,11 @@ class LevelConfig:
             raise
 
     def steelLevel(self, steelInfo, filterDefects):
-        steelInfo: SteelProject
+        steelInfo: "SteelProject"
         if not steelInfo.steelType:
             return [], ["", ""], ""
         # 进行判级#
-        filterDefects: list[DefectProject]
+        filterDefects: list["DefectProject"]
         print(filterDefects)
         for steelLevel in self.SteelLevelConfigList:
             if steelLevel.isCurrentType(steelInfo.steelType):

@@ -1,8 +1,8 @@
 import config
 from datetime import datetime
-from ...Base.module._ModelBase_ import ModelBase
-from ...DataSet.models import UserData
-from ...configs.DefectClass import defectClass2LevelDefectClass
+from Base.module._ModelBase_ import ModelBase
+from DataSet.models import UserData
+from configs.DefectClass import defectClass2LevelDefectClass
 
 
 class UserDataProject(ModelBase):
