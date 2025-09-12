@@ -3,7 +3,7 @@ from openpyxl import load_workbook
 
 from collections import defaultdict
 from subbProject.SteelLevel.configs.DataRead import LevelDataGet
-from configs.DefectClass import defectClass2LevelDefectClass
+from subbProject.SteelLevel.configs.DefectClass import defectClass2LevelDefectClass
 from config import xlsxFile
 
 # 打开 Excel 文件

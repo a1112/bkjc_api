@@ -3,7 +3,7 @@ from bkjc_database import SqlTool
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from Base.module import DefectProject, SteelProject, UserDataProject
+from subbProject.SteelLevel.Base.module import DefectProject, SteelProject, UserDataProject
 from .models import Base, SteelLevel, DefectLevel, UserData
 
 # 创建一个 SQLite 数据库引擎
@@ -125,3 +125,15 @@ def getUserDatByPackageNo(packageNo):
         items = session.query(UserData).where(packageNo==UserData.busNumber).all()
         print(items)
         return items
+
+def getSteelLevelByDate(startDate, endDate):
+    print("getSteelLevelByDate")
+    with Session() as session:
+        items= session.query(SteelLevel).where(SteelLevel.detectTime>startDate).where(SteelLevel.detectTime<endDate)[:10000]
+        print(items)
+        return items
+
+def getAllSteelLevel():
+    with Session() as session:
+        items = session.query(SteelLevel)
+        return items.all()

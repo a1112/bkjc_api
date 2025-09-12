@@ -1,11 +1,14 @@
-from core import mainApp as app
 import uvicorn
+from fastapi import FastAPI
 
 import subbProject.SteelLevel.init
+
+app=FastAPI()
 subbProject.SteelLevel.init.initServer(app)
-import subbProject.SteelLevel.main
+
 import subbProject.SteelLevel.api
-import subbProject.SteelLevel.script
+
 if __name__ == '__main__':
     app=subbProject.SteelLevel.api.app
-    uvicorn.run(app, host='0.0.0.0', port=8009)
+    # subbProject.SteelLevel.api.export_text()
+    uvicorn.run(app, host='0.0.0.0', port=8010)

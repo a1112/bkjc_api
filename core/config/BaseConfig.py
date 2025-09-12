@@ -19,7 +19,7 @@ info = MAIN_INFO
 
 locType = info["locType"] if "locType" in info else "3.0"
 
-
+print(fr"hostname: {socket.gethostname()}")
 def isLoc():
     # 是否未本机
     locConfig = info["useLoc"] if "useLoc" in info else False
