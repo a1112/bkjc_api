@@ -52,6 +52,7 @@ def saveExcel(data, excel_path):
     saveDir = Path(excel_path).parent
     if not saveDir.exists():
         saveDir.mkdir(parents=True)
+    print(fr"excel_path {excel_path}")
     workbook.save(excel_path)
 
 

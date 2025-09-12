@@ -1,9 +1,9 @@
 import time
 from  threading import Thread
 from subbProject.SteelLevel.DataSet import api, LevelSet
-from . import toExcel
-from .Base.module import SteelProject
-from .main import levelBySteelProject
+from subbProject.SteelLevel import toExcel
+from subbProject.SteelLevel.Base.module import SteelProject
+from subbProject.SteelLevel.main import levelBySteelProject
 
 
 class Script1(Thread):
@@ -14,6 +14,7 @@ class Script1(Thread):
     def run(self):
         time.sleep(5)
         print("run")
+
         for item in range(200):
             itemSize = 1000
             dataList = api.steelList(itemSize, 200000+item * itemSize)

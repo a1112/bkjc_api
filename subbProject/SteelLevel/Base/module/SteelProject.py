@@ -100,6 +100,9 @@ class SteelProject(ModelBase):
         return self._level[1]
     @property
     def levelStr(self):
+        if len(self._level)<3:
+            return ""
+        print(fr"self._level {self._level}")
         return self._level [2]
 
     @property

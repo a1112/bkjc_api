@@ -20,6 +20,7 @@ def levelBySteelProject(steelInfo: SteelProject):
             LevelSet.addDefect(
                 defect
             )
+
             filterDefects.append(defect)
     defList, levelMsg,levelStr = levelConfig.steelLevel(steelInfo, filterDefects)
     steelInfo.level = defList, levelMsg, levelStr
@@ -40,24 +41,26 @@ def main():
             toExcel.append(steelInfo)
             LevelSet.addSteel(steelInfo)
             oldSeqNo = steelInfo.steelID
-            # defects = api.getDefectList(steelInfo.steelID)
-            # filterDefects = []
-            # for defect in defects:  # 查询缺陷
-            #     defect: DefectProject
-            #     defectLevel = levelConfig.defectLevel(defect, steelInfo)
-            #     if defectLevel in ["L", "M", "S"]:
-            #         defect.level = defectLevel
-            #         # 严重缺陷
-            #         LevelSet.addDefect(
-            #             defect
-            #         )
-            #         filterDefects.append(defect)
-            # defList, levelMsg = levelConfig.steelLevel(steelInfo, filterDefects)
-            # steelInfo.level = defList, levelMsg
-            #
-            # toExcel.append(steelInfo)
-            # LevelSet.addSteel(steelInfo)
-            # # 获取 钢板等级
+            defects = api.getDefectList(steelInfo.steelID)
+            filterDefects = []
+            for defect in defects:  # 查询缺陷
+                defect: DefectProject
+                defectLevel = levelConfig.defectLevel(defect, steelInfo)
+                if defectLevel in ["L", "M", "S"]:
+                    defect.level = defectLevel
+                    # 严重缺陷
+                    LevelSet.addDefect(
+                        defect
+                    )
+                    filterDefects.append(defect)
+            info = levelConfig.steelLevel(steelInfo, filterDefects)
+            print(info)
+            i, defList, levelMsg = info
+            steelInfo.level = i, defList, levelMsg
+
+            toExcel.append(steelInfo)
+            LevelSet.addSteel(steelInfo)
+            # 获取 钢板等级
         time.sleep(5)
 
 

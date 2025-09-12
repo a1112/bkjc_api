@@ -363,6 +363,7 @@ class LevelConfig:
             if steelLevel.isCurrentType(steelInfo.steelType):
                 steelLevel = steelLevel.steelLevel(steelInfo, filterDefects)
                 print(steelLevel)
+                assert len(steelLevel) == 3
                 return steelLevel
         raise
 
