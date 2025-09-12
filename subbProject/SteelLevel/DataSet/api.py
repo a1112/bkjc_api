@@ -6,6 +6,7 @@ from ..Base.module import SteelProject, DefectProject
 
 
 def steelList(num, start_id) -> list[SteelProject]:
+
     url_ = f"{steelLevelUrl}/steelList/{num}/{start_id}"
     print(url_)
     jsonData = requests.get(url_).json()
@@ -25,6 +26,8 @@ def searchByData(startData, endData):
 
 
 def getDefectList(seqNo) -> list[DefectProject]:
+
+
     jsonData = requests.get(f"{steelLevelUrl}/getDefectView/{seqNo}").json()
     return [DefectProject(defect) for defect in jsonData["up"]["defectList"] + jsonData["down"]["defectList"]]
 

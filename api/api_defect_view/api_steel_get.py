@@ -71,7 +71,12 @@ def addSteelCache(steel, steelId):
 def getSteelList(start_seqNo, num):
     steels = dbm.getSteelByNum(num, False, start_seqNo, desc=False)
     infos = []
-    for (steel, steelId) in steels:
+    for item in steels:
+        if isinstance(item,list):
+            steel, steelId =item
+        else:
+            steel=item
+            steelId=None
         if dbm.isSqlServer():  # 3.0
             pass
         info = addSteelCache(steel, steelId)
@@ -273,6 +278,9 @@ def getDefectView(seqNo: int):
     :return: 上下表面缺陷数据集合
     """
     defectInfo = dbm.getDefectBySeqNo(seqNo)
+
+
+
     upWidthInfo, downWidthInfo = getWidthInfos(seqNo, [defectInfo["upCameraList"],
                                                        defectInfo["downCameraList"]])
     defectListUp, defectListDown = getDefectListByDefectInfo(seqNo, defectInfo)

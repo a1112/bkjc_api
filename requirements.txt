@@ -14,5 +14,6 @@ pypattyrn
 flask
 openpyxl
 requests
+sqlalchemy_utils
 https://github.com/a1112/bkjc_database
 https://github.com/a1112/bkjc_tool

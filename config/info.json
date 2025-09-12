@@ -32,7 +32,7 @@
     "// defectClassFile": "config/ArNTClassTable_ASCII.xml",
 
     "steelLevelEnable": false,
-    "conditionMonitoringEnable": true,
+    "conditionMonitoringEnable": false,
     "steelLevelTabelServerUrl": false,
 
     "plcForwarder": false

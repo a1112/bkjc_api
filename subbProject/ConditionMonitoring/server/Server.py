@@ -5,7 +5,7 @@ from ..CameraStatus import getCameraInfo, getLightInfo,getRkmonitorInfo
 
 from ..core import app
 
-from BKVisionListener.states.computer import ComputerStates
+# from BKVisionListener.states.computer import ComputerStates
 import config
 
 

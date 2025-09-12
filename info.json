@@ -2,7 +2,7 @@
     "cameraCount":2,
     "upCamera": [1],
     "downCamera": [2],
-    "upServer":"172.25.2.43",
+    "upServer":"172.25.3.7",
     "system":"4.0",
     "drive":"mysql",
         "drive2":"mysql",
@@ -13,10 +13,10 @@
     "downServer":"127.0.0.1",
     "source": "\\\\{}\\{}\\small",
     "sourceLen": 6,
-    "TopFace": "172.25.2.43\\imgsrc1",
-    "BottomFace":"172.25.2.43\\imgsrc2",
-    "TopDefect": "172.25.2.43\\defectImg1",
-    "BottomDefect": "172.25.2.43\\defectImg2",
+    "TopFace": "172.25.3.7\\imgsrc1",
+    "BottomFace":"172.25.3.7\\imgsrc2",
+    "TopDefect": "172.25.3.7\\defectImg1",
+    "BottomDefect": "172.25.3.7\\defectImg2",
     "defectSource": "\\\\{}\\{}",
 
     "ip": "0.0.0.0",
@@ -28,7 +28,7 @@
 
 
     "forwarder": false,
-    "forward_url":"http://172.25.2.43:809/",
+    "forward_url":"http://172.25.3.7:809/",
     "// defectClassFile": "config/ArNTClassTable_ASCII.xml",
 
     "steelLevelEnable": false,

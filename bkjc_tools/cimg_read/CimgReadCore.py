@@ -3,13 +3,18 @@ import os
 import ctypes
 import shutil
 import threading
+from pathlib import Path
 
 from PIL import Image
 
 import sys
 import numpy as np
 
-from CONFIG import DLL_PATH, WIDTH, HEIGHT, POOL_SIZE
+DLL_PATH = Path(__file__).parent / "dll/x64" if "python.exe" in sys.executable.lower() else Path(
+    sys.executable).parent / "dll/x64"
+WIDTH = 4096
+HEIGHT = 1024
+POOL_SIZE = 8
 
 dllPath = os.path.join(DLL_PATH, "CimgRead.dll")
 base_encoding = "gbk"
@@ -24,6 +29,7 @@ def loadDll(dll_url):
         ctypes.CDLL: The loaded DLL file.
     """
     print(fr"loadDll {sys.version_info}")
+    return None
     if sys.version_info.major >= 3 and sys.version_info.minor >= 8:
         os.add_dll_directory(DLL_PATH)
         return ctypes.CDLL(dll_url, winmode=0)
