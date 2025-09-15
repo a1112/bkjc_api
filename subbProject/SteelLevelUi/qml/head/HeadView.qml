@@ -1,0 +1,39 @@
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+
+Item{
+    Layout.fillWidth: true
+    height: 40
+RowLayout {
+        anchors.fill: parent
+        spacing: 30
+        DateTimeItem{
+            title:qsTr("起始")
+        }
+
+        DateTimeItem{
+            title:qsTr("结束")
+        }
+
+        Item{
+            Layout.fillWidth: true
+            height: 1
+        }
+
+        Button{
+            text: qsTr("查询")
+            height: 40
+            onClicked: {
+            }
+        }
+
+        Button{
+            text: qsTr("导出")
+            height: 40
+            onClicked: {
+            }
+        }
+
+    }
+}
