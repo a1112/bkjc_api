@@ -13,7 +13,7 @@ Item {
     }
 
     property string hostname: "127.0.0.1"
-    property string port:80010
+    property int port:8010
 
     readonly property string protocol: "http://"
     readonly property string ws_protocol:"ws://"
@@ -34,7 +34,7 @@ Item {
                 reUrl+=getGetArgs(args[argIndex])
             }
             else{
-            reUrl+="/"+args[argIndex]
+                 reUrl+="/"+args[argIndex]
                 }
         }
         return reUrl

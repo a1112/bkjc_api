@@ -25,6 +25,7 @@ RowLayout {
             text: qsTr("查询")
             height: 40
             onClicked: {
+                core.search()
             }
         }
 

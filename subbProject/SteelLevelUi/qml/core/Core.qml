@@ -1,4 +1,21 @@
 import QtQuick
 Item {
 
+    function search(){
+        coreStatus.dataLoading=true
+        api.getLevelDataByTime(
+                    "","",
+                    (text)=>{
+                        let json_data = JSON.parse(text)
+                        coreModel.initModel(json_data)
+                        coreStatus.dataLoading=false
+                    },
+                    (err)=>{
+                        coreStatus.dataLoading=false
+                    }
+                    )
+
+    }
+
+
 }

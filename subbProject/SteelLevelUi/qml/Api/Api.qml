@@ -21,11 +21,16 @@ Item {
     property ApiConfig apiConfig: ApiConfig{}
 
     function getLevelDataByTime(fromDateStr,toDateStr,success, failure){
-
-
+        return ajax.get(apiConfig.url(apiConfig.serverUrl,"LevelData"),success, failure)
     }
 
     function openApi(port){
             return Qt.openUrlExternally(apiConfig.url(apiConfig.protocol+apiConfig.hostname+":"+port,"docs"))
+    }
+
+
+    function getDelay(success, failure){
+        return ajax.get(apiConfig.url(apiConfig.serverUrl,"delay"),success, failure)
+
     }
 }

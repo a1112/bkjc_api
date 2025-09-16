@@ -7,6 +7,7 @@ import xlsxwriter
 from starlette.responses import StreamingResponse
 
 import config
+from bkjc_database.SqlTool import to_dict
 from ..DataSet.LevelSet import getSteelLevelByDate, getAllSteelLevel
 from ..configs.DataRead import LevelDataGet, xlsxDataGet
 from ..configs.DefectClass import defectClass2LevelDefectClassInfo
@@ -17,10 +18,21 @@ from ..toExcel import saveExcel
 from ..configs import ConfigRead
 
 
+
 @app.get("/steelLevel/info")
 def get_steel_level_info():
     steelLevelInfo = LevelSet.getSteelLevelInfo()
     return {"min": steelLevelInfo[0], "max": steelLevelInfo[1]}
+
+@app.get("/delay")
+async def get_delay():
+    return True
+
+
+@app.get("/getLevelData")
+async def get_level_data():
+    steels = getAllSteelLevel()
+    return to_dict(steels)
 
 
 @app.get("/steelLevel/exportSteelLevelByTime/{startTime:str}/{endTime:str}/{fileName:path}")
