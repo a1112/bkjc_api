@@ -4,7 +4,7 @@ import QtQuick
 
 Item {
     property bool dataLoading: false
-
+    property bool inited: false
 
 
 }

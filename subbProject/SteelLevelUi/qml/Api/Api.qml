@@ -20,8 +20,12 @@ Item {
 
     property ApiConfig apiConfig: ApiConfig{}
 
+    function getLevelTitle(success, failure){
+        return ajax.get(apiConfig.url(apiConfig.serverUrl,"getLevelTitle"),success, failure)
+    }
+
     function getLevelDataByTime(fromDateStr,toDateStr,success, failure){
-        return ajax.get(apiConfig.url(apiConfig.serverUrl,"LevelData"),success, failure)
+        return ajax.get(apiConfig.url(apiConfig.serverUrl,"getLevelData"),success, failure)
     }
 
     function openApi(port){

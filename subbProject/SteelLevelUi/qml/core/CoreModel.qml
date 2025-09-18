@@ -1,17 +1,30 @@
 import QtQuick
-
+import "../model"
 Item {
 
     property int ping_ms: -1
 
-    property ListModel main_model: ListModel{}
-
-
     function initModel(data){
-        main_model.clear()
+        steelLevelModel.clear()
         data.forEach((item)=>{
-                        main_model.append(item)
+                        steelLevelModel.append(item)
                      })
+    }
+
+    function initTitleMpdel(data){
+        titleleLeveModel.clear()
+        data.forEach((item)=>{
+                         titleleLeveModel.append(item)
+                      })
+
+    }
+
+    property ListModel steelLevelModel: ListModel{
+        dynamicRoles :true
+    }
+
+    property ListModel titleleLeveModel: ListModel{
+        dynamicRoles :true
     }
 
 }

@@ -14,7 +14,12 @@ Item {
                         },(err)=>{
                             coreModel.ping_ms = -1
                         }
+
                         )
+
+            if(!coreStatus.inited){
+                core.init()
+            }
 
         }
 

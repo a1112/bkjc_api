@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
-Item{
+Column{
     Layout.fillWidth: true
     height: 40
 RowLayout {

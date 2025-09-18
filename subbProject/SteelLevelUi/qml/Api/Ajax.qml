@@ -4,8 +4,6 @@ Item {
 
     function get(url, success, failure)
     {
-
-        console.log(url)
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url);
         xhr.onreadystatechange = function() {

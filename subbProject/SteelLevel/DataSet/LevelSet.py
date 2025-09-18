@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 
 from subbProject.SteelLevel.Base.module import DefectProject, SteelProject, UserDataProject
 from .models import Base, SteelLevel, DefectLevel, UserData
-
+from. import level_config
 # 创建一个 SQLite 数据库引擎
 engine = create_engine('sqlite:///example.db', echo=False)
 # 声明一个基类
@@ -28,7 +28,8 @@ def steelLevel(steelInfo, filterDefects):
 def addDefect(defect):
     defect: DefectProject
 
-    test = {'defectNo': 195,
+    test = {
+            'defectNo': 195,
             'defectID': 14,
             'bmIndex': 1,
             'seqNo': 519,

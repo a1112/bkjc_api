@@ -31,17 +31,20 @@ async def get_delay():
 
 @app.get("/getLevelData")
 async def get_level_data():
-    steels = getAllSteelLevel()
-    return to_dict(steels)
+    steels = [to_dict(item) for item in getAllSteelLevel()]
+
+    for item in steels:
+        for k in item.keys():
+            if not item[k]:
+                item[k]=""
+    return steels
 
 
-@app.get("/steelLevel/exportSteelLevelByTime/{startTime:str}/{endTime:str}/{fileName:path}")
+@app.get("/exportSteelLevelByTime/{startTime:str}/{endTime:str}/{fileName:path}")
 def exportSteelLevelByTime(startTime, endTime, fileName):
     startTime = datetime.datetime.strptime(startTime, config.TIMESTAMP_FORMAT)
     endTime = datetime.datetime.strptime(endTime, config.TIMESTAMP_FORMAT)
-    print(startTime)
-    print(endTime)
-    print(fileName)
+
 
     output = BytesIO()
     steels = getSteelLevelByDate(startTime, endTime)
@@ -60,29 +63,105 @@ def exportSteelLevelByTime(startTime, endTime, fileName):
 
 
 
-@app.get("/steelLevel/defectLevel/{bmIndex:int}/{defectId:int}")
+@app.get("/defectLevel/{bmIndex:int}/{defectId:int}")
 def getDefectLevel(defectId):
     pass
 
 
-@app.get("/steelLevel/getLevelTabel")
+@app.get("/getLevelTabel")
 def getLevelTabel():
     return ConfigRead.getLevelTabel()
 
 
-@app.get("/steelLevel/getLocalLevelData")
+@app.get("/getLocalLevelData")
 def getLocalLevelData():
     return xlsxDataGet()
 
 
-@app.get("/steelLevel/getLevelData")
+@app.get("/getLevelData")
 def getLevelData():
     return LevelDataGet()
 
 
-@app.get("/steelLevel/getDefectInfo")
+@app.get("/getDefectInfo")
 def getDefectInfo():
     return defectClass2LevelDefectClassInfo()
+
+@app.get("/getLevelTitle")
+def getLevelTitle():
+
+    # id = Column(Integer, primary_key=True)
+    # plant_classification = Column(String)
+    # productionLine_classification = Column(String)
+    # steelName = Column(String)
+    # packageName = Column(String)
+    # seqNo = Column(Integer)
+    # steelID = Column(Integer)
+    # steelType = Column(String)
+    # length = Column(Float)
+    # width = Column(Float)
+    # thick = Column(Float)
+    # upDefectNum = Column(Integer)  # 不同缺陷等级的数量
+    # downDefectNum = Column(Integer)  # 不同缺陷等级的数量
+    # detectTime = Column(DateTime)
+    # level = Column(Integer)
+    # levelInfo = Column(String)
+    # grade = Column(Integer)
+    # msg = Column(String)
+    #
+    # level_up = Column(Integer)
+    # levelInfo_up = Column(String)
+    # grade_up = Column(Integer)
+    # msg_up = Column(String)
+    #
+    # level_under = Column(Integer)
+    # levelInfo_under = Column(String)
+    # grade_under = Column(Integer)
+    # msg_under = Column(String)
+
+    return [
+        {
+            "key":"id",
+            "name":"判级Id",
+            "fillWidth":False
+        },{
+            "key": "productionLine_classification",
+            "name": "产线名称",
+            "fillWidth":False
+        },{
+            "key": "packageName",
+            "name": "捆包好",
+            "fillWidth":False
+        },{
+            "key": "steelName",
+            "name": "钢板号",
+            "fillWidth":False
+        },{
+            "key": "steelType",
+            "name": "钢种",
+            "fillWidth":False
+        },{
+            "key": "length",
+            "name": "长",
+            "fillWidth":False
+        },{
+            "key": "width",
+            "name": "宽",
+            "fillWidth":False
+        },{
+            "key": "thick",
+            "name": "厚",
+            "fillWidth":False
+        },{
+            "key": "level",
+            "name": "等级",
+            "fillWidth":False
+        },{
+            "key": "msg",
+            "name": "信息",
+            "fillWidth":True
+        }
+    ]
 
 @app.get("/steelLevel/export_test")
 def export_test():
