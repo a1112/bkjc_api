@@ -27,4 +27,21 @@ Item {
         dynamicRoles :true
     }
 
+    property ListModel productionLineModel: ListModel{
+        dynamicRoles :true
+    }
+
+    function initProductionLineModel(data_dict){
+        productionLineModel.clear()
+
+        for (let key in data_dict){
+            let item_data = data_dict[key]
+            item_data["index"] = key
+            productionLineModel.append(item_data)
+        }
+
+        data.forEach((item)=>{
+                         productionLineModel.append(item)
+                      })
+    }
 }

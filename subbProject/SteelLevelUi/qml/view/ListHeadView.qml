@@ -4,7 +4,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 
-RowLayout {
+SplitView {
     Layout.fillWidth: true
     spacing: 0
     Repeater{

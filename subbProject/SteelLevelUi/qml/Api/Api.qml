@@ -37,4 +37,9 @@ Item {
         return ajax.get(apiConfig.url(apiConfig.serverUrl,"delay"),success, failure)
 
     }
+
+    function getProductionLine(success, failure){
+        return ajax.get(apiConfig.url(apiConfig.serverUrl,"getProductionLine"),success, failure)
+    }
+
 }

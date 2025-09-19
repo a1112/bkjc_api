@@ -10,6 +10,7 @@ ItemDelegate {
     width: parent.width
     height: 30
     Row{
+        spacing: 0
         anchors.fill: parent
         Repeater{
             model: coreModel.titleleLeveModel
@@ -25,5 +26,6 @@ ItemDelegate {
 
     Component.onCompleted: {
         steelLevelModel.init(coreModel.steelLevelModel.get(index))
+
     }
 }

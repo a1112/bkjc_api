@@ -16,6 +16,7 @@ tabelList = {
         "FactoryID": 1,
         "DeviceName": "热处理5号线",
         "ip":"172.25.2.26"
+
     },
     "4": {
         "FactoryID": 1,
@@ -25,11 +26,13 @@ tabelList = {
     "5": {
         "FactoryID": 1,
         "DeviceName": "SED线",
+        "ip": "172.25.2.12"
 
     },
     "6": {
         "FactoryID": 1,
         "DeviceName": "横切1号线",
+        "ip": "172.25.2.12"
     },
     "7": {
         "FactoryID": 1,
@@ -104,6 +107,7 @@ tabelList = {
     "21": {
         "FactoryID": 2,
         "DeviceName": "横切2号线",
+        "ip": "172.25.2.12"
     },
 
 }

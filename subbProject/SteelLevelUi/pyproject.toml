@@ -1,0 +1,31 @@
+[project]
+name = "SteelLevel"
+
+[tool.pyside6-project]
+files = [
+            "main.py",
+            "main.qml",
+            "qml/Api/Ajax.qml",
+            "qml/Api/Api.qml",
+            "qml/Api/ApiConfig.qml",
+            "qml/Api/CoreStatus.qml",
+            "qml/Api/CoreTimer.qml",
+            "qml/Api/PortTool.qml",
+            "qml/DialogView.qml",
+            "qml/core/Core.qml",
+            "qml/core/CoreModel.qml",
+            "qml/foot/FootView.qml",
+            "qml/foot/IpInfo.qml",
+            "qml/foot/PingInfo.qml",
+            "qml/head/DateTimeItem.qml",
+            "qml/head/HeadView.qml",
+            "qml/head/ProductionLineSelect.qml",
+            "qml/head/TitleLabelItem.qml",
+            "qml/model/SteelLevelModel.qml",
+            "qml/view/ListHeadView.qml",
+            "qml/view/SteelLevelItem.qml",
+            "qml/view/SteelLevelItemItem.qml",
+            "qml/view/SteelLevelTabelView.qml",
+            "qml/view/TitleRowItem.qml",
+            "qtquickcontrols2.conf",
+]

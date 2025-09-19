@@ -8,6 +8,9 @@ from starlette.responses import StreamingResponse
 
 import config
 from bkjc_database.SqlTool import to_dict
+
+from subbProject.ApiForwarder import core as ApiForwarderCore
+
 from ..DataSet.LevelSet import getSteelLevelByDate, getAllSteelLevel
 from ..configs.DataRead import LevelDataGet, xlsxDataGet
 from ..configs.DefectClass import defectClass2LevelDefectClassInfo
@@ -123,43 +126,53 @@ def getLevelTitle():
         {
             "key":"id",
             "name":"判级Id",
-            "fillWidth":False
+            "fillWidth":False,
+            "item_width":150
         },{
             "key": "productionLine_classification",
             "name": "产线名称",
-            "fillWidth":False
+            "fillWidth":False,
+            "item_width":150
         },{
             "key": "packageName",
-            "name": "捆包好",
-            "fillWidth":False
+            "name": "捆包号",
+            "fillWidth":False,
+            "item_width":150
         },{
             "key": "steelName",
             "name": "钢板号",
-            "fillWidth":False
+            "fillWidth":False,
+            "item_width":150
         },{
             "key": "steelType",
             "name": "钢种",
-            "fillWidth":False
+            "fillWidth":False,
+            "item_width":150
         },{
             "key": "length",
             "name": "长",
-            "fillWidth":False
+            "fillWidth":False,
+            "item_width":100
         },{
             "key": "width",
             "name": "宽",
-            "fillWidth":False
+            "fillWidth":False,
+            "item_width":100
         },{
             "key": "thick",
             "name": "厚",
-            "fillWidth":False
+            "fillWidth":False,
+            "item_width":100
         },{
             "key": "level",
             "name": "等级",
-            "fillWidth":False
+            "fillWidth":False,
+            "item_width":100
         },{
             "key": "msg",
             "name": "信息",
-            "fillWidth":True
+            "fillWidth":True,
+            "item_width":150
         }
     ]
 
@@ -180,6 +193,11 @@ def export_test():
     response = StreamingResponse(output, headers=headers,
                                  media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
     return response
+
+@app.get("/getProductionLine")
+def getProductionLine():
+    return ApiForwarderCore.tabelList
+
 
 def export_text():
     steels = getAllSteelLevel()

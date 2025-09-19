@@ -3,11 +3,18 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 Column{
+    id:root
     Layout.fillWidth: true
     height: 40
 RowLayout {
         anchors.fill: parent
         spacing: 30
+
+        ProductionLineSelect{
+            height: 40
+
+        }
+
         DateTimeItem{
             title:qsTr("起始")
         }
@@ -33,6 +40,7 @@ RowLayout {
             text: qsTr("导出")
             height: 40
             onClicked: {
+                core.exportExcel()
             }
         }
 

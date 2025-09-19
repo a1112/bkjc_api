@@ -6,7 +6,7 @@ Row {
     height: 40
     property alias title: title_id.text
     spacing: 5
-    Label{
+    TitleLabelItem{
         id:title_id
         anchors.verticalCenter: parent.verticalCenter
 
@@ -18,7 +18,7 @@ Row {
         implicitHeight: root.height
         selectByMouse: true
     }
-    Label{
+    TitleLabelItem{
         anchors.verticalCenter: parent.verticalCenter
         text: qsTr("年")
     }
@@ -27,7 +27,7 @@ Row {
         implicitHeight: root.height
         selectByMouse: true
     }
-    Label{
+    TitleLabelItem{
         anchors.verticalCenter: parent.verticalCenter
         text: qsTr("月")
     }
@@ -36,7 +36,7 @@ Row {
         implicitHeight: root.height
         selectByMouse: true
     }
-    Label{
+    TitleLabelItem{
         anchors.verticalCenter: parent.verticalCenter
         text: qsTr("日")
     }
@@ -45,7 +45,7 @@ Row {
         implicitHeight: root.height
         selectByMouse: true
     }
-    Label{
+    TitleLabelItem{
         anchors.verticalCenter: parent.verticalCenter
         text: qsTr("时")
     }
@@ -54,7 +54,7 @@ Row {
         implicitHeight: root.height
         selectByMouse: true
     }
-    Label{
+    TitleLabelItem{
         anchors.verticalCenter: parent.verticalCenter
         text: qsTr("分")
     }
