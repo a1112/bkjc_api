@@ -7,7 +7,13 @@ from subbProject.SteelLevel.Base.module import DefectProject, SteelProject, User
 from .models import Base, SteelLevel, DefectLevel, UserData
 from. import level_config
 # 创建一个 SQLite 数据库引擎
-engine = create_engine('sqlite:///example.db', echo=False)
+
+
+
+engine = create_engine('mysql+pymysql://root:nercar@127.0.0.1:3306/SteelLevel', echo=False)
+
+
+
 # 声明一个基类
 # 创建数据库表
 Base.metadata.create_all(engine)
@@ -112,7 +118,6 @@ def hasUserFileData(fileName):
 
 
 def addUserData(userItem):
-    print("addUserData")
     userItem: UserDataProject
     with Session() as session:
         session.add(userItem.getUserData())
@@ -120,15 +125,13 @@ def addUserData(userItem):
 
 
 def getUserDatByPackageNo(packageNo):
-    print("packageNo ", packageNo)
-    print("getUserDatByPackageNo")
+
     with Session() as session:
         items = session.query(UserData).where(packageNo==UserData.busNumber).all()
         print(items)
         return items
 
 def getSteelLevelByDate(startDate, endDate):
-    print("getSteelLevelByDate")
     with Session() as session:
         items= session.query(SteelLevel).where(SteelLevel.detectTime>startDate).where(SteelLevel.detectTime<endDate)[:10000]
         print(items)
