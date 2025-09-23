@@ -21,4 +21,3 @@ def get_dbm(config:CONFIG.DbConfigBase,reGet=False):
     if not dbm:
         init_dbm(config)
     return dbm
-init_dbm(CONFIG.DbConfig4d0())

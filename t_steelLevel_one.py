@@ -1,15 +1,15 @@
+from threading import  Thread
+from subbProject.ApiForwarder import core
 from core import mainApp as app
-import uvicorn
 from core.config import BaseConfig
+
 BaseConfig.level_only = True
 
 import subbProject.SteelLevel.init
+
 subbProject.SteelLevel.init.initServer(app)
-import subbProject.SteelLevel.main
+from subbProject.SteelLevel.script import ScriptLevel
 import subbProject.SteelLevel.api
-import subbProject.SteelLevel.script
 
 
-if __name__ == '__main__':
-    app=subbProject.SteelLevel.api.app
-    uvicorn.run(app, host='0.0.0.0', port=8009)
+ScriptLevel(core.tabelList["6"])

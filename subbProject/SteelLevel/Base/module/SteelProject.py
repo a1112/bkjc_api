@@ -11,6 +11,7 @@ class SteelProject(ModelBase):
         self.jsonData = jsonData
         self._level = 1
         self._packageNo_ = ""
+        self.productionLine = ""
 
     @property
     def id(self):
@@ -117,6 +118,7 @@ class SteelProject(ModelBase):
 
     def getSteelLevel(self):
         return SteelLevel(
+            productionLine_classification=self.productionLine,
             steelName=self.steelNo,
             packageName=self.packageName,
             seqNo=self.seqNo,

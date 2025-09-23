@@ -5,7 +5,6 @@ from subbProject.SteelLevel.DataSet import api
 from .Base.module import SteelProject, DefectProject
 from .configs import levelConfig
 from . import toExcel
-from . import AddUseDataThread
 
 
 def levelBySteelProject(steelInfo: SteelProject):
@@ -20,7 +19,6 @@ def levelBySteelProject(steelInfo: SteelProject):
             LevelSet.addDefect(
                 defect
             )
-
             filterDefects.append(defect)
     defList, levelMsg,levelStr = levelConfig.steelLevel(steelInfo, filterDefects)
     steelInfo.level = defList, levelMsg, levelStr
@@ -33,7 +31,7 @@ def main():
     getCount = 100
     oldSeqNo = maxSeq
     while True:
-        for steelInfo in api.steelList(getCount, oldSeqNo):  # 查询钢板
+        for steelInfo in api.steelList(getCount, oldSeqNo,steelLevelUrl=self.steelLevelUrl):  # 查询钢板
             steelInfo: SteelProject
             if oldSeqNo == steelInfo.steelID:
                 continue
@@ -64,11 +62,13 @@ def main():
         time.sleep(5)
 
 
+
+
 def startMain():
     Thread(target=main).start()
 
 
-if __name__ == "__main__":
-    main()
-else:
-    startMain()
+# if __name__ == "__main__":
+#     main()
+# else:
+#     startMain()

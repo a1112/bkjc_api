@@ -29,7 +29,15 @@ class Mysql_4d0(DataBaseInterFace):
             print(session)
 
             # 备份数据
-            return session.query(Ncdhotstrip.Steelrecord)[0:number]
+
+            que = session.query(Ncdhotstrip.Steelrecord)
+            if startID:
+                que = que.filter(Ncdhotstrip.Steelrecord.seqNo > startID)
+            if desc:
+                ord_item = Ncdhotstrip.Steelrecord.seqNo.desc()
+            else:
+                ord_item = Ncdhotstrip.Steelrecord.seqNo.asc()
+            return que[0:number]
 
             try:
                 que = session.query(Ncdhotstrip.Steelrecord,

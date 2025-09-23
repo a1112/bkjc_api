@@ -54,7 +54,7 @@ class SqlServer_3d0(DataBaseInterFace):
                     SteelRecord.SteelID, SteelRecord.SteelID.ID == SteelRecord.Steel.SteelID, isouter=True
                 )
                 if startID:
-                    que = que.filter(SteelRecord.Steel.ID > startID)
+                    que = que.filter(SteelRecord.Steel.SequeceNo > startID)
 
                 if desc:
                     ord_item = SteelRecord.Steel.ID.desc()

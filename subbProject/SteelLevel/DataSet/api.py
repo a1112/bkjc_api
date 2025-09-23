@@ -5,7 +5,7 @@ from config import steelLevelUrl
 from ..Base.module import SteelProject, DefectProject
 
 
-def steelList(num, start_id) -> list[SteelProject]:
+def steelList(num, start_id,steelLevelUrl) -> list[SteelProject]:
 
     url_ = f"{steelLevelUrl}/steelList/{num}/{start_id}"
     print(url_)

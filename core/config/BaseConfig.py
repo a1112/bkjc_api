@@ -35,6 +35,8 @@ defectClassFile = info["defectClassFile"] if "defectClassFile" in info else get_
 forwarder = info["forwarder"] if "forwarder" in info else False
 forward_url = info["forward_url"] if "forward_url" in info else ""
 
+level_only = False
+
 # 是否是PLC数据转发
 plcForwarder = info["plcForwarder"] if "plcForwarder" in info else False
 plcForwarderUrl = info["plcForwarderUrl"] if "plcForwarderUrl" in info else ""

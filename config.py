@@ -12,8 +12,11 @@ if isLoc():
 else:
     from core.config.NetConfig import *
 
-if not forwarder:
-    init.initDataBase(info)
+if not forwarder :
+    if level_only:
+        pass
+    else:
+        init.initDataBase(info)
 
 
 

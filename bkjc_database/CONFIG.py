@@ -39,19 +39,18 @@ class DbConfig3d0(DbConfigBase):
         self.databaseList = ['DWDiagnostics', 'DWConfiguration', 'DWQueue', 'Classifier', 'SteelRecord', "ConfigCenter"]
 
 class DbConfig4d0(DbConfigBase):
-    def __init__(self):
+    def __init__(self,ip):
         super().__init__()
         global globDbConfig
         globDbConfig =self
+        self.ip = ip
         self.database_type = "ncdhotstrip1"
         self.systemDatabase = ["master", "model", "msdb", "tempdb"]
         drives="mysql+pymysql"
-        self.baseUrl = drives+"://root:nercar@172.25.3.7:3306/{}?charset=utf8"
+        self.baseUrl = drives+"://root:nercar@"+ip+":3306/{}?charset=utf8"
         # self.baseUrl="sqlite:///test.db"
         self.echo = False
         self.beforeInit = True
         self.databaseCheckInfo = {}  # 数据库正确性验证字典
         self.drive = "mysql"
 
-
-globDbConfig=DbConfig4d0()

@@ -68,12 +68,12 @@ def addSteelCache(steel, steelId):
 
 
 @app.get("/steelList/{num:int}/{start_seqNo:int}")
-def getSteelList(start_seqNo, num):
+def getSteelList(num,start_seqNo):
     steels = dbm.getSteelByNum(num, False, start_seqNo, desc=False)
     infos = []
     for item in steels:
         if isinstance(item,list):
-            steel, steelId =item
+            steel, steelId = item
         else:
             steel=item
             steelId=None

@@ -1,5 +1,7 @@
+import datetime
+
 import requests
-from bkjc_database import SqlTool
+# from bkjc_database import SqlTool
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -12,7 +14,50 @@ from. import level_config
 
 engine = create_engine('mysql+pymysql://root:nercar@127.0.0.1:3306/SteelLevel', echo=False)
 
+def getDateInfo(dateTime):
+    """
+    将时间戳，datetime，转换成 字典
+    :param dateTime:
+    :return:
+    """
+    if isinstance(dateTime, datetime.datetime):
+        return {"year": dateTime.year,
+                "month": dateTime.month,
+                "weekday": dateTime.weekday(),
+                "day": dateTime.day,
+                "hour": dateTime.hour,
+                "minute": dateTime.minute,
+                "second": dateTime.second,
+                }
+    if isinstance(dateTime, (float, int)):
+        return getDateInfo(datetime.datetime.fromtimestamp(dateTime))
+    if isinstance(dateTime, datetime.timedelta):
+        return {"day": dateTime.days,
+                "hour": int(dateTime.seconds / 3600),
+                "minute": int(dateTime.seconds / 60) % 60,
+                "second": dateTime.seconds % 60
+                }
 
+
+def to_dict(obj, up_Data: dict = None):
+    """
+    转换成可序列化的字典
+    """
+    if hasattr(obj, "__dict__") and "_sa_instance_state" in obj.__dict__:
+        if not up_Data:
+            up_Data = {}
+        if len(obj.__dict__) <= 1:
+            rd = {key: to_dict(getattr(obj, key)) for key in obj.__dir__() if not key.startswith('_')
+                  and key not in ["metadata"] and key not in up_Data}
+        else:
+            rd = {key: to_dict(getattr(obj, key)) for key in obj.__dict__ if
+                  key not in ["_sa_instance_state"] and key not in up_Data}
+        rd.update(up_Data)
+        return rd
+    elif isinstance(obj, datetime.datetime):
+        return getDateInfo(obj)
+    else:
+        return obj
 
 # 声明一个基类
 # 创建数据库表
@@ -88,11 +133,19 @@ def clearAll():
 def getMaxSteelNo():
     session = Session()
     try:
-        maxItem = session.query(SteelLevel).order_by(SteelLevel.seqNo.desc()).all()[0]
+        maxItem = session.query(SteelLevel).order_by(SteelLevel.seqNo.desc())[0]
         return maxItem.seqNo
     except BaseException:
         return 0
 
+def getMaxSteelNoByproductionLine(productionLine):
+    with Session() as session:
+        try:
+            maxItem = session.query(SteelLevel).where(productionLine==SteelLevel.productionLine_classification).order_by(SteelLevel.id.desc())[0]
+            print(f"{productionLine} maxItem maxId: {maxItem.id} {maxItem.seqNo}")
+            return maxItem.seqNo
+        except BaseException:
+            return 0
 
 
 
@@ -101,7 +154,7 @@ def getSteelLevelInfo():
         try:
             minItem = session.query(SteelLevel).order_by(SteelLevel.seqNo)[0]
             maxItem = session.query(SteelLevel).order_by(SteelLevel.seqNo.desc())[0]
-            return SqlTool.to_dict(minItem), SqlTool.to_dict(maxItem)
+            return to_dict(minItem), to_dict(maxItem)
         except BaseException:
             return {}, {}
 

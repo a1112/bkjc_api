@@ -1,5 +1,5 @@
 # 定义一个模型类
-from sqlalchemy import create_engine, Column, Integer, String, Float, DateTime
+from sqlalchemy import create_engine, Column, Integer, String, Float, DateTime,Text
 from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
@@ -8,13 +8,13 @@ class SteelLevel(Base):
     #  钢板等级信息表
     __tablename__ = 'SteelLevel'
     id = Column(Integer, primary_key=True)
-    plant_classification = Column(String)
-    productionLine_classification = Column(String)
-    steelName = Column(String)
-    packageName = Column(String)
+    plant_classification = Column(String(50))
+    productionLine_classification = Column(String(50))
+    steelName = Column(String(50))
+    packageName = Column(String(50))
     seqNo = Column(Integer)
     steelID = Column(Integer)
-    steelType = Column(String)
+    steelType = Column(String(30))
     length = Column(Float)
     width = Column(Float)
     thick = Column(Float)
@@ -22,19 +22,19 @@ class SteelLevel(Base):
     downDefectNum = Column(Integer)  # 不同缺陷等级的数量
     detectTime = Column(DateTime)
     level = Column(Integer)
-    levelInfo = Column(String)
+    levelInfo = Column(Text())
     grade = Column(Integer)
-    msg = Column(String)
+    msg = Column(Text())
 
     level_up = Column(Integer)
-    levelInfo_up = Column(String)
+    levelInfo_up = Column(String(10))
     grade_up = Column(Integer)
-    msg_up = Column(String)
+    msg_up = Column(Text())
 
     level_under = Column(Integer)
-    levelInfo_under = Column(String)
+    levelInfo_under = Column(String(10))
     grade_under = Column(Integer)
-    msg_under = Column(String)
+    msg_under = Column(Text())
 
 
 class DefectLevel(Base):
@@ -43,11 +43,11 @@ class DefectLevel(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     defectNo = Column(Integer)
     defectID = Column(Integer)
-    defectName = Column(String)
-    steelName = Column(String)
+    defectName = Column(String(20))
+    steelName = Column(String(20))
     bmIndex = Column(Integer)
     seqNo = Column(Integer)
-    packageName = Column(String)
+    packageName = Column(String(30))
     classId = Column(Integer)
     cameraId = Column(Integer)
     ImageIndex = Column(Integer)
@@ -63,23 +63,23 @@ class DefectLevel(Base):
     steelH = Column(Integer)
 
     level = Column(Integer)
-    levelMsg = Column(String)
-    msg = Column(String)
+    levelMsg = Column(Text())
+    msg = Column(Text())
 
 
 class UserData(Base):
     __tablename__ = 'UserSteelLevelData'
     id = Column(Integer, primary_key=True, autoincrement=True)  # id
-    fileName = Column(String)  # 插入的文件名称
-    steelName = Column(String)
-    plant_classification = Column(String)
-    productionLine_classification = Column(String)
+    fileName = Column(String(256))  # 插入的文件名称
+    steelName = Column(String(30))
+    plant_classification = Column(String(50))
+    productionLine_classification = Column(String(50))
     productionTime = Column(DateTime)
-    steelType = Column(String)
+    steelType = Column(String(30))
     steelLevel = Column(Integer)
-    steelLevelCode = Column(String)
-    residualReasonCode = Column(String)
-    defectCode = Column(String)
-    scrapReasonCode = Column(String)
-    downgradeNote = Column(String)
-    busNumber = Column(String)
+    steelLevelCode = Column(String(5))
+    residualReasonCode = Column(String(5))
+    defectCode = Column(String(5))
+    scrapReasonCode = Column(String(5))
+    downgradeNote = Column(String(5))
+    busNumber = Column(String(10))

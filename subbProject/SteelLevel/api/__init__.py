@@ -7,11 +7,10 @@ import xlsxwriter
 from starlette.responses import StreamingResponse
 
 import config
-from bkjc_database.SqlTool import to_dict
 
 from subbProject.ApiForwarder import core as ApiForwarderCore
 
-from ..DataSet.LevelSet import getSteelLevelByDate, getAllSteelLevel
+from ..DataSet.LevelSet import getSteelLevelByDate, getAllSteelLevel, to_dict
 from ..configs.DataRead import LevelDataGet, xlsxDataGet
 from ..configs.DefectClass import defectClass2LevelDefectClassInfo
 from ..init import app
