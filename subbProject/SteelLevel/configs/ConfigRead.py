@@ -152,9 +152,11 @@ class DefectLevelConfig:
         print(fr"width {width_mm} mm")
         print(fr"height {height_mm} mm")
 
-
-        if eval(levelCode):
-            return True
+        try:
+            if eval(levelCode):
+                return True
+        except SyntaxError:
+            return False
         return False
 
 
