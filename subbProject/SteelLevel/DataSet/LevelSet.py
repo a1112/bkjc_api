@@ -184,11 +184,14 @@ def getUserDatByPackageNo(packageNo):
         print(items)
         return items
 
-def getSteelLevelByDate(startDate, endDate):
+def getSteelLevelByDate(startDate, endDate, productionLine = None):
     with Session() as session:
-        items= session.query(SteelLevel).where(SteelLevel.detectTime>startDate).where(SteelLevel.detectTime<endDate)[:10000]
-        print(items)
-        return items
+        que=session.query(SteelLevel).where(SteelLevel.detectTime>startDate).where(SteelLevel.detectTime<endDate)
+        if not productionLine:
+            pass
+        else:
+            que=que.filter(SteelLevel.productionLine_classification == productionLine)
+        return que[:10000]
 
 def getAllSteelLevel():
     with Session() as session:

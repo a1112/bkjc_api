@@ -21,35 +21,62 @@ from ..configs import ConfigRead
 
 
 
-@app.get("/steelLevel/info")
-def get_steel_level_info():
-    steelLevelInfo = LevelSet.getSteelLevelInfo()
-    return {"min": steelLevelInfo[0], "max": steelLevelInfo[1]}
+# @app.get("/steelLevel/info")
+# def get_steel_level_info():
+#     """
+#     判级规则
+#     """
+#     steelLevelInfo = LevelSet.getSteelLevelInfo()
+#     return {"min": steelLevelInfo[0], "max": steelLevelInfo[1]}
 
 @app.get("/delay")
 async def get_delay():
+    """
+    延时测试
+    """
     return True
 
 
-@app.get("/getLevelData")
-async def get_level_data():
-    steels = [to_dict(item) for item in getAllSteelLevel()]
+# @app.get("/getLevelData")
+# async def get_level_data():
+#
+#     steels = [to_dict(item) for item in getAllSteelLevel()]
+#
+#     for item in steels:
+#         for k in item.keys():
+#             if not item[k]:
+#                 item[k]=""
+#     return steels
 
-    for item in steels:
-        for k in item.keys():
-            if not item[k]:
-                item[k]=""
-    return steels
+@app.get("/productionLineInfo")
+async def get_productionLineInfo():
+    """
+    获取所有的产线信息
+    """
+    tabelList = ApiForwarderCore.tabelList
+    return tabelList
+
+@app.get("/getLevelTabel")
+async def getLevelTabel():
+    """
+    获取判级规则
+    """
+    return ConfigRead.getLevelTabel()
 
 
 @app.get("/exportSteelLevelByTime/{startTime:str}/{endTime:str}/{fileName:path}")
-def exportSteelLevelByTime(startTime, endTime, fileName):
+def exportExcelByTime(productionLine,startTime, endTime, fileName):
+    """
+        导出excel文件
+        productionLine:产线名词,不进行填写则是全部产线
+        时间格式： ”%Y-%m-%d %H:%M:%S“
+    """
+
     startTime = datetime.datetime.strptime(startTime, config.TIMESTAMP_FORMAT)
     endTime = datetime.datetime.strptime(endTime, config.TIMESTAMP_FORMAT)
 
-
     output = BytesIO()
-    steels = getSteelLevelByDate(startTime, endTime)
+    steels = getSteelLevelByDate(startTime, endTime,productionLine=productionLine)
     workbook = saveExcel(steels, None)
     workbook.save(output)
     output.seek(0)
@@ -63,21 +90,19 @@ def exportSteelLevelByTime(startTime, endTime, fileName):
                                  media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
     return response
 
+@app.get("")
 
 
-@app.get("/defectLevel/{bmIndex:int}/{defectId:int}")
-def getDefectLevel(defectId):
-    pass
+# @app.get("/defectLevel/{bmIndex:int}/{defectId:int}")
+# def getDefectLevel(defectId):
+#     pass
 
 
-@app.get("/getLevelTabel")
-def getLevelTabel():
-    return ConfigRead.getLevelTabel()
 
 
-@app.get("/getLocalLevelData")
-def getLocalLevelData():
-    return xlsxDataGet()
+# @app.get("/getLocalLevelData")
+# def getLocalLevelData():
+#     return xlsxDataGet()
 
 
 @app.get("/getLevelData")
@@ -91,6 +116,10 @@ def getDefectInfo():
 
 @app.get("/getLevelTitle")
 def getLevelTitle():
+    """
+        部分字段的说明
+
+    """
 
     # id = Column(Integer, primary_key=True)
     # plant_classification = Column(String)
@@ -175,27 +204,27 @@ def getLevelTitle():
         }
     ]
 
-@app.get("/steelLevel/export_test")
-def export_test():
-    output = BytesIO()
-    steels = getAllSteelLevel()
-    workbook = saveExcel(steels, None)
-    workbook.save(output)
-    output.seek(0)
-    # file_size=output.tell()
-    headers = {
-        "Content-Disposition": f"attachment; filename=example.xlsx",
-        # "Content-Length": str(file_size)  # 设置文件大小
-    }
-
-    # 将 BytesIO 对象传递给 StreamingResponse，设置内容类型和附件名称
-    response = StreamingResponse(output, headers=headers,
-                                 media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-    return response
-
-@app.get("/getProductionLine")
-def getProductionLine():
-    return ApiForwarderCore.tabelList
+# @app.get("/steelLevel/export_test")
+# def export_test():
+#     output = BytesIO()
+#     steels = getAllSteelLevel()
+#     workbook = saveExcel(steels, None)
+#     workbook.save(output)
+#     output.seek(0)
+#     # file_size=output.tell()
+#     headers = {
+#         "Content-Disposition": f"attachment; filename=example.xlsx",
+#         # "Content-Length": str(file_size)  # 设置文件大小
+#     }
+#
+#     # 将 BytesIO 对象传递给 StreamingResponse，设置内容类型和附件名称
+#     response = StreamingResponse(output, headers=headers,
+#                                  media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+#     return response
+#
+# @app.get("/getProductionLine")
+# def getProductionLine():
+#     return ApiForwarderCore.tabelList
 
 
 def export_text():
