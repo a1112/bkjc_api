@@ -193,6 +193,19 @@ def getSteelLevelByDate(startDate, endDate, productionLine = None):
             que=que.filter(SteelLevel.productionLine_classification == productionLine)
         return que[:10000]
 
+def getSteelLevelCount(productionLine):
+    with Session() as session:
+        if productionLine:
+            que=session.query(SteelLevel).where(SteelLevel.productionLine_classification==productionLine)
+        else:
+            que=session.query(SteelLevel)
+        return que.count()
+
+def getSteelLevelByNum(productionLine, num):
+    with Session() as session:
+        return session.query(SteelLevel).where(SteelLevel.productionLine_classification==productionLine).order_by(SteelLevel.id.desc())[:num]
+
+
 def getAllSteelLevel():
     with Session() as session:
         items = session.query(SteelLevel)

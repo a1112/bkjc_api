@@ -10,7 +10,7 @@ import config
 
 from subbProject.ApiForwarder import core as ApiForwarderCore
 
-from ..DataSet.LevelSet import getSteelLevelByDate, getAllSteelLevel, to_dict
+from ..DataSet import LevelSet
 from ..configs.DataRead import LevelDataGet, xlsxDataGet
 from ..configs.DefectClass import defectClass2LevelDefectClassInfo
 from ..init import app
@@ -28,6 +28,11 @@ from ..configs import ConfigRead
 #     """
 #     steelLevelInfo = LevelSet.getSteelLevelInfo()
 #     return {"min": steelLevelInfo[0], "max": steelLevelInfo[1]}
+
+def is_all(productionLine):
+    if productionLine in ["","all"]:
+        return True
+    return False
 
 @app.get("/delay")
 async def get_delay():
@@ -64,8 +69,8 @@ async def getLevelTabel():
     return ConfigRead.getLevelTabel()
 
 
-@app.get("/exportSteelLevelByTime/{startTime:str}/{endTime:str}/{fileName:path}")
-def exportExcelByTime(productionLine,startTime, endTime, fileName):
+@app.get("/exportSteelLevelByTime/{productionLine}/{startTime:str}/{endTime:str}/{fileName:path}")
+async def exportExcelByTime(productionLine,startTime, endTime, fileName):
     """
         导出excel文件
         productionLine:产线名词,不进行填写则是全部产线
@@ -76,7 +81,7 @@ def exportExcelByTime(productionLine,startTime, endTime, fileName):
     endTime = datetime.datetime.strptime(endTime, config.TIMESTAMP_FORMAT)
 
     output = BytesIO()
-    steels = getSteelLevelByDate(startTime, endTime,productionLine=productionLine)
+    steels = LevelSet.getSteelLevelByDate(startTime, endTime,productionLine=productionLine)
     workbook = saveExcel(steels, None)
     workbook.save(output)
     output.seek(0)
@@ -90,7 +95,36 @@ def exportExcelByTime(productionLine,startTime, endTime, fileName):
                                  media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
     return response
 
-@app.get("")
+@app.get("/getSteelLevelDataByTime/{productionLine}/{startTime:str}/{endTime:str}")
+async def getSteelLevelDataByTime(productionLine,startTime, endTime):
+    """
+        获取数据
+        productionLine:产线名词,不进行填写则是全部产线
+        时间格式： ”%Y-%m-%d %H:%M:%S“
+    """
+
+    steels = LevelSet.getSteelLevelByDate(startTime, endTime, productionLine=productionLine)
+    return  LevelSet.to_dict(steels)
+
+@app.get("/data_count/{productionLine}")
+async def get_data_count(productionLine):
+    """
+    获取 对应产线的检测数据量
+    """
+    return LevelSet.getSteelLevelCount(productionLine)
+
+@app.get("/getSteelLevelByNum/{productionLine}/{num}")
+async def get_steelLevelByNum(productionLine, num):
+    """
+        获取最新的 N 条数据
+
+    """
+    if is_all(productionLine):
+        res_dict = {}
+        for v in ApiForwarderCore.tabelList.values():
+            res_dict[v["DeviceName"]]=LevelSet.getSteelLevelByNum(v["DeviceName"], v)
+        return res_dict
+    return LevelSet.getSteelLevelByNum(productionLine, num)
 
 
 # @app.get("/defectLevel/{bmIndex:int}/{defectId:int}")
@@ -105,9 +139,9 @@ def exportExcelByTime(productionLine,startTime, endTime, fileName):
 #     return xlsxDataGet()
 
 
-@app.get("/getLevelData")
-def getLevelData():
-    return LevelDataGet()
+# @app.get("/getLevelData")
+# def getLevelData():
+#     return LevelDataGet()
 
 
 @app.get("/getDefectInfo")
@@ -228,5 +262,5 @@ def getLevelTitle():
 
 
 def export_text():
-    steels = getAllSteelLevel()
+    steels = LevelSet.getAllSteelLevel()
     saveExcel(steels, "steelLevel.xlsx")
