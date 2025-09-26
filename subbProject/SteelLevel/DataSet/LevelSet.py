@@ -10,7 +10,10 @@ from .models import Base, SteelLevel, DefectLevel, UserData
 from. import level_config
 # 创建一个 SQLite 数据库引擎
 
-
+def is_all(productionLine):
+    if productionLine in ["","all"]:
+        return True
+    return False
 
 engine = create_engine('mysql+pymysql://root:nercar@127.0.0.1:3306/SteelLevel', echo=False)
 
@@ -187,7 +190,7 @@ def getUserDatByPackageNo(packageNo):
 def getSteelLevelByDate(startDate, endDate, productionLine = None):
     with Session() as session:
         que=session.query(SteelLevel).where(SteelLevel.detectTime>startDate).where(SteelLevel.detectTime<endDate)
-        if not productionLine:
+        if is_all(productionLine):
             pass
         else:
             que=que.filter(SteelLevel.productionLine_classification == productionLine)

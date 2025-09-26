@@ -11,6 +11,7 @@ import config
 from subbProject.ApiForwarder import core as ApiForwarderCore
 
 from ..DataSet import LevelSet
+from ..DataSet.LevelSet import to_dict
 from ..configs.DataRead import LevelDataGet, xlsxDataGet
 from ..configs.DefectClass import defectClass2LevelDefectClassInfo
 from ..init import app
@@ -72,8 +73,8 @@ async def getLevelTabel():
 @app.get("/exportSteelLevelByTime/{productionLine}/{startTime:str}/{endTime:str}/{fileName:path}")
 async def exportExcelByTime(productionLine,startTime, endTime, fileName):
     """
-        导出excel文件
-        productionLine:产线名词,不进行填写则是全部产线
+        导出excel文件   \n
+        productionLine:产线名词,不进行填写 或者 all 则是全部产线
         时间格式： ”%Y-%m-%d %H:%M:%S“
     """
 
@@ -99,7 +100,7 @@ async def exportExcelByTime(productionLine,startTime, endTime, fileName):
 async def getSteelLevelDataByTime(productionLine,startTime, endTime):
     """
         获取数据
-        productionLine:产线名词,不进行填写则是全部产线
+        productionLine:产线名词,不进行填写 或者 all 则是全部产线
         时间格式： ”%Y-%m-%d %H:%M:%S“
     """
 
@@ -111,6 +112,12 @@ async def get_data_count(productionLine):
     """
     获取 对应产线的检测数据量
     """
+    if is_all(productionLine):
+        res_dict = {}
+        for v in ApiForwarderCore.tabelList.values():
+            res_dict[v["DeviceName"]]=LevelSet.getSteelLevelCount(v["DeviceName"])
+        return res_dict
+
     return LevelSet.getSteelLevelCount(productionLine)
 
 @app.get("/getSteelLevelByNum/{productionLine}/{num}")
@@ -122,9 +129,9 @@ async def get_steelLevelByNum(productionLine, num):
     if is_all(productionLine):
         res_dict = {}
         for v in ApiForwarderCore.tabelList.values():
-            res_dict[v["DeviceName"]]=LevelSet.getSteelLevelByNum(v["DeviceName"], v)
+            res_dict[v["DeviceName"]]= to_dict(LevelSet.getSteelLevelByNum(v["DeviceName"], num))
         return res_dict
-    return LevelSet.getSteelLevelByNum(productionLine, num)
+    return to_dict(LevelSet.getSteelLevelByNum(productionLine, num))
 
 
 # @app.get("/defectLevel/{bmIndex:int}/{defectId:int}")
