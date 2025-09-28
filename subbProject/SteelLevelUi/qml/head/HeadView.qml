@@ -12,6 +12,10 @@ RowLayout {
 
         ProductionLineSelect{
             height: 40
+        }
+
+        SearchSelect{
+
 
         }
 

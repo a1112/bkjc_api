@@ -12,7 +12,7 @@ Item {
                     },
 
                     (err)=>{
-                        coreStatus.dataLoading=false
+                        coreStatus.dataLoading = false
                     }
 
                     )
@@ -39,4 +39,12 @@ Item {
                     )
 
     }
+
+    function exportExcel(){
+        
+    
+        
+    
+    }
+
 }

@@ -39,7 +39,7 @@ Item {
     }
 
     function getProductionLine(success, failure){
-        return ajax.get(apiConfig.url(apiConfig.serverUrl,"getProductionLine"),success, failure)
+        return ajax.get(apiConfig.url(apiConfig.serverUrl,"productionLineInfo"),success, failure)
     }
 
 }

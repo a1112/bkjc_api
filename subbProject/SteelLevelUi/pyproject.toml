@@ -20,6 +20,7 @@ files = [
             "qml/head/DateTimeItem.qml",
             "qml/head/HeadView.qml",
             "qml/head/ProductionLineSelect.qml",
+            "qml/head/SearchSelect.qml",
             "qml/head/TitleLabelItem.qml",
             "qml/model/SteelLevelModel.qml",
             "qml/view/ListHeadView.qml",
