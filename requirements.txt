@@ -1,19 +1,42 @@
-fastapi
-faker
-sqlalchemy
-uvicorn
-pymssql
-numpy
-webcolors
-pillow
-tqdm
-pymysql
-python-multipart
-pytest
-pypattyrn
-flask
-openpyxl
-requests
-sqlalchemy_utils
-https://github.com/a1112/bkjc_database
-https://github.com/a1112/bkjc_tool
+# ============================================
+# 依赖升级 - 2025-04-24
+# ============================================
+# 主要升级：
+# - 所有依赖添加版本锁定
+# - 升级到最新稳定版本
+# ============================================
+
+# Web 框架
+fastapi~=0.115.0
+uvicorn~=0.32.0
+flask~=3.1.0
+python-multipart~=0.0.17
+
+# 数据库
+sqlalchemy~=2.0.36
+sqlalchemy_utils~=0.11.4
+pymssql~=2.3.2
+pymysql~=1.1.1
+
+# 数据处理
+numpy~=1.26.4
+pandas~=2.2.0
+
+# 工具库
+requests~=2.32.0
+pillow~=10.4.0
+tqdm~=4.66.0
+pyyaml~=6.0.1
+faker~=33.0.0
+webcolors~=24.8.0
+openpyxl~=3.1.5
+
+# 测试
+pytest~=8.0.0
+
+# 内部包
+pypattyrn~=1.2
+
+# 注意: GitHub 依赖引用已移除，请改用标准 pip 包
+# - https://github.com/a1112/bkjc_database
+# - https://github.com/a1112/bkjc_tool
