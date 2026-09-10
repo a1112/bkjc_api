@@ -1,30 +1,39 @@
-from threading import Thread
-import time
-from bkjc_database.NerCarDataBase.mysql import Ncdhotstripdefect, defectinfodatabase
-from bkjc_database.NerCarDataBase.mysql import Ncdhotstrip
+"""Incremental defect synchronization using the maintained database package."""
+import logging
+from threading import Event, Thread
+
+from bkjc_database.sync import sync_defects_once
+
+logger = logging.getLogger(__name__)
 
 
 class DefectSynchronizer(Thread):
-    def __init__(self):
+    def __init__(self, source=None, steels=None, destination=None, interval=60, batch_size=500):
         super().__init__()
-        # self.start()
+        self.source, self.steels, self.destination = source, steels, destination
+        self.interval, self.batch_size = interval, batch_size
+        self.stop_event = Event()
+
+    def run_once(self):
+        # Model imports follow explicit configuration in core.init.initDataBase.
+        if self.source is None:
+            from bkjc_database.NerCarDataBase.mysql.Ncdhotstripdefect import defectDb
+            self.source = defectDb
+        if self.steels is None:
+            from bkjc_database.NerCarDataBase.mysql.Ncdhotstrip import steelDb
+            self.steels = steelDb
+        if self.destination is None:
+            from bkjc_database.NerCarDataBase.mysql.defectinfodatabase import defectInfoDb
+            self.destination = defectInfoDb
+        return sync_defects_once(self.source, self.steels, self.destination, self.batch_size)
+
+    def stop(self):
+        self.stop_event.set()
 
     def run(self):
-        seq_steelNoDict = {}
-        while True:
-            for istop in [0,1]:
-                defectId = defectinfodatabase.getLastDefectId(istop)
-                for defect in Ncdhotstripdefect.getDefectByDefectId(istop + 1, defectId):
-                    defect: Ncdhotstripdefect.Camdefect1
-                    if defect.seqNo in seq_steelNoDict:
-                        steel = seq_steelNoDict[defect.seqNo]
-                    else:
-                        steel = Ncdhotstrip.getSteelBySeqNo(defect.seqNo)
-                        seq_steelNoDict[defect.seqNo] = steel
-                    defectinfodatabase.appendDefect(defect, steel)
-                    if len(seq_steelNoDict)>100:
-                        seq_steelNoDict={}
-                        defectinfodatabase.session.commit()
-            defectinfodatabase.session.commit()
-            time.sleep(60)
-            # 查询最新的defect
+        while not self.stop_event.is_set():
+            try:
+                self.run_once()
+            except Exception:
+                logger.exception("Defect synchronization failed; the current surface batch was rolled back")
+            self.stop_event.wait(self.interval)

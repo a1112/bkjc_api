@@ -15,7 +15,8 @@ def server_item(k, v):
     import config
     FactoryID, DeviceName, DeviceIp = v.values()
     print(fr"DeviceIp {DeviceIp}")
-    init_dbm(CONFIG.DbConfig4d0(DeviceIp))
+    from core.init import initDataBase
+    initDataBase(dict(config.info, upServer=DeviceIp))
     server_ip = "127.0.0.1"
     server_port = core.basePrt+int(k)
 

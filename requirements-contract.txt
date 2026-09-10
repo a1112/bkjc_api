@@ -1,0 +1,2 @@
+bkjc_database @ git+https://github.com/a1112/bkjc_database.git@b8066fb2edff5fc02c675e8af72fbdacaf63b355
+pytest

@@ -8,6 +8,7 @@ logging.basicConfig(level=logging.INFO,
 
 def initDataBase(info):
     from bkjc_database import core
-    core.CONFIG.database_type = info["database_type"]
-    print(info["upServer"])
-    core.setBaseUrl(ip=info["upServer"], user=info["user"], password=info["password"], drive_=info["drive"])
+    from bkjc_database.dbm import init_dbm
+    # info['port'] is the HTTP listening port, not the database port.
+    settings = dict(info, port=info.get("db_port", 0))
+    return init_dbm(core.configure_database(settings))

@@ -1,0 +1,2 @@
+# Historical configuration retained in the ignored local backup.
+# Source blob is recorded in manifest.json; use documented environment settings.
