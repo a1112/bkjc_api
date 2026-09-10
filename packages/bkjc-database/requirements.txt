@@ -1,0 +1,8 @@
+sqlalchemy
+pymssql
+pymysql
+pypattyrn
+cryptography
+fastapi
+Pillow
+requests

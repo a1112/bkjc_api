@@ -1,21 +1,27 @@
-name: Installed database dependency
+name: Monorepo package contracts
 on:
   pull_request:
-    paths: ['core/init.py', 'api/**', 'bkjc_database/**', 'tests/**', 'requirements*.txt', 'docs/dependency-consolidation/**', 'scripts/verify_consolidation_346.py', '.github/workflows/database-dependency.yml']
+    paths: ['core/init.py', 'api/**', 'packages/**', 'hooks/**', 'tests/**', 'requirements*.txt', 'docs/**', 'scripts/**', '.github/workflows/database-dependency.yml']
   push:
     branches: [main]
-    paths: ['core/init.py', 'api/**', 'bkjc_database/**', 'tests/**', 'requirements*.txt', 'docs/dependency-consolidation/**', 'scripts/verify_consolidation_346.py', '.github/workflows/database-dependency.yml']
+    paths: ['core/init.py', 'api/**', 'packages/**', 'hooks/**', 'tests/**', 'requirements*.txt', 'docs/**', 'scripts/**', '.github/workflows/database-dependency.yml']
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   contracts:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: python -m pip install -r requirements-contract.txt
-      - run: python -m pytest tests/test_database_dependency.py -q
+      - run: python -m pytest tests/test_database_dependency.py tests/test_cimg_contract.py packages/bkjc-database/tests/test_api_contract.py -q
       - run: python scripts/verify_consolidation_346.py docs/dependency-consolidation/bkjc_database/manifest.json
+      - run: python scripts/verify_consolidation_346.py docs/repository-consolidation/bkjc_database/manifest.json docs/repository-consolidation/bkjc_tool/manifest.json docs/repository-consolidation/bkjc_tools-api-original/manifest.json
+      - run: python -m pip wheel --no-deps ./packages/bkjc-database ./packages/bkjc-tools --wheel-dir wheelhouse
+      - run: python scripts/verify_package_wheels.py wheelhouse

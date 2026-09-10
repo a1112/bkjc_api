@@ -17,11 +17,11 @@ def load_file(name, relative):
     return module
 
 
-def test_checkout_does_not_shadow_installed_database():
+def test_checkout_resolves_the_monorepo_database_package():
     script = "import bkjc_database; from pathlib import Path; print(Path(bkjc_database.__file__).resolve())"
     result = subprocess.run([sys.executable, "-c", script], cwd=ROOT, capture_output=True, text=True, check=True)
     package_file = Path(result.stdout.strip())
-    assert not package_file.is_relative_to(ROOT)
+    assert package_file.is_relative_to(ROOT / "packages/bkjc-database")
     assert not (ROOT / "bkjc_database/__init__.py").exists()
 
 

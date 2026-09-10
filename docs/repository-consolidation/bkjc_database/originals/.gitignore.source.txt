@@ -1,0 +1,9 @@
+/bkjc_database.egg-info
+/venv/
+
+/bkjc_database/build/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/

@@ -1,0 +1,6 @@
+from pathlib import Path
+
+DLL_PATH = Path(__file__).parent / "dll/x64"
+WIDTH = 4096
+HEIGHT = 1024
+POOL_SIZE = 8

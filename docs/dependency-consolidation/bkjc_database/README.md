@@ -1,3 +1,5 @@
+> 历史记录：本文描述上一轮外部依赖整合。当前数据库与工具已经迁入本仓库 packages/，以根 README 和 docs/repository-consolidation/ 的本轮记录为准。
+
 # 移除同名内置包，使用固定维护库
 
 原 `bkjc_database/` 的 64 个跟踪文件已保存到 [manifest.json](manifest.json) 和惰性原文档案，避免再遮蔽 pip 安装包。原 CONFIG.py 的完整内容在迁移机器 `.repository-consolidation-local/bkjc_api/bkjc_database/CONFIG.py`，必须单独备份；这里只提交遮蔽后的记录。原 Git 提交也记录于清单。

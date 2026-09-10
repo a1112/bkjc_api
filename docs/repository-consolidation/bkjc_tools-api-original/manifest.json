@@ -1,0 +1,311 @@
+{
+  "source_repository": "a1112/bkjc_api",
+  "source_commit": "c51a187a251255d68d5cf5e2ab78e43127d2de30",
+  "scope": "Former API-local bkjc_tools package only",
+  "files": [
+    {
+      "source_path": "bkjc_tools/CONFIG.py",
+      "source_mode": "100644",
+      "source_git_blob": "70dd33d05b52bdfde54abeb7bb6ef5ee59bbe6ed",
+      "target_path": "docs/repository-consolidation/bkjc_tools-api-original/originals/bkjc_tools/CONFIG.py.source.txt",
+      "target_git_blob": "70dd33d05b52bdfde54abeb7bb6ef5ee59bbe6ed",
+      "disposition": "archived_original"
+    },
+    {
+      "source_path": "bkjc_tools/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "e7b96f02d4e942200e899df50989b19b0343635b",
+      "target_path": "docs/repository-consolidation/bkjc_tools-api-original/originals/bkjc_tools/__init__.py.source.txt",
+      "target_git_blob": "e7b96f02d4e942200e899df50989b19b0343635b",
+      "disposition": "archived_original"
+    },
+    {
+      "source_path": "bkjc_tools/cimg_read/CimgReadCore.py",
+      "source_mode": "100644",
+      "source_git_blob": "c7173786d87e24c5838d2327e8018ba51b9da3f6",
+      "target_path": "docs/repository-consolidation/bkjc_tools-api-original/originals/bkjc_tools/cimg_read/CimgReadCore.py.source.txt",
+      "target_git_blob": "c7173786d87e24c5838d2327e8018ba51b9da3f6",
+      "disposition": "archived_original"
+    },
+    {
+      "source_path": "bkjc_tools/cimg_read/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "target_path": "packages/bkjc-tools/bkjc_tools/cimg_read/__init__.py",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/CimgRead.dll",
+      "source_mode": "100644",
+      "source_git_blob": "90411a4998be1f61c3938dd2dabf3f9dc5f1349e",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/CimgRead.dll",
+      "target_git_blob": "90411a4998be1f61c3938dd2dabf3f9dc5f1349e",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/ImageDetect.dll",
+      "source_mode": "100644",
+      "source_git_blob": "419f5cf04b0f81077bb22b6812b97cc03518abe7",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/ImageDetect.dll",
+      "target_git_blob": "419f5cf04b0f81077bb22b6812b97cc03518abe7",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/MSVCP140.dll",
+      "source_mode": "100644",
+      "source_git_blob": "d7d19bf2017480d8cf991becaf4d41def0bf14c9",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/MSVCP140.dll",
+      "target_git_blob": "d7d19bf2017480d8cf991becaf4d41def0bf14c9",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDCommonFunc.dll",
+      "source_mode": "100644",
+      "source_git_blob": "e10d0817ec0d737af737de666eb722d06c807107",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDCommonFunc.dll",
+      "target_git_blob": "e10d0817ec0d737af737de666eb722d06c807107",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDConfigFile.dll",
+      "source_mode": "100644",
+      "source_git_blob": "70235b25ba761e26d30a889726985f804cf04396",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDConfigFile.dll",
+      "target_git_blob": "70235b25ba761e26d30a889726985f804cf04396",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDConsole.dll",
+      "source_mode": "100644",
+      "source_git_blob": "c640e8ee0f17f75a24d4291b6e735665d8021de2",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDConsole.dll",
+      "target_git_blob": "c640e8ee0f17f75a24d4291b6e735665d8021de2",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDDataSource.dll",
+      "source_mode": "100644",
+      "source_git_blob": "9b58abcebbacff943bf5558ad30fea57a61db27e",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDDataSource.dll",
+      "target_git_blob": "9b58abcebbacff943bf5558ad30fea57a61db27e",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDGUITerminal.dll",
+      "source_mode": "100644",
+      "source_git_blob": "09cbd285ba4ea5d08a68ebc623c860f9c174ac7b",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDGUITerminal.dll",
+      "target_git_blob": "09cbd285ba4ea5d08a68ebc623c860f9c174ac7b",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDImage.dll",
+      "source_mode": "100644",
+      "source_git_blob": "71a8b14335984b7527c135077cfd127d49a6f3c0",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDImage.dll",
+      "target_git_blob": "71a8b14335984b7527c135077cfd127d49a6f3c0",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDImageProcess.dll",
+      "source_mode": "100644",
+      "source_git_blob": "c21eb62ce63d5e8cd857790e80a1de741302b31c",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDImageProcess.dll",
+      "target_git_blob": "c21eb62ce63d5e8cd857790e80a1de741302b31c",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDKeyHook.dll",
+      "source_mode": "100644",
+      "source_git_blob": "2cbe0fbfa779663e9cdd049219509bce3bfdc2bd",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDKeyHook.dll",
+      "target_git_blob": "2cbe0fbfa779663e9cdd049219509bce3bfdc2bd",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDLineaCaptrue.dll",
+      "source_mode": "100644",
+      "source_git_blob": "d9f55f3b6e1adc3aff8c9253083b4f5f2d8996ea",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDLineaCaptrue.dll",
+      "target_git_blob": "d9f55f3b6e1adc3aff8c9253083b4f5f2d8996ea",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDLogFile.dll",
+      "source_mode": "100644",
+      "source_git_blob": "cd0f8c610348d2c496ec4523c024631d5535e8b9",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDLogFile.dll",
+      "target_git_blob": "cd0f8c610348d2c496ec4523c024631d5535e8b9",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDMFCCommonUI.dll",
+      "source_mode": "100644",
+      "source_git_blob": "66247957f1f3933e0b8b979437dff83b11e0e975",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDMFCCommonUI.dll",
+      "target_git_blob": "66247957f1f3933e0b8b979437dff83b11e0e975",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDNetTrans.dll",
+      "source_mode": "100644",
+      "source_git_blob": "40f9d0e1491eea4921f2fa571c1f252d422ce298",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDNetTrans.dll",
+      "target_git_blob": "40f9d0e1491eea4921f2fa571c1f252d422ce298",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDSimulCapture.dll",
+      "source_mode": "100644",
+      "source_git_blob": "2278b5839053d2a26a5f12111d697e9f0342ac8c",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDSimulCapture.dll",
+      "target_git_blob": "2278b5839053d2a26a5f12111d697e9f0342ac8c",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDSimulDataSource.dll",
+      "source_mode": "100644",
+      "source_git_blob": "a06de9e1bd2968fdd3ecca6f2351cfc075932353",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDSimulDataSource.dll",
+      "target_git_blob": "a06de9e1bd2968fdd3ecca6f2351cfc075932353",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/NCDThreadOper.dll",
+      "source_mode": "100644",
+      "source_git_blob": "946f16a6ed69bb72325f25964a318c894116abe4",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/NCDThreadOper.dll",
+      "target_git_blob": "946f16a6ed69bb72325f25964a318c894116abe4",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead0.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead0.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead1.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead1.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead2.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead2.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead3.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead3.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead4.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead4.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead5.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead5.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead6.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead6.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead7.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead7.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead8.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead8.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgRead9.dll",
+      "source_mode": "100644",
+      "source_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgRead9.dll",
+      "target_git_blob": "402ac7470df056a5da963486041c926f088dc9de",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/OldCimgReadTest.dll",
+      "source_mode": "100644",
+      "source_git_blob": "9a90f073b9e045475e16ce83e3d7970bbd656f55",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/OldCimgReadTest.dll",
+      "target_git_blob": "9a90f073b9e045475e16ce83e3d7970bbd656f55",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/ServiceCommand.json",
+      "source_mode": "100644",
+      "source_git_blob": "f8a91a457e3994df01eb886b77082a7f542f5895",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/ServiceCommand.json",
+      "target_git_blob": "f8a91a457e3994df01eb886b77082a7f542f5895",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/dll/x64/mspdb80.dll",
+      "source_mode": "100644",
+      "source_git_blob": "866c9488342c9afa0649e6d5579ec8ee358fb82f",
+      "target_path": "packages/bkjc-tools/bkjc_tools/dll/x64/mspdb80.dll",
+      "target_git_blob": "866c9488342c9afa0649e6d5579ec8ee358fb82f",
+      "disposition": "already_in_consumer"
+    },
+    {
+      "source_path": "bkjc_tools/t2.py",
+      "source_mode": "100644",
+      "source_git_blob": "44f401e976de9e04f3464861e50572da55d6d094",
+      "target_path": "docs/repository-consolidation/bkjc_tools-api-original/originals/bkjc_tools/t2.py.source.txt",
+      "target_git_blob": "44f401e976de9e04f3464861e50572da55d6d094",
+      "disposition": "archived_original"
+    },
+    {
+      "source_path": "bkjc_tools/test.py",
+      "source_mode": "100644",
+      "source_git_blob": "b127de93d5db05f5fa366d574dac4ea9c20aa980",
+      "target_path": "docs/repository-consolidation/bkjc_tools-api-original/originals/bkjc_tools/test.py.source.txt",
+      "target_git_blob": "b127de93d5db05f5fa366d574dac4ea9c20aa980",
+      "disposition": "archived_original"
+    }
+  ]
+}
