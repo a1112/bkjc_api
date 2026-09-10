@@ -1,0 +1,759 @@
+{
+  "source_repository": "a1112/bkjc",
+  "source_commit": "f733a3e8bcee3fc27c1e943a12d6006d84f220ed",
+  "source_tree": "e3a9b37b2a963bc23cceae1c97c619c318fb681d",
+  "consumer_repository": "a1112/bkjc_database",
+  "consumer_base_commit": "f1ea4b7f4dcb871e7ff489781ffed903e86ea6c1",
+  "scope": "Default-branch source snapshot; generated files excluded explicitly; full Git history and hosted records are outside this migration.",
+  "files": [
+    {
+      "source_path": "database/NerCarDataBase/BaseImport.py",
+      "source_mode": "100644",
+      "source_git_blob": "2284f919ae62a21d5ab66ad070cad27806b2a238",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/BaseImport.py.source.txt",
+      "target_git_blob": "2284f919ae62a21d5ab66ad070cad27806b2a238"
+    },
+    {
+      "source_path": "database/NerCarDataBase/CheckDataBase.py",
+      "source_mode": "100644",
+      "source_git_blob": "63b306e6c23cdadd2b67eaaf65a080747497fe4a",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/CheckDataBase.py",
+      "target_git_blob": "63b306e6c23cdadd2b67eaaf65a080747497fe4a"
+    },
+    {
+      "source_path": "database/NerCarDataBase/SqlBase.py",
+      "source_mode": "100644",
+      "source_git_blob": "71f77c1a0ed780646ebe137040b90d14721617f8",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/SqlBase.py.source.txt",
+      "target_git_blob": "71f77c1a0ed780646ebe137040b90d14721617f8"
+    },
+    {
+      "source_path": "database/NerCarDataBase/SqlManage/ConfigCenter.py",
+      "source_mode": "100644",
+      "source_git_blob": "e34c7923cbe799f41c93525c521073ea9f5da115",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/SqlManage/ConfigCenter.py",
+      "target_git_blob": "e34c7923cbe799f41c93525c521073ea9f5da115"
+    },
+    {
+      "source_path": "database/NerCarDataBase/SqlManage/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/SqlManage/__init__.py",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "database/NerCarDataBase/SqlTool.py",
+      "source_mode": "100644",
+      "source_git_blob": "5a3ad934ef770797fc5957bda343762a2b749e93",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/SqlTool.py.source.txt",
+      "target_git_blob": "5a3ad934ef770797fc5957bda343762a2b749e93"
+    },
+    {
+      "source_path": "database/NerCarDataBase/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "edb2fd1af5fb754c250ec568512eafd64769561e",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/__init__.py",
+      "target_git_blob": "edb2fd1af5fb754c250ec568512eafd64769561e"
+    },
+    {
+      "source_path": "database/NerCarDataBase/__pycache__/BaseImport.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "377038f72f2245524186530f68444fe6276eb297",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/__pycache__/SqlBase.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "d4352631cf1876272546d5ecc9765840a7d86c67",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/__pycache__/SqlTool.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "7c4c62add2c6f3d7591e8f52cd3fd0e0eca851c9",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/__pycache__/__init__.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "57f763bdac9832f417e11d20a084f8c8d0792864",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/__pycache__/core.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "0b37ba87a51a94075d908d069b6ed707abcd952c",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/cfg.py",
+      "source_mode": "100644",
+      "source_git_blob": "af8d066c6d93b2576288e9a58d51fd4399d3cacb",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/cfg.py",
+      "target_git_blob": "af8d066c6d93b2576288e9a58d51fd4399d3cacb"
+    },
+    {
+      "source_path": "database/NerCarDataBase/config/DBconfig.json",
+      "source_mode": "100644",
+      "source_git_blob": "731b6e8aa6720a97104996088732e49684e25e46",
+      "disposition": "redacted_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/config/DBconfig.json.source.txt",
+      "target_git_blob": "8e8621c7c42a4be8d46c4ba573d18d16e7d56808",
+      "local_path": ".repository-consolidation-local/bkjc/database/NerCarDataBase/config/DBconfig.json.source.txt"
+    },
+    {
+      "source_path": "database/NerCarDataBase/core.py",
+      "source_mode": "100644",
+      "source_git_blob": "b416838e9fcf55cae1fa13331c835768e6dcaab6",
+      "disposition": "redacted_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/core.py.source.txt",
+      "target_git_blob": "a7f54ac1faa4319287d99fef821758ae881324b3",
+      "local_path": ".repository-consolidation-local/bkjc/database/NerCarDataBase/core.py.source.txt"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/Ncdhotstrip.py",
+      "source_mode": "100644",
+      "source_git_blob": "96a2a35e8d4c9301465572558d540f0ad8105220",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/mysql/Ncdhotstrip.py.source.txt",
+      "target_git_blob": "96a2a35e8d4c9301465572558d540f0ad8105220"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/Ncdhotstripdefect.py",
+      "source_mode": "100644",
+      "source_git_blob": "8438997ac7009988319ea1982c7874cb5a28079d",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/mysql/Ncdhotstripdefect.py.source.txt",
+      "target_git_blob": "8438997ac7009988319ea1982c7874cb5a28079d"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "cb317e8ac4ae8e4761b3b9c943c832f8d7bd516c",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/mysql/__init__.py.source.txt",
+      "target_git_blob": "cb317e8ac4ae8e4761b3b9c943c832f8d7bd516c"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/defectinfodatabase.py",
+      "source_mode": "100644",
+      "source_git_blob": "921dc13ee0c31406c7ac854ddd5ef1be750adf4b",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/mysql/defectinfodatabase.py.source.txt",
+      "target_git_blob": "921dc13ee0c31406c7ac854ddd5ef1be750adf4b"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/models/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "150dc3626dc3b16e57a1939aa7c46a3a04b42643",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/mysql/models/__init__.py.source.txt",
+      "target_git_blob": "150dc3626dc3b16e57a1939aa7c46a3a04b42643"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/models/defectinfodatabase.py",
+      "source_mode": "100644",
+      "source_git_blob": "f2e24c739ff71c487da45d1c2384edf45757138a",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/mysql/models/defectinfodatabase.py",
+      "target_git_blob": "f2e24c739ff71c487da45d1c2384edf45757138a"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/models/ncdhotstrip.py",
+      "source_mode": "100644",
+      "source_git_blob": "9161ac088a6aee3b6f1dd37f8ac1bb12e8fd34b5",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/mysql/models/ncdhotstrip.py",
+      "target_git_blob": "9161ac088a6aee3b6f1dd37f8ac1bb12e8fd34b5"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/models/ncdhotstripdefect.py",
+      "source_mode": "100644",
+      "source_git_blob": "1583fbad1aa0f44cedd3cee4f469c2a44b996475",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/mysql/models/ncdhotstripdefect.py",
+      "target_git_blob": "1583fbad1aa0f44cedd3cee4f469c2a44b996475"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/models/ncdhotstripdevice.py",
+      "source_mode": "100644",
+      "source_git_blob": "78c05dab5e67a41eab0a2fc22c3f774c98b95161",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/mysql/models/ncdhotstripdevice.py",
+      "target_git_blob": "78c05dab5e67a41eab0a2fc22c3f774c98b95161"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/models/ncdplate.py",
+      "source_mode": "100644",
+      "source_git_blob": "410aeb4ea034194fd2e9bcd8930043673f79e6ff",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/mysql/models/ncdplate.py.source.txt",
+      "target_git_blob": "410aeb4ea034194fd2e9bcd8930043673f79e6ff"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/models/ncdplatedefect.py",
+      "source_mode": "100644",
+      "source_git_blob": "d58fd61bd863ce365dd67e203c3654c45d52c1e1",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/mysql/models/ncdplatedefect.py",
+      "target_git_blob": "d58fd61bd863ce365dd67e203c3654c45d52c1e1"
+    },
+    {
+      "source_path": "database/NerCarDataBase/mysql/models/ncdplatedevice.py",
+      "source_mode": "100644",
+      "source_git_blob": "99ca24a8b32e8062172472f3b9c5b3f97aa177dc",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/mysql/models/ncdplatedevice.py",
+      "target_git_blob": "99ca24a8b32e8062172472f3b9c5b3f97aa177dc"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/Classifier.py",
+      "source_mode": "100644",
+      "source_git_blob": "478a624acc4f09a12fe67286016ffce4971a98da",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/sqlserver/Classifier.py.source.txt",
+      "target_git_blob": "478a624acc4f09a12fe67286016ffce4971a98da"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/ClientDefectDB.py",
+      "source_mode": "100644",
+      "source_git_blob": "459d5dcb0433e6a08ab673a2b984528ff6f49a55",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/sqlserver/ClientDefectDB.py.source.txt",
+      "target_git_blob": "459d5dcb0433e6a08ab673a2b984528ff6f49a55"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/ConfigCenter.py",
+      "source_mode": "100644",
+      "source_git_blob": "eb8e29c256b53fc47690b3abc1caa399302f88b7",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/sqlserver/ConfigCenter.py.source.txt",
+      "target_git_blob": "eb8e29c256b53fc47690b3abc1caa399302f88b7"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/DWConfiguration.py",
+      "source_mode": "100644",
+      "source_git_blob": "7b331de9498cf707f6c56cae0f44dadb9f092ebc",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/sqlserver/DWConfiguration.py.source.txt",
+      "target_git_blob": "7b331de9498cf707f6c56cae0f44dadb9f092ebc"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/DWDiagnostics.py",
+      "source_mode": "100644",
+      "source_git_blob": "57aaac4068c0b3c648bbd9ad1d7c824618164f2c",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/sqlserver/DWDiagnostics.py.source.txt",
+      "target_git_blob": "57aaac4068c0b3c648bbd9ad1d7c824618164f2c"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/DWQueue.py",
+      "source_mode": "100644",
+      "source_git_blob": "1854787b313250f0999d7c28433c8bb308ab51de",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/sqlserver/DWQueue.py.source.txt",
+      "target_git_blob": "1854787b313250f0999d7c28433c8bb308ab51de"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/SteelRecord.py",
+      "source_mode": "100644",
+      "source_git_blob": "a684b6713dea57123e35250a60848800c49ef9ef",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/sqlserver/SteelRecord.py.source.txt",
+      "target_git_blob": "a684b6713dea57123e35250a60848800c49ef9ef"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "d99bd51b3daa527ced7ff27b3af5281190d3eefd",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/__init__.py",
+      "target_git_blob": "d99bd51b3daa527ced7ff27b3af5281190d3eefd"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/__pycache__/ClientDefectDB.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "218c4b9384f6078a4e6e76320c8144e8767424db",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/__pycache__/ConfigCenter.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "cb7d8bbbb4d52b2333dca6e411952d1ed8715a66",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/__pycache__/SteelRecord.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "6a6b00ab2a344137a7c6141ecd9e8f723b034bfb",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/__pycache__/SteelRecord.py",
+      "source_mode": "100644",
+      "source_git_blob": "7565b742145df0eb4a86f89d0f3dc19fa7c5f8ce",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/__pycache__/SteelRecord.py",
+      "target_git_blob": "7565b742145df0eb4a86f89d0f3dc19fa7c5f8ce"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/__pycache__/__init__.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "32471cb0bacaa9bea3ca92ba829c5e205237fda5",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/__pycache__/master.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "e05aff03adc9ef74f313781ad30a117035503d09",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/master.py",
+      "source_mode": "100644",
+      "source_git_blob": "955805b662d99e6d2604469c636c7f249e3211bc",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/NerCarDataBase/sqlserver/master.py.source.txt",
+      "target_git_blob": "955805b662d99e6d2604469c636c7f249e3211bc"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/Classifier.py",
+      "source_mode": "100644",
+      "source_git_blob": "7b218d5ad65098555e217a308a8ca5bc44b4c291",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/Classifier.py",
+      "target_git_blob": "7b218d5ad65098555e217a308a8ca5bc44b4c291"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/ClientDefectDB1.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB1.py",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/ClientDefectDB2.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB1.py",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/ClientDefectDB3.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB1.py",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/ClientDefectDB4.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB1.py",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/ClientDefectDB5.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB1.py",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/ClientDefectDB6.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB1.py",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/ConfigCenter.py",
+      "source_mode": "100644",
+      "source_git_blob": "1cea1583770aa46dcf0b06815cec6e6213f32eea",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/ConfigCenter.py",
+      "target_git_blob": "1cea1583770aa46dcf0b06815cec6e6213f32eea"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/DWConfiguration.py",
+      "source_mode": "100644",
+      "source_git_blob": "c34ba14122e0f2a70524250cd1c46893adab7253",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/DWConfiguration.py",
+      "target_git_blob": "c34ba14122e0f2a70524250cd1c46893adab7253"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/DWDiagnostics.py",
+      "source_mode": "100644",
+      "source_git_blob": "bf0280702a3724989d06d8ba24dfc9b039b98a8c",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/DWDiagnostics.py",
+      "target_git_blob": "bf0280702a3724989d06d8ba24dfc9b039b98a8c"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/DWQueue.py",
+      "source_mode": "100644",
+      "source_git_blob": "56fe24d4e70e4fcde72d18408226ddbc646e83d2",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/DWQueue.py",
+      "target_git_blob": "56fe24d4e70e4fcde72d18408226ddbc646e83d2"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/DebugInfo.py",
+      "source_mode": "100644",
+      "source_git_blob": "50ea6a58fc51d48a0c49f77d4e9d40a2be8d54ea",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/DebugInfo.py",
+      "target_git_blob": "50ea6a58fc51d48a0c49f77d4e9d40a2be8d54ea"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/RcvSteelID.py",
+      "source_mode": "100644",
+      "source_git_blob": "7c4391a360e1a19e003bd7966927538672ff7707",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/RcvSteelID.py",
+      "target_git_blob": "7c4391a360e1a19e003bd7966927538672ff7707"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/ReportServer.py",
+      "source_mode": "100644",
+      "source_git_blob": "22f95966a133ed850598ae8c227400d6fba345fe",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/ReportServer.py",
+      "target_git_blob": "22f95966a133ed850598ae8c227400d6fba345fe"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/ReportServerTempDB.py",
+      "source_mode": "100644",
+      "source_git_blob": "adb4096620a8f356f4dca8664f6757b54c628788",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/ReportServerTempDB.py",
+      "target_git_blob": "adb4096620a8f356f4dca8664f6757b54c628788"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/SteelRecord.py",
+      "source_mode": "100644",
+      "source_git_blob": "93dcf8de8fa33cfb3b28ac402a3cc549c34bf969",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/SteelRecord.py",
+      "target_git_blob": "93dcf8de8fa33cfb3b28ac402a3cc549c34bf969"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/SteelTJ.py",
+      "source_mode": "100644",
+      "source_git_blob": "5ff1a08e46700b8fc6a985184577ef9107b087e3",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/SteelTJ.py",
+      "target_git_blob": "5ff1a08e46700b8fc6a985184577ef9107b087e3"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/TutorialDB.py",
+      "source_mode": "100644",
+      "source_git_blob": "6e52d580aed62e1accb5a71844a16450e7a2efcd",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/TutorialDB.py",
+      "target_git_blob": "6e52d580aed62e1accb5a71844a16450e7a2efcd"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "aab5fe8ed51c4433b42ccfe27e2c9fd0bde2e23a",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/sqlserver/models/__init__.py",
+      "target_git_blob": "aab5fe8ed51c4433b42ccfe27e2c9fd0bde2e23a"
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/__pycache__/ClientDefectDB1.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "572da9ce786b2336c712f67ff7a12c603242028a",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/__pycache__/ConfigCenter.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "fc3107b6203d7d370a48819ff744231c4b826314",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/__pycache__/SteelRecord.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "b2d398c46f7985708e3da5bd83d351235adf6851",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/NerCarDataBase/sqlserver/models/__pycache__/__init__.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "50be224fbc66bade60e2c16b08f0ab34a6a0687f",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "b6e690fd59145ce8900fd9ab8d8a996ee7d33834",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/__init__.py",
+      "target_git_blob": "b6e690fd59145ce8900fd9ab8d8a996ee7d33834"
+    },
+    {
+      "source_path": "database/__pycache__/__init__.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "91f9f763558cf497a3b421659f63ad4df57a5742",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/__pycache__/dbm.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "4abe1480d64309b223cc28843af07ff1b9aeb127",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/__pycache__/dbm.cpython-37.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "2d2a87726a67fbb242ca428d6c67067db7b95563",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/__pycache__/dbm.cpython-38.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "3be1553ece4549b72139363f0de5a5f2ced44c40",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/__pycache__/dbm.cpython-39.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "a9f8d59d47cc67c1667882bdf12d668b2107b52f",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/dbm.py",
+      "source_mode": "100644",
+      "source_git_blob": "541162935bf3ec86f29651786ade95125672ed7f",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/dbm.py.source.txt",
+      "target_git_blob": "541162935bf3ec86f29651786ade95125672ed7f"
+    },
+    {
+      "source_path": "database/interface/DataBaseInterFace.py",
+      "source_mode": "100644",
+      "source_git_blob": "28deb015ea8dd22c657546a8bd93fcc24a2eb842",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/interface/DataBaseInterFace.py.source.txt",
+      "target_git_blob": "28deb015ea8dd22c657546a8bd93fcc24a2eb842"
+    },
+    {
+      "source_path": "database/interface/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/SqlManage/__init__.py",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "database/interface/__pycache__/DataBaseInterFace.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "10018a2019ab66b9f25ac47aea2e84dde0ac3beb",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/interface/__pycache__/DataBaseInterFace.cpython-37.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "76f46191c47a980deb5bee6a5700b15032491f52",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/interface/__pycache__/__init__.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "745f5fc889c0bc537f5950d564ed13a77887198c",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/interface/__pycache__/__init__.cpython-37.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "3b98df2509ecf2fb422a5582326b671affc95487",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/interface/__pycache__/__init__.cpython-38.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "3a84d0ce2a86ea9a6f50f6b95c95251bf3ba4a5e",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ms/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/SqlManage/__init__.py",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "database/ms/__pycache__/__init__.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "64e71ef3b026c817ba0cde90692b0557bb8f302b",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ms/__pycache__/__init__.cpython-37.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "707732a3e80cd5e9a6c1002dfa20e1333672ec55",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ms/__pycache__/__init__.cpython-38.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "1ec32e3804d5cecbd9be2e8263abf53e638fde3f",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ms/__pycache__/dbi.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "c5d64dbdadce8802af3d6b0c7aca38fd6f17cc5a",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ms/__pycache__/dbi.cpython-37.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "82e945f0c78d91151d2a445c474a4af92a9f3f82",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ms/dbc.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/SqlManage/__init__.py",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "database/ms/dbi.py",
+      "source_mode": "100644",
+      "source_git_blob": "cbecf5dca823e6feb58d3449630d307f3c6ec059",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/ms/dbi.py.source.txt",
+      "target_git_blob": "cbecf5dca823e6feb58d3449630d307f3c6ec059"
+    },
+    {
+      "source_path": "database/ss/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/SqlManage/__init__.py",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "database/ss/__pycache__/__init__.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "6326ba56cac1702728bdc7c354884d8005859943",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ss/__pycache__/__init__.cpython-37.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "efceb92d997305a2efda1ffd379aeba8e316fac1",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ss/__pycache__/__init__.cpython-38.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "d075f3fcf4a9bf48efac74136b75e8d2a89c7a2b",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ss/__pycache__/__init__.cpython-39.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "294c26d4c0ce06817d66284a953b03790cd95b91",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ss/__pycache__/dbi.cpython-311.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "bf588d9150bede0cbc0d93b219a259082d8396c2",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ss/__pycache__/dbi.cpython-37.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "79a0015e40e52ea6eea8ad26751a2f88b2bc952c",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ss/__pycache__/dbi.cpython-38.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "1736d5fa48cd4469041ed4e4f8cd5fcf50f00adc",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ss/__pycache__/dbi.cpython-39.pyc",
+      "source_mode": "100644",
+      "source_git_blob": "20dc613332306bb4ea0f8c3c6f8481f1b8c08478",
+      "disposition": "excluded_generated",
+      "reason": "Compiler output; restore by rebuilding, not by source migration."
+    },
+    {
+      "source_path": "database/ss/dbc.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "already_in_consumer",
+      "target_path": "bkjc_database/NerCarDataBase/SqlManage/__init__.py",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "database/ss/dbi.py",
+      "source_mode": "100644",
+      "source_git_blob": "4844cead23e48aa374550ec5929a528efd93c1a5",
+      "disposition": "archived_original",
+      "target_path": "docs/repository-consolidation/bkjc/originals/database/ss/dbi.py.source.txt",
+      "target_git_blob": "4844cead23e48aa374550ec5929a528efd93c1a5"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+    "BaseUrl": "mssql+pymssql://ARNTUSER:ARNTUSER@127.0.0.1:1433/{}?charset=utf8",
+    "SteelRecord_url":"mssql+pymssql://ARNTUSER:ARNTUSER@127.0.0.1:1433/SteelRecord?charset=utf8",
+    "echo":false,
+    "LGZBMES":{
+        "type":"Oracle",
+        "drive":"cx_oracle",
+        "ip":"172.16.1.4",
+        "port":"1521",
+        "user":"zbbmjc",
+        "password":"zbbmjc170522",
+        "Name":"LGZBMES",
+        "msg":"用户oracle 数据库，通过··· ···",
+        "tables":[]
+    },
+    "DataBase_Base":{
+        "ip":"127.0.0.1",
+        "user":"ARNTUSER",
+        "password":"ARNTUSER",
+        "port":"1433",
+        "msg":"标检数据库统一配置"
+    },
+    "CameraNumber":6
+}
