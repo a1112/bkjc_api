@@ -69,7 +69,7 @@ def addSteelCache(steel, steelId):
 
 @app.get("/steelList/{num:int}/{start_seqNo:int}")
 def getSteelList(num,start_seqNo):
-    steels = dbm.getSteelByNum(num, False, start_seqNo, desc=False)
+    steels = dbm.getSteelBySequence(num, start_seqNo)
     infos = []
     for item in steels:
         if isinstance(item,list):

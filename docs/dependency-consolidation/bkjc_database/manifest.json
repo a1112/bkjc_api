@@ -1,0 +1,520 @@
+{
+  "source_repository": "a1112/bkjc_api",
+  "source_commit": "ee04908807d7c1b4767b8d766b6ca1a7f4351734",
+  "scope": "Only the former vendored bkjc_database package",
+  "files": [
+    {
+      "source_path": "bkjc_database/BaseImport.py",
+      "source_mode": "100644",
+      "source_git_blob": "87fa02f6ef15805efd4b83fd5e4ca2c8c2cf8d6f",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/BaseImport.py.source.txt",
+      "target_git_blob": "87fa02f6ef15805efd4b83fd5e4ca2c8c2cf8d6f"
+    },
+    {
+      "source_path": "bkjc_database/CONFIG.py",
+      "source_mode": "100644",
+      "source_git_blob": "25fa25c2735e81224b078e7203575c3535d47183",
+      "disposition": "redacted_local_configuration",
+      "local_path": ".repository-consolidation-local/bkjc_api/bkjc_database/CONFIG.py",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/CONFIG.py.source.txt",
+      "target_git_blob": "431697b72600f0af910d671c0da26bdbc8a35e5c"
+    },
+    {
+      "source_path": "bkjc_database/CheckDataBase.py",
+      "source_mode": "100644",
+      "source_git_blob": "63b306e6c23cdadd2b67eaaf65a080747497fe4a",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/CheckDataBase.py.source.txt",
+      "target_git_blob": "63b306e6c23cdadd2b67eaaf65a080747497fe4a"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/SqlManage/ConfigCenter.py",
+      "source_mode": "100644",
+      "source_git_blob": "e34c7923cbe799f41c93525c521073ea9f5da115",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/SqlManage/ConfigCenter.py.source.txt",
+      "target_git_blob": "e34c7923cbe799f41c93525c521073ea9f5da115"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/SqlManage/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/SqlManage/__init__.py.source.txt",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "edb2fd1af5fb754c250ec568512eafd64769561e",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/__init__.py.source.txt",
+      "target_git_blob": "edb2fd1af5fb754c250ec568512eafd64769561e"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/config/DBconfig.json",
+      "source_mode": "100644",
+      "source_git_blob": "731b6e8aa6720a97104996088732e49684e25e46",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/config/DBconfig.json.source.txt",
+      "target_git_blob": "731b6e8aa6720a97104996088732e49684e25e46"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/Ncdhotstrip.py",
+      "source_mode": "100644",
+      "source_git_blob": "09b51b84dd7839cd9e7fe382ed01177ef3ec787c",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/Ncdhotstrip.py.source.txt",
+      "target_git_blob": "09b51b84dd7839cd9e7fe382ed01177ef3ec787c"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/Ncdhotstripdefect.py",
+      "source_mode": "100644",
+      "source_git_blob": "2d5e302c0657d043f5e032b43443a70b9348668f",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/Ncdhotstripdefect.py.source.txt",
+      "target_git_blob": "2d5e302c0657d043f5e032b43443a70b9348668f"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/Ncdplatedevice.py",
+      "source_mode": "100644",
+      "source_git_blob": "a8176276f18b06e55b1563b741361cbabf7fe4f9",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/Ncdplatedevice.py.source.txt",
+      "target_git_blob": "a8176276f18b06e55b1563b741361cbabf7fe4f9"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "f71935b225163a51e9554bf9d9249f9a913ef569",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/__init__.py.source.txt",
+      "target_git_blob": "f71935b225163a51e9554bf9d9249f9a913ef569"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/defectinfodatabase.py",
+      "source_mode": "100644",
+      "source_git_blob": "51cc929352f110210babb46310f799626dc42a9a",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/defectinfodatabase.py.source.txt",
+      "target_git_blob": "51cc929352f110210babb46310f799626dc42a9a"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/models/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "fca3bcb91a03f6e5cf98de9c9a43d0e68adf406f",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/models/__init__.py.source.txt",
+      "target_git_blob": "fca3bcb91a03f6e5cf98de9c9a43d0e68adf406f"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/models/core.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/models/core.py.source.txt",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/models/defectinfodatabase.py",
+      "source_mode": "100644",
+      "source_git_blob": "f2e24c739ff71c487da45d1c2384edf45757138a",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/models/defectinfodatabase.py.source.txt",
+      "target_git_blob": "f2e24c739ff71c487da45d1c2384edf45757138a"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/models/ncdhotstrip.py",
+      "source_mode": "100644",
+      "source_git_blob": "9161ac088a6aee3b6f1dd37f8ac1bb12e8fd34b5",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/models/ncdhotstrip.py.source.txt",
+      "target_git_blob": "9161ac088a6aee3b6f1dd37f8ac1bb12e8fd34b5"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/models/ncdhotstripdefect.py",
+      "source_mode": "100644",
+      "source_git_blob": "1583fbad1aa0f44cedd3cee4f469c2a44b996475",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/models/ncdhotstripdefect.py.source.txt",
+      "target_git_blob": "1583fbad1aa0f44cedd3cee4f469c2a44b996475"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/models/ncdhotstripdevice.py",
+      "source_mode": "100644",
+      "source_git_blob": "78c05dab5e67a41eab0a2fc22c3f774c98b95161",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/models/ncdhotstripdevice.py.source.txt",
+      "target_git_blob": "78c05dab5e67a41eab0a2fc22c3f774c98b95161"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/models/ncdplate.py",
+      "source_mode": "100644",
+      "source_git_blob": "8d6fd4739aa43ec5ff0a38bb909b8cfebe02efe6",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/models/ncdplate.py.source.txt",
+      "target_git_blob": "8d6fd4739aa43ec5ff0a38bb909b8cfebe02efe6"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/models/ncdplatedefect.py",
+      "source_mode": "100644",
+      "source_git_blob": "d58fd61bd863ce365dd67e203c3654c45d52c1e1",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/models/ncdplatedefect.py.source.txt",
+      "target_git_blob": "d58fd61bd863ce365dd67e203c3654c45d52c1e1"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/mysql/models/ncdplatedevice.py",
+      "source_mode": "100644",
+      "source_git_blob": "99ca24a8b32e8062172472f3b9c5b3f97aa177dc",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/mysql/models/ncdplatedevice.py.source.txt",
+      "target_git_blob": "99ca24a8b32e8062172472f3b9c5b3f97aa177dc"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/Classifier.py",
+      "source_mode": "100644",
+      "source_git_blob": "3124afc02d0a3f756782d07615dee78493874d63",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/Classifier.py.source.txt",
+      "target_git_blob": "3124afc02d0a3f756782d07615dee78493874d63"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/ClientDefectDB.py",
+      "source_mode": "100644",
+      "source_git_blob": "3716d3023c457c71f23c711a130feec051f72b63",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/ClientDefectDB.py.source.txt",
+      "target_git_blob": "3716d3023c457c71f23c711a130feec051f72b63"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/ConfigCenter.py",
+      "source_mode": "100644",
+      "source_git_blob": "ca7c7b617304f5f67cf1ca90d9498d5fb2b555d2",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/ConfigCenter.py.source.txt",
+      "target_git_blob": "ca7c7b617304f5f67cf1ca90d9498d5fb2b555d2"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/DWConfiguration.py",
+      "source_mode": "100644",
+      "source_git_blob": "3507179a298dc090e3c46487352052b497a4bd93",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/DWConfiguration.py.source.txt",
+      "target_git_blob": "3507179a298dc090e3c46487352052b497a4bd93"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/DWDiagnostics.py",
+      "source_mode": "100644",
+      "source_git_blob": "605056654852b437eb8892880af8c235110f36e8",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/DWDiagnostics.py.source.txt",
+      "target_git_blob": "605056654852b437eb8892880af8c235110f36e8"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/DWQueue.py",
+      "source_mode": "100644",
+      "source_git_blob": "ecd80740d22694b791cf01b7a3aa571e6a294284",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/DWQueue.py.source.txt",
+      "target_git_blob": "ecd80740d22694b791cf01b7a3aa571e6a294284"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/SteelRecord.py",
+      "source_mode": "100644",
+      "source_git_blob": "b20c9419947621b834b6fa3ac093de135912a69c",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/SteelRecord.py.source.txt",
+      "target_git_blob": "b20c9419947621b834b6fa3ac093de135912a69c"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "d99bd51b3daa527ced7ff27b3af5281190d3eefd",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/__init__.py.source.txt",
+      "target_git_blob": "d99bd51b3daa527ced7ff27b3af5281190d3eefd"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/master.py",
+      "source_mode": "100644",
+      "source_git_blob": "3ea9af4f55d1f17efb0024e46b36430d79b5cfa4",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/master.py.source.txt",
+      "target_git_blob": "3ea9af4f55d1f17efb0024e46b36430d79b5cfa4"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/Classifier.py",
+      "source_mode": "100644",
+      "source_git_blob": "7b218d5ad65098555e217a308a8ca5bc44b4c291",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/Classifier.py.source.txt",
+      "target_git_blob": "7b218d5ad65098555e217a308a8ca5bc44b4c291"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB1.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/ClientDefectDB1.py.source.txt",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB2.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/ClientDefectDB2.py.source.txt",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB3.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/ClientDefectDB3.py.source.txt",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB4.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/ClientDefectDB4.py.source.txt",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB5.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/ClientDefectDB5.py.source.txt",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/ClientDefectDB6.py",
+      "source_mode": "100644",
+      "source_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/ClientDefectDB6.py.source.txt",
+      "target_git_blob": "1f1a7cd68bd652a97ab58621c0d7b34154ccddc4"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/ConfigCenter.py",
+      "source_mode": "100644",
+      "source_git_blob": "1cea1583770aa46dcf0b06815cec6e6213f32eea",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/ConfigCenter.py.source.txt",
+      "target_git_blob": "1cea1583770aa46dcf0b06815cec6e6213f32eea"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/DWConfiguration.py",
+      "source_mode": "100644",
+      "source_git_blob": "c34ba14122e0f2a70524250cd1c46893adab7253",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/DWConfiguration.py.source.txt",
+      "target_git_blob": "c34ba14122e0f2a70524250cd1c46893adab7253"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/DWDiagnostics.py",
+      "source_mode": "100644",
+      "source_git_blob": "bf0280702a3724989d06d8ba24dfc9b039b98a8c",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/DWDiagnostics.py.source.txt",
+      "target_git_blob": "bf0280702a3724989d06d8ba24dfc9b039b98a8c"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/DWQueue.py",
+      "source_mode": "100644",
+      "source_git_blob": "56fe24d4e70e4fcde72d18408226ddbc646e83d2",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/DWQueue.py.source.txt",
+      "target_git_blob": "56fe24d4e70e4fcde72d18408226ddbc646e83d2"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/DebugInfo.py",
+      "source_mode": "100644",
+      "source_git_blob": "50ea6a58fc51d48a0c49f77d4e9d40a2be8d54ea",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/DebugInfo.py.source.txt",
+      "target_git_blob": "50ea6a58fc51d48a0c49f77d4e9d40a2be8d54ea"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/RcvSteelID.py",
+      "source_mode": "100644",
+      "source_git_blob": "7c4391a360e1a19e003bd7966927538672ff7707",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/RcvSteelID.py.source.txt",
+      "target_git_blob": "7c4391a360e1a19e003bd7966927538672ff7707"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/ReportServer.py",
+      "source_mode": "100644",
+      "source_git_blob": "22f95966a133ed850598ae8c227400d6fba345fe",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/ReportServer.py.source.txt",
+      "target_git_blob": "22f95966a133ed850598ae8c227400d6fba345fe"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/ReportServerTempDB.py",
+      "source_mode": "100644",
+      "source_git_blob": "adb4096620a8f356f4dca8664f6757b54c628788",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/ReportServerTempDB.py.source.txt",
+      "target_git_blob": "adb4096620a8f356f4dca8664f6757b54c628788"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/SteelRecord.py",
+      "source_mode": "100644",
+      "source_git_blob": "93dcf8de8fa33cfb3b28ac402a3cc549c34bf969",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/SteelRecord.py.source.txt",
+      "target_git_blob": "93dcf8de8fa33cfb3b28ac402a3cc549c34bf969"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/SteelTJ.py",
+      "source_mode": "100644",
+      "source_git_blob": "5ff1a08e46700b8fc6a985184577ef9107b087e3",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/SteelTJ.py.source.txt",
+      "target_git_blob": "5ff1a08e46700b8fc6a985184577ef9107b087e3"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/TutorialDB.py",
+      "source_mode": "100644",
+      "source_git_blob": "6e52d580aed62e1accb5a71844a16450e7a2efcd",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/TutorialDB.py.source.txt",
+      "target_git_blob": "6e52d580aed62e1accb5a71844a16450e7a2efcd"
+    },
+    {
+      "source_path": "bkjc_database/NerCarDataBase/sqlserver/models/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "aab5fe8ed51c4433b42ccfe27e2c9fd0bde2e23a",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/NerCarDataBase/sqlserver/models/__init__.py.source.txt",
+      "target_git_blob": "aab5fe8ed51c4433b42ccfe27e2c9fd0bde2e23a"
+    },
+    {
+      "source_path": "bkjc_database/SqlBase.py",
+      "source_mode": "100644",
+      "source_git_blob": "34169ed9a7990b41334dd90c8f63c4333916283b",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/SqlBase.py.source.txt",
+      "target_git_blob": "34169ed9a7990b41334dd90c8f63c4333916283b"
+    },
+    {
+      "source_path": "bkjc_database/SqlTool.py",
+      "source_mode": "100644",
+      "source_git_blob": "0e3ecbe0e83a72e77ca23ea2a50c1f059c1696fa",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/SqlTool.py.source.txt",
+      "target_git_blob": "0e3ecbe0e83a72e77ca23ea2a50c1f059c1696fa"
+    },
+    {
+      "source_path": "bkjc_database/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "b6e690fd59145ce8900fd9ab8d8a996ee7d33834",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/__init__.py.source.txt",
+      "target_git_blob": "b6e690fd59145ce8900fd9ab8d8a996ee7d33834"
+    },
+    {
+      "source_path": "bkjc_database/cfg.py",
+      "source_mode": "100644",
+      "source_git_blob": "af8d066c6d93b2576288e9a58d51fd4399d3cacb",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/cfg.py.source.txt",
+      "target_git_blob": "af8d066c6d93b2576288e9a58d51fd4399d3cacb"
+    },
+    {
+      "source_path": "bkjc_database/core.py",
+      "source_mode": "100644",
+      "source_git_blob": "f305124d611bd8d0b29706265ff262145648e6b3",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/core.py.source.txt",
+      "target_git_blob": "f305124d611bd8d0b29706265ff262145648e6b3"
+    },
+    {
+      "source_path": "bkjc_database/dbm.py",
+      "source_mode": "100644",
+      "source_git_blob": "9653735c538244458fc6ef9db0a3546ef25bd4a0",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/dbm.py.source.txt",
+      "target_git_blob": "9653735c538244458fc6ef9db0a3546ef25bd4a0"
+    },
+    {
+      "source_path": "bkjc_database/ms/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/ms/__init__.py.source.txt",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "bkjc_database/ms/dbc.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/ms/dbc.py.source.txt",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "bkjc_database/ms/dbi.py",
+      "source_mode": "100644",
+      "source_git_blob": "3737dfe357d55eab792a7be7d7de784a5690569c",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/ms/dbi.py.source.txt",
+      "target_git_blob": "3737dfe357d55eab792a7be7d7de784a5690569c"
+    },
+    {
+      "source_path": "bkjc_database/property/DataBaseInterFace.py",
+      "source_mode": "100644",
+      "source_git_blob": "36363a5c54fb26f4fb3b2d4474e3b21100e7ef83",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/property/DataBaseInterFace.py.source.txt",
+      "target_git_blob": "36363a5c54fb26f4fb3b2d4474e3b21100e7ef83"
+    },
+    {
+      "source_path": "bkjc_database/property/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/property/__init__.py.source.txt",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "bkjc_database/ss/__init__.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/ss/__init__.py.source.txt",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "bkjc_database/ss/dbc.py",
+      "source_mode": "100644",
+      "source_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/ss/dbc.py.source.txt",
+      "target_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "source_path": "bkjc_database/ss/dbi.py",
+      "source_mode": "100644",
+      "source_git_blob": "061e53a5ea1857295e1b8fdf810825129fcaa0a5",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/ss/dbi.py.source.txt",
+      "target_git_blob": "061e53a5ea1857295e1b8fdf810825129fcaa0a5"
+    },
+    {
+      "source_path": "bkjc_database/test/LinkMysql.py",
+      "source_mode": "100644",
+      "source_git_blob": "f2d63d5da6519c65fa65ff8bbe119e9a5626273e",
+      "disposition": "archived_original",
+      "target_path": "docs/dependency-consolidation/bkjc_database/originals/test/LinkMysql.py.source.txt",
+      "target_git_blob": "f2d63d5da6519c65fa65ff8bbe119e9a5626273e"
+    }
+  ]
+}

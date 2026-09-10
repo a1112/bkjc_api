@@ -15,5 +15,5 @@ flask
 openpyxl
 requests
 sqlalchemy_utils
-https://github.com/a1112/bkjc_database
-https://github.com/a1112/bkjc_tool
+bkjc_database @ git+https://github.com/a1112/bkjc_database.git@b8066fb2edff5fc02c675e8af72fbdacaf63b355
+# bkjc_tools stays local: its CIMG implementation is not interchangeable with bkjc_tool.
